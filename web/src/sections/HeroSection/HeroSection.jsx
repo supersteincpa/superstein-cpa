@@ -20,11 +20,12 @@ export const HeroSection = ({
 }) => {
   const heroSectionClasses = clsx(
     otherClasses,
-    'lg:h-[613px] w-full relative mt-[64px] lg:mt-[110px]'
+    'lg:h-[627px] w-full relative mt-[64px] lg:mt-[110px]'
   )
 
   return (
     <>
+      <section className={heroSectionClasses} data-testid="hero-section">
       <Image
         imageData={backgroundDesktopImage}
         otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block"
@@ -33,40 +34,22 @@ export const HeroSection = ({
         imageData={backgroundMobileImage}
         otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden"
       />
-      <section className={heroSectionClasses} data-testid="hero-section">
-        <div
-          className={clsx(
-            'flex gap-8 lg:gap-0 flex-col-reverse lg:flex-row lg:items-center h-full  relative',
+      <div className='max-w-[1512px] mx-auto  px-4 pt-10 pb-[60px] md:pt-[110px] md:pb-[170px] md:pl-[164px] lg:pr-0 '>
 
-            'pb-[263px] lg:pb-0 pl-4 lg:pr-0 lg:pl-[100px] xl:pl-[156px]'
-          )}
-        >
-          <div
-            className={clsx(
-              'w-full lg:w-2/4  ml-auto',
-
-              'pr-4 lg:pr-0 lg:max-w-[690px]'
-            )}
-          >
+          <div className=" w-full relative lg:max-w-[875px]">
             <Heading
               type="h1"
-              otherClasses="lg:text-[52px] lg:leading-[78px] text-[38px] text-primary_blue_200  mb-6 leading-[42px]  font-medium font-petrona "
+              otherClasses="lg:text-[52px] lg:leading-[78px] text-[34px] leading-[44px] mb-8 text-white font-light font-Poppins "
             >
               {mainHeading}
             </Heading>
-            <article
-              className={clsx(
-                'mb-6 hero_section_rich_text',
-                'text-left font-figtree'
-              )}
-            >
+            <article className='mb-6 hero_section_rich_text'>
               <RichText richText={_rawSubText} />
             </article>
-            <div>
-              <Button onClick={() => toggleFunc('Contact Us')} {...button} />
-            </div>
+            <Button onClick={() => toggleFunc('Contact Us')} {...button} />
           </div>
-        </div>
+          </div>
+
       </section>
     </>
   )
