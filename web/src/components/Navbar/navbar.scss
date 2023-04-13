@@ -1,6 +1,59 @@
+.navbar_phone_button {
+  background: #4679e5;
+  &:hover {
+    background: linear-gradient(123.18deg, #e7f0ff -9.87%, #3f73e1 97.95%);
+  }
+  &:active {
+    background: linear-gradient(#4679e5, #4679e5) padding-box,
+      linear-gradient(to right, #e7f0ff, #3f73e1) border-box;
+    border: 3px solid transparent;
+  }
+}
 .navbar_drop_down_chevron {
   width: 18px;
   height: 18px;
   mask-image: url('../../images/scpa-icons/white-chevron-down.svg');
   -webkit-mask-image: url('../../images/scpa-icons/white-chevron-down.svg');
+}
+
+.navbar_drop_down_button {
+  &:active {
+    @media (min-width: 1024px) {
+      background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+        linear-gradient(to right, #e7f0ff, #3f73e1) border-box;
+      border: 3px solid transparent;
+    }
+  }
+}
+.navbar_mobile_menu_bar {
+  @media (min-width: 1024px) {
+    height: auto;
+  }
+  height: calc(100vh - 62px);
+}
+
+.navbar_menu_list_wrapper {
+  > div {
+    padding: 0px;
+    max-height: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    border: 0px;
+    opacity: 0;
+  }
+  &:hover {
+    > div {
+      @media (min-width: 1024px) {
+        padding: 32px 0px;
+        max-height: 300px;
+        transition: all 0.4s;
+      }
+      max-height: 700px;
+      opacity: 1;
+      padding: 16px 0 0 0px;
+      border: 1px;
+      overflow: visible;
+      transition: all 0.5s;
+    }
+  }
 }
