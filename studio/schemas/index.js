@@ -11,10 +11,12 @@ import reviewsSection from './documents/reviewsSection'
 import servicesPages from './documents/servicesPages'
 import servicesSection from './documents/servicesSection'
 import testimonials from './documents/testimonials'
+import twoColumnGenericSections from './documents/twoColumnGenericSections'
 import twoColumnHeroes from './documents/twoColumnHeroes'
 import bodyPortableText from './objects/bodyPortableText'
 import button from './objects/button'
 import checkList from './objects/checkList'
+import genericSectionFields from './objects/genericSectionFields'
 import iframe from './objects/iframe'
 import image from './objects/image'
 import youtube from './objects/youtube'
@@ -35,7 +37,9 @@ export const schemaTypes = [
   servicesPages,
   twoColumnHeroes,
   meetTheTeamSection,
+  twoColumnGenericSections,
   // Objects
+  genericSectionFields,
   button,
   bodyPortableText,
   checkList,
