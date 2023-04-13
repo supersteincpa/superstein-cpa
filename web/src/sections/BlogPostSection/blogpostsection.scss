@@ -1,0 +1,101 @@
+.blog_post_rich_text {
+    div {
+      > p {
+        @media (min-width: 1024px) {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: #333333;
+      font-family: 'Public Sans', sans-serif;
+        font-weight: 400;
+        margin-bottom: 16px;
+      }
+      ul {
+        list-style: disc;
+        li {
+          @media (min-width: 1024px) {
+            font-size: 20px;
+            line-height: 30px;
+          }
+          color: #333333;
+        font-family: 'Public Sans', sans-serif;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+          margin-bottom: 8px;
+        }
+      }
+      ol {
+        list-style: number;
+        li {
+          @media (min-width: 1024px) {
+            font-size: 20px;
+            line-height: 30px;
+          }
+          color: #333333;
+        font-family: 'Public Sans', sans-serif;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+          margin-bottom: 8px;
+        }
+      }
+      h1 {
+        margin-top: 32px;
+        font-size: 42px;
+        line-height: 51px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 24px;
+  font-family: 'Public Sans', sans-serif;
+      }
+      h2 {
+        font-size: 36px;
+        margin-top: 32px;
+        line-height: 43px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 24px;
+  font-family: 'Public Sans', sans-serif;
+      }
+      h3 {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 700;
+        margin-top: 32px;
+        margin-bottom: 24px;
+        color: #1a1a1a;
+  font-family: 'Public Sans', sans-serif;
+      }
+      h4 {
+        font-size: 24px;
+        margin-top: 32px;
+        color: #1a1a1a;
+        line-height: 34px;
+        font-weight: 700;
+        margin-bottom: 24px;
+  font-family: 'Public Sans', sans-serif;
+      }
+      h5 {
+        font-size: 20px;
+        line-height: 28px;
+        color: #1a1a1a;
+        margin-top: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+  font-family: 'Public Sans', sans-serif;
+      }
+      h6 {
+        margin-top: 32px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1a1a1a;
+        font-weight: 700;
+        margin-bottom: 24px;
+  font-family: 'Public Sans', sans-serif;
+      }
+    }
+  }
