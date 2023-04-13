@@ -1,0 +1,17 @@
+.generic_rich_text {
+  > div {
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #333333;
+      letter-spacing: 0.03em;
+      font-family: 'Public Sans';
+
+      &:nth-last-child(1) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

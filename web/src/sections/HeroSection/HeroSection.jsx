@@ -26,16 +26,15 @@ export const HeroSection = ({
   return (
     <>
       <section className={heroSectionClasses} data-testid="hero-section">
-      <Image
-        imageData={backgroundDesktopImage}
-        otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block"
-      />
-      <Image
-        imageData={backgroundMobileImage}
-        otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden"
-      />
-      <div className='max-w-[1512px] mx-auto  px-4 pt-10 pb-[60px] md:pt-[110px] md:pb-[170px] md:pl-[164px] lg:pr-0 '>
-
+        <Image
+          imageData={backgroundDesktopImage}
+          otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block"
+        />
+        <Image
+          imageData={backgroundMobileImage}
+          otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden"
+        />
+        <div className="max-w-[1512px] mx-auto  px-4 pt-10 pb-[60px] md:pt-[110px] md:pb-[170px] md:pl-[164px] lg:pr-0 ">
           <div className=" w-full relative lg:max-w-[875px]">
             <Heading
               type="h1"
@@ -43,13 +42,12 @@ export const HeroSection = ({
             >
               {mainHeading}
             </Heading>
-            <article className='mb-6 hero_section_rich_text'>
+            <article className="mb-6 hero_section_rich_text">
               <RichText richText={_rawSubText} />
             </article>
             <Button onClick={() => toggleFunc('Contact Us')} {...button} />
           </div>
-          </div>
-
+        </div>
       </section>
     </>
   )
