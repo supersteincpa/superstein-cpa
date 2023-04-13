@@ -1,0 +1,15 @@
+.cta_section_rich_text {
+  > div {
+    p {
+      @media (min-width: 1024px) {
+        text-align: left;
+      }
+      text-align: center;
+      font-size: 18px;
+      line-height: 26px;
+      color: #8e8774;
+      font-weight: 400;
+      font-family: 'Crimson Pro', serif;
+    }
+  }
+}

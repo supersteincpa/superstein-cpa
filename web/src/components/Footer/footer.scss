@@ -1,0 +1,8 @@
+.footer_grid_column_container {
+  > ul:nth-last-child(1) {
+    @media (min-width: 768px) {
+      grid-area: auto;
+    }
+    grid-area: 3;
+  }
+}

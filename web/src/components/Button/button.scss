@@ -1,0 +1,45 @@
+.primary_button_hover_transition {
+  border: 3px solid transparent;
+
+  &:hover {
+    // background: linear-gradient(123.18deg, #e7f0ff -9.87%, #3f73e1 97.95%);
+    background: linear-gradient(123.18deg, #e7f0ff -9.87%, #3f73e1 97.95%)
+        padding-box,
+      linear-gradient(123.18deg, #e7f0ff -9.87%, #3f73e1 97.95%) border-box;
+    border: 3px solid transparent;
+  }
+  &:active {
+    background: linear-gradient(#4679e5, #4679e5) padding-box,
+      linear-gradient(to right, #e7f0ff, #3f73e1) border-box;
+    border: 3px solid transparent;
+  }
+}
+.secondary_button_hover_transition {
+  border: 1px solid #4679e5;
+
+  &:hover {
+    // background: linear-gradient(123.18deg, #e7f0ff -9.87%, #3f73e1 97.95%);
+    background: linear-gradient(#e7f0ff, #e7f0ff) padding-box,
+      linear-gradient(123.18deg, #e7f0ff -9.87%, #3f73e1 97.95%) border-box;
+  }
+  &:active {
+    background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(to right, #e7f0ff, #3f73e1) border-box;
+    border: 3px solid transparent;
+  }
+}
+
+.text_link_light_button_hover_transition {
+  &:active {
+    background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(to right, #e7f0ff, #3f73e1) border-box;
+    border: 3px solid transparent;
+  }
+}
+.text_link_dark_button_hover_transition {
+  &:active {
+    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+      linear-gradient(to right, #e7f0ff, #3f73e1) border-box;
+    border: 3px solid transparent;
+  }
+}
