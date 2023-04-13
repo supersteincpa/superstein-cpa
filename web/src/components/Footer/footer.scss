@@ -1,8 +1,21 @@
 .footer_grid_column_container {
-  > ul:nth-last-child(1) {
+  >ul:nth-last-child(1) {
     @media (min-width: 768px) {
       grid-area: auto;
     }
+
     grid-area: 3;
   }
+}
+
+.bg_clip_path {
+  clip-path: polygon(0% 3.5%, 100% 0%, 100% 100%, 0% 100%);
+  background: black;
+
+  @media (min-width: 1024px) {
+    background: black;
+    clip-path: polygon(0% 12.8%, 100% 0%, 100% 100%, 0% 100%);
+    ;
+  }
+
 }
