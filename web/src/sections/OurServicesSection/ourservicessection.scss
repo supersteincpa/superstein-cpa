@@ -1,0 +1,53 @@
+.our_services_main_container {
+  @media (min-width: 1024px) {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  }
+  clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+}
+
+.our_services_card_black_color {
+  > div:nth-child(2) {
+    h5 {
+      color: #1a1a1a;
+      span {
+        background-color: #333333;
+      }
+    }
+    p {
+      color: #333333;
+    }
+  }
+}
+
+.our_services_section_rich_text_black {
+  > div {
+    p {
+      @media (min-width: 1024px) {
+        font-size: 20px;
+      }
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      font-family: 'Public Sans';
+      color: #1a1a1a;
+      opacity: 0.8;
+    }
+  }
+}
+.our_services_section_rich_text_white {
+  > div {
+    p {
+      @media (min-width: 1024px) {
+        font-size: 20px;
+      }
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      font-family: 'Public Sans';
+      color: white;
+      opacity: 0.8;
+    }
+  }
+}
