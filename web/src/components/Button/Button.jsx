@@ -17,7 +17,7 @@ export const Button = ({
   const buttonClasses = clsx(
     otherClasses,
     variant === 'primary' &&
-      `px-6 lg:px-10 py-[5px] lg:py-[9px] bg-addition_button_color rounded-full text-sm lg:text-lg font-normal text-white font-Poppins leading-6 primary_button_hover_transition`,
+      `px-6 lg:px-[36px] py-[5px] lg:py-[7px] bg-addition_button_color rounded-full text-sm lg:text-lg font-normal text-white font-Poppins leading-6 primary_button_hover_transition`,
     variant === 'secondary' &&
       `px-6 lg:px-10 py-[7px] lg:py-[9px] bg-transparent rounded-full text-sm lg:text-lg font-normal text-addition_button_color font-Poppins leading-6 active:py-[5px] lg:active:py-[7px] active:px-[22px] lg:active:px-[38px] secondary_button_hover_transition`,
     variant === 'text-link-light' &&
