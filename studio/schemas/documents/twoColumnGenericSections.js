@@ -18,10 +18,12 @@ export default {
   preview: {
     select: {
       title: 'identifier',
+      media: 'genericSections.mobileImage',
     },
-    prepare({title = 'No title'}) {
+    prepare({title = 'No title',media}) {
       return {
         title,
+        media,
       }
     },
   },

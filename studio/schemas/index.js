@@ -5,6 +5,7 @@ import featuredBlogsSection from './documents/featuredBlogsSection'
 import heroSection from './documents/heroSection'
 import meetTheTeam from './documents/meetTheTeam'
 import meetTheTeamSection from './documents/meetTheTeamSection'
+import ourServicesSection from './documents/ourServicesSection'
 import pages from './documents/pages'
 import positions from './documents/positions'
 import reviewsSection from './documents/reviewsSection'
@@ -38,6 +39,7 @@ export const schemaTypes = [
   twoColumnHeroes,
   meetTheTeamSection,
   twoColumnGenericSections,
+  ourServicesSection,
   // Objects
   genericSectionFields,
   button,
