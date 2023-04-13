@@ -10,7 +10,7 @@ export default {
     },
     {
       title: 'Image',
-      name: 'customImage',
+      name: 'image',
       type: 'image',
     },
   ],
