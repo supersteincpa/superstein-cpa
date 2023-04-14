@@ -4,37 +4,21 @@ export default {
   type: 'document',
   fields: [
     {
-      title: 'About Person',
-      name: 'aboutPerson',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    },
-    {
       title: 'Name',
       name: 'name',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
-    {
-      title: 'Sub Heading',
-      name: 'subHeading',
-      type: 'string',
-    },
-    {
-      title: 'Description',
-      name: 'description',
-      type: 'string',
-    },
 
     {
-      title: 'Testimonial',
-      name: 'text',
+      title: 'Sub Text',
+      name: 'subText',
       type: 'bodyPortableText',
       validation: (Rule) => Rule.required(),
     },
     {
-      title: 'Image',
-      name: 'image',
+      title: 'Uers Image',
+      name: 'userImage',
       type: 'customImage',
       validation: (Rule) => Rule.required(),
     },
@@ -47,8 +31,8 @@ export default {
   ],
   preview: {
     select: {
-      title: 'aboutPerson',
-      media: 'image',
+      title: 'name',
+      media: 'userImage',
     },
     prepare({title = 'No title', media}) {
       return {

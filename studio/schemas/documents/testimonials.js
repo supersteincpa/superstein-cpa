@@ -9,37 +9,37 @@ export default {
       type: 'string',
     },
     {
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+    },
+    {
       title: 'Heading',
       name: 'heading',
       type: 'string',
     },
     {
       title: 'Desktop Background Image',
-      name: 'desktopbackgroundImage',
+      name: 'desktopBackgroundImage',
       type: 'customImage',
       validation: (Rule) => Rule.required(),
     },
     {
       title: 'Mobile Background Image',
-      name: 'mobilebackgroundImage',
+      name: 'mobileBackgroundImage',
       type: 'customImage',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      title: 'Is User Image',
-      name: 'isUserImage',
-      type: 'boolean',
-      initialValue: false,
       validation: (Rule) => Rule.required(),
     },
   ],
   preview: {
     select: {
       title: 'identifier',
+      media: 'mobileBackgroundImage',
     },
-    prepare({title = 'No title'}) {
+    prepare({title = 'No title', media}) {
       return {
         title,
+        media,
       }
     },
   },
