@@ -1,15 +1,22 @@
-.cta_section_rich_text {
-  > div {
-    p {
-      @media (min-width: 1024px) {
-        text-align: left;
-      }
-      text-align: center;
-      font-size: 18px;
-      line-height: 26px;
-      color: #8e8774;
-      font-weight: 400;
-      font-family: 'Crimson Pro', serif;
-    }
+// .cta_section_rich_text {
+//   > div {
+//     p {
+//       @media (min-width: 1024px) {
+//         text-align: left;
+//       }
+//       text-align: center;
+//       font-size: 18px;
+//       line-height: 26px;
+//       color: #8e8774;
+//       font-weight: 400;
+//       font-family: 'Crimson Pro', serif;
+//     }
+//   }
+// }
+.cta-clip-path {
+  clip-path: polygon(0% 7.5%, 100% 0%, 100% 93.3%, 0% 100%);
+
+  @media (min-width: 1024px) {
+    clip-path: polygon(0% 10.8%, 100% 0%, 100% 88.3%, 0% 100%);
   }
 }
