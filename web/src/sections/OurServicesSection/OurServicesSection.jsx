@@ -13,7 +13,7 @@ export const OurServicesSection = ({
   isBackgroundColor,
   title,
   mainHeading,
-  filterBar = true,
+  filterBar = false,
   _rawSubText,
 }) => {
   const ourServicesSectionClasses = clsx(
@@ -80,6 +80,12 @@ export const OurServicesSection = ({
     setToggle(index)
   }
 
+  const mobileFilterFunc = (e) => {
+    const value = e.target.value
+    const filterNodes = arr.filter((e) => e.type === value)
+    setData(filterNodes)
+  }
+
   const allData = () => {
     setData([])
     setToggle()
@@ -124,8 +130,22 @@ export const OurServicesSection = ({
             <RichText richText={_rawSubText} />
           </article>
         </div>
-        <div className="max-w-[1184px] mx-auto w-full border-b-[1px] border-b-gray-700">
-          <Heading type="h5" otherClasses="text-white font-Poppins text-center">
+        <div
+          className={clsx(
+            'max-w-[1184px] mx-auto w-full lg:border-b-[1px] lg:border-b-gray-700',
+            filterBar ? 'block' : 'hidden'
+          )}
+        >
+          <Heading
+            type="h5"
+            otherClasses="text-white font-Poppins text-center lg:block hidden"
+          >
+            {mainHeading}
+          </Heading>
+          <Heading
+            type="h2"
+            otherClasses="text-white font-Poppins text-left lg:hidden mb-6"
+          >
             {mainHeading}
           </Heading>
           <div className="hidden lg:flex items-center justify-center mt-10 ">
@@ -173,13 +193,26 @@ export const OurServicesSection = ({
             })}
           </div>
           <select
-            // onChange={(link) => toggleFilter(link)}
+            onChange={(e) => mobileFilterFunc(e)}
             name="drop-down-menu"
             id="all"
+            className="lg:hidden w-full py-3 px-4 font-Poppins font-normal text-base leading-6 bg-transparent text-white rounded-full border-[1px] border-white"
           >
-            <option value="all">all</option>
+            <option
+              value="all"
+              className="font-Poppins text-gray-900 font-normal text-base leading-6"
+            >
+              all
+            </option>
             {uniqueChars.map(({ type }) => {
-              return <option value={type}>{type}</option>
+              return (
+                <option
+                  value={type}
+                  className="font-Poppins text-gray-900 font-normal text-base leading-6"
+                >
+                  {type}
+                </option>
+              )
             })}
           </select>
         </div>
