@@ -4,3 +4,20 @@
   mask-image: url('../../images/scpa-icons/share-arrow-right.svg');
   -webkit-mask-image: url('../../images/scpa-icons/share-arrow-right.svg');
 }
+
+.our_services_rich_text {
+  > div {
+    p {
+      @media (min-width: 1024px) {
+        font-size: 16px;
+      }
+      font-family: 'Public Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+    }
+  }
+}

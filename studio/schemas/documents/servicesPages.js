@@ -37,33 +37,9 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: 'Is Nav White',
-      name: 'isNavWhite',
-      type: 'boolean',
-      initialValue: false,
-    },
-    {
-      title: 'Image',
-      name: 'image',
-      type: 'customImage',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      title: 'Main Heading',
-      name: 'mainHeading',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      title: 'Sub Text',
-      name: 'subText',
-      type: 'bodyPortableText',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      title: 'Button Label',
-      name: 'buttonLabel',
-      type: 'string',
+      title: 'Services Card',
+      name: 'servicesCard',
+      type: 'servicesCardObject',
       validation: (Rule) => Rule.required(),
     },
     {

@@ -6,12 +6,18 @@ import './navbar.scss'
 import Button from '../Button/Button'
 import Heading from '../Heading/Heading'
 import Icon from '../Icon/Icon'
+import { useState } from 'react'
 
 export const Navbar = ({ otherClasses }) => {
   const navbarClasses = clsx(
     otherClasses,
     'fixed top-0 translate-x-[-50%] left-2/4 z-20 w-full bg-black border-t-[4px] border-t-gray-600'
   )
+
+  const [toggleNav, setToggleNav] = useState(false)
+  const toggleNavbar = (elm) => {
+    setToggleNav(!elm)
+  }
 
   return (
     <nav className={navbarClasses} id="navbar" data-testid="navbar">
@@ -32,7 +38,12 @@ export const Navbar = ({ otherClasses }) => {
             className="w-[181px] h-8 lg:w-[275px] lg:h-12"
           />
         </Link>
-        <div className="flex flex-col lg:flex-row items-center gap-8 absolute lg:static top-[62px] lg:top-0 navbar_mobile_menu_bar lg:bg-transparent bg-gray-900 lg:w-auto w-full lg:left-0 left-0 lg:p-0 px-6 pt-8">
+        <div
+          className={clsx(
+            toggleNav ? 'flex' : 'hidden lg:flex',
+            ' flex-col lg:flex-row items-center gap-8 absolute lg:static top-[62px] lg:top-0 navbar_mobile_menu_bar lg:bg-transparent bg-gray-900 lg:w-auto w-full lg:left-0 left-0 lg:p-0 px-6 pt-8'
+          )}
+        >
           <ul className="lg:w-auto w-full flex flex-col lg:gap-0 gap-4 lg:flex-row items-center">
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
               <button className="flex lg:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
@@ -158,7 +169,10 @@ export const Navbar = ({ otherClasses }) => {
             otherClasses="lg:block hidden"
           />
         </div>
-        <button className="pl-[22px] border-l-[1px] border-l-gray-800 h-[62px] lg:hidden flex items-center">
+        <button
+          onClick={() => toggleNavbar(toggleNav)}
+          className="pl-[22px] border-l-[1px] border-l-gray-800 h-[62px] lg:hidden flex items-center"
+        >
           <Icon icon="navbar-hamburger-menu" iconHeight={24} iconWidth={24} />
         </button>
       </div>

@@ -20,21 +20,23 @@ export const HeroSection = ({
 }) => {
   const heroSectionClasses = clsx(
     otherClasses,
-    'lg:h-[627px] w-full relative mt-[64px] lg:mt-[110px]'
+    'lg:h-[627px] w-full relative mt-[66px] lg:mt-[84px] z-10'
   )
 
   return (
     <>
       <section className={heroSectionClasses} data-testid="hero-section">
         <Image
+          objectFit="fill"
           imageData={backgroundDesktopImage}
           otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block"
         />
         <Image
+          objectFit="fill"
           imageData={backgroundMobileImage}
           otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden"
         />
-        <div className="max-w-[1512px] mx-auto  px-4 pt-10 pb-[60px] md:pt-[110px] md:pb-[170px] md:pl-[164px] lg:pr-0 ">
+        <div className="max-w-[1512px] mx-auto  px-4 pt-10 pb-[70px] md:pt-[110px] md:pb-[170px] lg:pl-20 xl:pl-[164px] lg:pr-0 ">
           <div className=" w-full relative lg:max-w-[875px]">
             <Heading
               type="h1"

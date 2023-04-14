@@ -10,6 +10,7 @@ import roundedImage from '../../images/background-circle-pattern.svg'
 
 export const GenericTwoColumn = ({
   otherClasses,
+  toggleFunc,
   genericSections: {
     title,
     heading,

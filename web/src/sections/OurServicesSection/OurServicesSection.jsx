@@ -5,7 +5,7 @@ import './ourservicessection.scss'
 import { Heading } from '../../components/Heading'
 import circleImage from '../../images/background-circle-pattern.svg'
 import OurServicesCard from '../../components/OurServicesCard/OurServicesCard'
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { RichText } from '../../components/RichText'
 import { useState } from 'react'
 export const OurServicesSection = ({
@@ -13,7 +13,7 @@ export const OurServicesSection = ({
   isBackgroundColor,
   title,
   mainHeading,
-  filterBar = false,
+  isFilterBar,
   _rawSubText,
 }) => {
   const ourServicesSectionClasses = clsx(
@@ -21,6 +21,30 @@ export const OurServicesSection = ({
     'our_services_main_container w-full  py-[100px] lg:py-[150px] relative',
     isBackgroundColor ? 'bg-transparent' : 'bg-gray-900'
   )
+
+  const ourServices = useStaticQuery(graphql`
+    query sanityServicesSection {
+      allSanityServicesPages {
+        nodes {
+          slug {
+            current
+          }
+          servicesCard {
+            heading
+            _rawSubText
+            image {
+              ...CustomImage
+            }
+            servicesType
+          }
+        }
+      }
+    }
+  `)
+
+  const nodes = ourServices.allSanityServicesPages.nodes
+
+  // console.log(nodes)
 
   const arr = [
     {
@@ -67,14 +91,18 @@ export const OurServicesSection = ({
     },
   ]
 
-  const uniqueChars = [...new Map(arr.map((m) => [m.type, m])).values()]
+  const uniqueChars = [
+    ...new Map(nodes.map((m) => [m.servicesCard.servicesType, m])).values(),
+  ]
 
   const [toggle, setToggle] = useState('')
   const [data, setData] = useState([])
   const [active, setActive] = useState(true)
 
   const toggleFilter = (type, index) => {
-    const filterNodes = arr.filter((e) => e.type === type)
+    const filterNodes = nodes.filter(
+      (e) => e.servicesCard.servicesType === type
+    )
     setActive(false)
     setData(filterNodes)
     setToggle(index)
@@ -82,7 +110,9 @@ export const OurServicesSection = ({
 
   const mobileFilterFunc = (e) => {
     const value = e.target.value
-    const filterNodes = arr.filter((e) => e.type === value)
+    const filterNodes = nodes.filter(
+      (e) => e.servicesCard.servicesType === value
+    )
     setData(filterNodes)
   }
 
@@ -110,7 +140,7 @@ export const OurServicesSection = ({
             {title}
           </p>
         )}
-        <div className={clsx('max-w-[793px]', filterBar && 'hidden')}>
+        <div className={clsx('max-w-[793px]', isFilterBar && 'hidden')}>
           <Heading
             type="h2"
             otherClasses={clsx(
@@ -133,7 +163,7 @@ export const OurServicesSection = ({
         <div
           className={clsx(
             'max-w-[1184px] mx-auto w-full lg:border-b-[1px] lg:border-b-gray-700',
-            filterBar ? 'block' : 'hidden'
+            isFilterBar ? 'block' : 'hidden'
           )}
         >
           <Heading
@@ -159,21 +189,21 @@ export const OurServicesSection = ({
               <span className="our_services_button_color_icon"></span>
               <p
                 className={clsx(
-                  'text-base font-semibold py-3 px-12 font-Public_Sans text',
+                  'text-base font-semibold py-3 px-12 font-Public_Sans text capitalize',
                   active ? 'text-addition_button_color' : 'text-gray-200'
                 )}
               >
-                all
+                All Services
               </p>
             </button>
-            {uniqueChars.map(({ type }, index) => {
+            {uniqueChars.map(({ servicesCard: { servicesType } }, index) => {
               return (
                 <button
                   onClick={() => {
-                    toggleFilter(type, index)
+                    toggleFilter(servicesType, index)
                   }}
                   className={clsx(
-                    'flex flex-col items-center justify-center gap-2',
+                    'flex flex-col items-center justify-center gap-2 capitalize',
                     toggle === index ? ' border-b-[3px] border-b-[#3F73E1]' : ''
                   )}
                 >
@@ -186,7 +216,7 @@ export const OurServicesSection = ({
                         : 'text-gray-200'
                     )}
                   >
-                    {type}
+                    {servicesType}
                   </p>
                 </button>
               )
@@ -200,17 +230,17 @@ export const OurServicesSection = ({
           >
             <option
               value="all"
-              className="font-Poppins text-gray-900 font-normal text-base leading-6"
+              className="font-Poppins text-gray-900 font-normal text-base leading-6 capitalize"
             >
-              all
+              All
             </option>
-            {uniqueChars.map(({ type }) => {
+            {uniqueChars.map(({ servicesCard: { servicesType } }) => {
               return (
                 <option
-                  value={type}
-                  className="font-Poppins text-gray-900 font-normal text-base leading-6"
+                  value={servicesType}
+                  className="font-Poppins text-gray-900 font-normal text-base leading-6 capitalize"
                 >
-                  {type}
+                  {servicesType}
                 </option>
               )
             })}
@@ -219,7 +249,9 @@ export const OurServicesSection = ({
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-y-12 gap-x-10 xl:gap-x-20 mt-6 lg:mt-16">
           {data.length === 0 ? (
             <>
-              {arr.map((nodes) => {
+              {nodes.map((nodes) => {
+                console.log(nodes)
+
                 return (
                   <OurServicesCard
                     {...nodes}
@@ -253,12 +285,13 @@ export const OurServicesSection = ({
 export default OurServicesSection
 
 export const query = graphql`
-  fragment OurServicesSection on SanityOurServicesSection {
+  fragment OurServicesSection on SanityServicesSection {
     __typename
     identifier
-    isBackgroundColor
     title
     mainHeading
-    _rawSubText
+    _rawText
+    isBackgroundColor
+    isFilterBar
   }
 `
