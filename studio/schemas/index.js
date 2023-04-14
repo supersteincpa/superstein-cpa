@@ -3,6 +3,7 @@ import blogs from './documents/blogs'
 import categories from './documents/categories'
 import featuredBlogsSection from './documents/featuredBlogsSection'
 import heroSection from './documents/heroSection'
+import industriesSection from './documents/industriesSection'
 import meetTheTeam from './documents/meetTheTeam'
 import meetTheTeamSection from './documents/meetTheTeamSection'
 import ourServicesSection from './documents/ourServicesSection'
@@ -40,6 +41,7 @@ export const schemaTypes = [
   meetTheTeamSection,
   twoColumnGenericSections,
   ourServicesSection,
+  industriesSection,
   // Objects
   genericSectionFields,
   button,
