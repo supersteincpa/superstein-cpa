@@ -15,12 +15,14 @@ import servicesSection from './documents/servicesSection'
 import testimonials from './documents/testimonials'
 import twoColumnGenericSections from './documents/twoColumnGenericSections'
 import twoColumnHeroes from './documents/twoColumnHeroes'
+import whySuperSteinCpa from './documents/whySuperSteinCpa'
 import bodyPortableText from './objects/bodyPortableText'
 import button from './objects/button'
 import checkList from './objects/checkList'
 import genericSectionFields from './objects/genericSectionFields'
 import iframe from './objects/iframe'
 import image from './objects/image'
+import whySuperSteinCpaObject from './objects/whySuperSteinCpaObject'
 import youtube from './objects/youtube'
 
 export const schemaTypes = [
@@ -42,8 +44,10 @@ export const schemaTypes = [
   twoColumnGenericSections,
   ourServicesSection,
   industriesSection,
+  whySuperSteinCpa,
   // Objects
   genericSectionFields,
+  whySuperSteinCpaObject,
   button,
   bodyPortableText,
   checkList,
