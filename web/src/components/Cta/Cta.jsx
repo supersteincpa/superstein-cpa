@@ -16,7 +16,7 @@ export const Cta = ({
   )
 
   return <section className={ctaClasses} data-testid="cta">
-    <div className='w-full max-w-[1512px]  mx-auto flex flex-col lg:flex-row items-start lg:items-center px-6 lg:px-20 justify-center gap-6 relative'>
+    <div className='w-full max-w-[1512px] mx-auto flex flex-col lg:flex-row items-start lg:items-center px-6 lg:px-20 justify-center gap-6 relative'>
       <p className='absolute top-[50%] left-0 text-sm font-bold text-gray-300 transition sm:hidden -translate-y-[-50%] -rotate-90 hidden lg:block'>
         08. contact us
       </p>
