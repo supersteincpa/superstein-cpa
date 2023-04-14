@@ -1,7 +1,7 @@
 export default {
-  name: 'pages',
+  title: 'Locations Pages',
+  name: 'locationsPages',
   type: 'document',
-  title: 'Pages',
   fields: [
     {
       title: 'SEO Title',
@@ -33,6 +33,30 @@ export default {
     {
       title: 'Title',
       name: 'title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: 'Desktop Image',
+      name: 'desktopImage',
+      type: 'customImage',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: 'Mobile Image',
+      name: 'mobileImage',
+      type: 'customImage',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: 'Heading',
+      name: 'heading',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: 'City',
+      name: 'city',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
@@ -110,26 +134,6 @@ export default {
             disableNew: true,
           },
           to: [{type: 'featuredBlogsSection'}],
-        },
-        {
-          title: 'Location Section',
-          name: 'locationSection',
-          type: 'reference',
-          validation: (Rule) => Rule.required(),
-          options: {
-            disableNew: true,
-          },
-          to: [{type: 'locationSection'}],
-        },
-        {
-          title: 'CTA',
-          name: 'cta',
-          type: 'reference',
-          validation: (Rule) => Rule.required(),
-          options: {
-            disableNew: true,
-          },
-          to: [{type: 'cta'}],
         },
       ],
     },

@@ -1,9 +1,12 @@
 import authors from './documents/authors'
 import blogs from './documents/blogs'
 import categories from './documents/categories'
+import cta from './documents/cta'
 import featuredBlogsSection from './documents/featuredBlogsSection'
 import heroSection from './documents/heroSection'
 import industriesSection from './documents/industriesSection'
+import locationSection from './documents/locationSection'
+import locationsPages from './documents/locationsPages'
 import meetTheTeam from './documents/meetTheTeam'
 import meetTheTeamSection from './documents/meetTheTeamSection'
 import ourServicesSection from './documents/ourServicesSection'
@@ -45,6 +48,9 @@ export const schemaTypes = [
   ourServicesSection,
   industriesSection,
   whySuperSteinCpa,
+  locationsPages,
+  cta,
+  locationSection,
   // Objects
   genericSectionFields,
   whySuperSteinCpaObject,
