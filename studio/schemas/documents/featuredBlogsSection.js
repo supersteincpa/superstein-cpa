@@ -10,6 +10,12 @@ export default {
       initialValue: 'Featured Blogs Section',
     },
     {
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+      initialValue: 'Featured Blogs Section',
+    },
+    {
       title: 'Heading',
       name: 'heading',
       type: 'string',

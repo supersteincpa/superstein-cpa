@@ -47,3 +47,19 @@
 .testimonail_arrow_box_shadow {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
+
+.testimonial_rich_text {
+  > div {
+    p {
+      
+      font-family: 'Public Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+    }
+  }
+}

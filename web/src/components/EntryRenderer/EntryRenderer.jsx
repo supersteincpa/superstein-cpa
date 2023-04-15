@@ -2,6 +2,12 @@ import React from 'react'
 import HeroSection from '../../sections/HeroSection/HeroSection'
 import GenericTwoColumn from '../GenericTwoColumn/GenericTwoColumn'
 import OurServicesSection from '../../sections/OurServicesSection/OurServicesSection'
+import IndustriesSection from '../../sections/IndustriesSection/IndustriesSection'
+import WhySuperSteinCpa from '../../sections/WhySuperSteinCpa/WhySuperSteinCpa'
+import TestimonialSection from '../../sections/TestimonialSection/TestimonialSection'
+import FeaturedBlogSection from '../../sections/FeaturedBlogSection/FeaturedBlogSection'
+import WhereWeLocated from '../../sections/WhereWeLocated/WhereWeLocated'
+import Cta from '../Cta/Cta'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -14,6 +20,24 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
         return (
           <OurServicesSection key={__typename} {...sectionData} {...props} />
         )
+      case 'SanityIndustriesSection':
+        return (
+          <IndustriesSection key={__typename} {...sectionData} {...props} />
+        )
+      case 'SanityWhySuperSteinCpa':
+        return <WhySuperSteinCpa key={__typename} {...sectionData} {...props} />
+      case 'SanityTestimonials':
+        return (
+          <TestimonialSection key={__typename} {...sectionData} {...props} />
+        )
+      case 'SanityFeaturedBlogsSection':
+        return (
+          <FeaturedBlogSection key={__typename} {...sectionData} {...props} />
+        )
+      case 'SanityLocationSection':
+        return <WhereWeLocated key={__typename} {...sectionData} {...props} />
+      case 'SanityCta':
+        return <Cta key={__typename} {...sectionData} {...props} />
       default:
         return null
     }

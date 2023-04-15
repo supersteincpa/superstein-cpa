@@ -22,7 +22,7 @@ export const IndustriesSection = ({
     ' w-full',
     isBackground
       ? 'py-[91px] lg:py-[190px] industries_main_container bg-gray-50'
-      : 'py-[100px] py-[64px] relative overflow-x-clip'
+      : 'lg:py-[140px] py-[64px] relative overflow-x-clip'
   )
 
   return (
@@ -39,9 +39,11 @@ export const IndustriesSection = ({
       )}
       <div className="max-w-[1512px] mx-auto w-full px-6 lg:px-20 xl:px-[164px] relative">
         {title && (
-          <p className="absolute -left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 text-sm leading-[18px] font-Public_Sans font-bold text-gray-500 tracking-[0.03em] ">
-            {title}
-          </p>
+          <div className="absolute lg:left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 ">
+            <p className="text-sm leading-[18px] font-Public_Sans font-bold text-gray-500 tracking-[0.03em] w-5 whitespace-nowrap uppercase">
+              {title}
+            </p>
+          </div>
         )}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center mb-6">
           <Heading otherClasses="font-Poppins text-gray-900 w-full lg:min-w-[337px] lg:w-[337px] pb-6 lg:pr-8 border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-b-addition_button_color lg:border-r-addition_button_color">

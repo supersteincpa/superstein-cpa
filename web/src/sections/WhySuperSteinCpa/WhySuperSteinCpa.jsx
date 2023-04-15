@@ -16,7 +16,7 @@ export const WhySuperSteinCpa = ({
 }) => {
   const whySuperSteinCpaClasses = clsx(
     otherClasses,
-    'w-full bg-gray-50 cta-clip-path py-[90px] lg:py-[210px]'
+    'w-full bg-gray-50 cta-clip-path pb-[120px] pt-[90px] lg:py-[210px] mb-[-63px] lg:mb-[-116px]'
   )
 
   return (
@@ -24,11 +24,13 @@ export const WhySuperSteinCpa = ({
       className={whySuperSteinCpaClasses}
       data-testid="why-super-stein-cpa"
     >
-      <div className="w-full max-w-[1512px] mx-auto flex-col lg:px-20 xl:px-[165px] px-6 items-center justify-start relative">
+      <div className="w-full max-w-[1512px] mx-auto flex-col lg:px-20 xl:px-[164px] px-6 items-center justify-start relative">
         {title && (
-          <p className="absolute -left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 text-sm leading-[18px] font-Public_Sans font-bold text-gray-500 tracking-[0.03em] ">
-            {title}
-          </p>
+          <div className="absolute lg:left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 ">
+            <p className="text-sm leading-[18px] font-Public_Sans font-bold text-gray-500 tracking-[0.03em] w-5 whitespace-nowrap uppercase">
+              {title}
+            </p>
+          </div>
         )}
         <Heading type="h2" otherClasses="mb-4">
           {mainHeading}

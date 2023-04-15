@@ -1,12 +1,13 @@
 import React from 'react'
 import clsx from 'clsx'
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Image } from '../../components/Image'
 import { Heading } from '../../components/Heading'
 import image1 from '../../images/temp/google-logo.png'
 import Slider from '../../components/Slider/Slider'
 import './testimonialsection.scss'
 import Icon from '../../components/Icon/Icon'
+import { RichText } from '../../components/RichText'
 export const TestimonialSection = ({
   otherClasses,
   title,
@@ -16,7 +17,7 @@ export const TestimonialSection = ({
 }) => {
   const testimonialSectionClasses = clsx(
     otherClasses,
-    'w-full relative py-[158px] lg:h-[740px] flex items-center'
+    'w-full relative pt-[100px] pb-[158px] lg:py-0 lg:h-[740px] flex items-center'
   )
 
   const arr = [
@@ -39,13 +40,31 @@ export const TestimonialSection = ({
       company: image1,
     },
   ]
+  const reviews = useStaticQuery(graphql`
+    query TesimonialReviews {
+      allSanityReviews {
+        nodes {
+          name
+          _rawSubText
+          userImage {
+            ...CustomImage
+          }
+          logo {
+            ...CustomImage
+          }
+        }
+      }
+    }
+  `)
+
+  const reviewData = reviews.allSanityReviews.nodes
 
   const TestimonailPrevArrow = (props) => {
     const { onClick } = props
     return (
       <button
         onClick={onClick}
-        className="testimonail_arrow_box_shadow p-2 h-fit rounded-full bg-addition_button_color absolute bottom-[-62px] lg:top-2/4 left-0 translate-y-[-50%] lg:left-[-40px] xl:left-[-129px]"
+        className="testimonail_arrow_box_shadow p-2 h-fit rounded-full bg-addition_button_color absolute bottom-[-62px] lg:top-2/4 left-0 translate-y-[-50%] lg:left-[-40px] xl:left-[-129px] z-10"
       >
         <Icon
           iconWidth={18}
@@ -61,7 +80,7 @@ export const TestimonialSection = ({
     return (
       <button
         onClick={onClick}
-        className="testimonail_arrow_box_shadow p-2 h-fit rounded-full bg-addition_button_color absolute bottom-[-62px] lg:top-2/4 translate-y-[-50%] right-0 lg:right-[-40px] xl:right-[-129px] rotate-180"
+        className="testimonail_arrow_box_shadow p-2 h-fit rounded-full bg-addition_button_color absolute bottom-[-62px] lg:top-2/4 translate-y-[-50%] right-0 lg:right-[-40px] xl:right-[-129px] rotate-180 z-10"
       >
         <Icon
           iconWidth={18}
@@ -99,9 +118,11 @@ export const TestimonialSection = ({
       />
       <div className="relative max-w-[1512px] mx-auto w-full">
         {title && (
-          <p className="absolute -left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 text-sm leading-[18px] font-Public_Sans font-bold text-white tracking-[0.03em] ">
-            {title}
-          </p>
+          <div className="absolute lg:left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 ">
+            <p className="text-sm leading-[18px] font-Public_Sans font-bold text-white tracking-[0.03em] w-5 whitespace-nowrap uppercase">
+              {title}
+            </p>
+          </div>
         )}
         <div className="max-w-[800px] mx-auto w-full px-4 lg:px-0 flex flex-col gap-6 ">
           <Heading type="h2" otherClasses="font-Poppins text-white text-center">
@@ -111,18 +132,17 @@ export const TestimonialSection = ({
             customSettings={settings}
             customClass="testimonial_main_container"
           >
-            {arr.map(({ company, _rawText, name }) => {
+            {reviewData.map(({ logo, _rawSubText, name }) => {
               return (
                 <div className="px-4">
                   <div className="w-full flex flex-col items-center gap-8">
-                    <p className="text-xl font-normal leading-[30px] text-center text-white">
-                      {_rawText}
-                    </p>
-                    <div className="px-4 py-[6px] rounded-full bg-white">
-                      <img
-                        src={company}
-                        alt={name}
-                        className="max-w-[61.05px] max-h-[20px] "
+                    <article className="testimonial_rich_text">
+                      <RichText richText={_rawSubText} />
+                    </article>
+                    <div className="h-[32px] w-[89.05px] justify-center rounded-full bg-white flex items-center">
+                      <Image
+                        imageData={logo}
+                        otherClasses="max-w-[61.05px] max-h-[20px] "
                       />
                     </div>
                     <p className="font-Public_Sans text-base leading-6 font-bold text-white text-center tracking-[0.03em]">

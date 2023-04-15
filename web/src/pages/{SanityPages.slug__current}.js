@@ -29,6 +29,12 @@ export const query = graphql`
         ...HeroSection
         ...GenericTwoColumnSection
         ...OurServicesSection
+        ...IndustrySection
+        ...WhySuperSteinCPASection
+        ...TestmionailSection
+        ...FeaturedBlogSection
+        ...WhereWeLocated
+        ...CTASection
       }
     }
   }
