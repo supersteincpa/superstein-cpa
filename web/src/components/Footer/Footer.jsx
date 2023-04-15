@@ -66,9 +66,9 @@ export const Footer = ({ otherClasses }) => {
             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               Case Studies
             </li>
-            <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
+            <Link to='blog' className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               Blog
-            </li>
+            </Link>
           </ul>
           <ul className="flex flex-col">
             <li className="text-white font-semibold text-base leading-6 mb-2">

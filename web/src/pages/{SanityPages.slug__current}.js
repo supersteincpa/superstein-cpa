@@ -35,6 +35,8 @@ export const query = graphql`
         ...FeaturedBlogSection
         ...WhereWeLocated
         ...CTASection
+        ...MiniHeroSection
+        ...BlogsSection
       }
     }
   }

@@ -18,6 +18,7 @@ export const Cta = ({
     otherClasses,
     'w-full cta-clip-path bg-gray-50 py-[91px] lg:py-[210px] -mb-8 lg:mb-[-65px]'
   )
+  console.log(ctaButtons);
 
   return (
     <section className={ctaClasses} data-testid="cta">
@@ -42,7 +43,7 @@ export const Cta = ({
           </article>
         </div>
         <div className="flex gap-6">
-          {ctaButtons.map((nodes) => {
+          {(ctaButtons||[]).map((nodes) => {
             return <Button {...nodes} otherClasses="whitespace-nowrap" />
           })}
         </div>

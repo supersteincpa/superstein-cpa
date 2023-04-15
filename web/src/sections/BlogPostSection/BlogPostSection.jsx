@@ -36,6 +36,36 @@ export const BlogPostSection = ({
     document.body.removeChild(el)
   }
 
+  const [userEmail, setUserEmail] = useState('')
+  function encode(data) {
+    const formData = new FormData()
+    for (const key of Object.keys(data)) {
+      formData.append(key, data[key])
+    }
+    return formData
+  }
+  function handleChange(e) {
+    setUserEmail(e.target.value)
+  }
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const form = e.target
+    try {
+      await fetch('/', {
+        method: 'POST',
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          email: userEmail,
+        }),
+      })
+      setUserEmail('')
+      form.reset()
+    } catch (error) {
+      alert(error)
+    }
+  }
+
+
   useEffect(() => {
     let timer
     if (copied) {
@@ -113,6 +143,41 @@ export const BlogPostSection = ({
       </div>
       <div className="flex w-fit mx-auto gap-6 mb-[60px] lg:mb-[120px]">
         {shareButtons}
+      </div>
+      <div className="max-w-[1054px] max-h-[282px] mx-auto w-full bg-gray-50 pt-[72px]  pb-[80px] px-10 mb-[120px] lg:mb-[120px] border-[1px] border-white rounded-[15px]">
+        <Heading
+          type="h4"
+          otherClasses="font-Poppins font-normal  w-fit mx-auto mb-6 text-center "
+        >
+          Subscribe Newsletter
+        </Heading>
+        <p className="text-base font-Public_Sans text-gray-800 mb-6 text-center max-w-[580px] mx-auto  ">
+          Subscribe to our newsletter, so you can be the first to find out the
+          latest Blogs
+        </p>
+        <form
+          name={'newsletter-subscription'}
+          method="post"
+          action=""
+          data-netlify = 'true'
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-3 sm:flex-row sm:gap-0 items-center justify-center w-full "
+        >
+          <div className='flex flex-row gap-2 w-full md:w-[575px] max-w-[575px]' >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onChange={handleChange}
+            required
+            placeholder="Enter your email address"
+            className="max-w-[352px] w-full  h-12  border-[1px] border-gray-300 pl-4 text-base rounded-[30px] "
+          />
+          <button className="font-Poppins text-[18px] leading-6 font-normal text-white px-[40px] py-[12px] bg-[#4679E6] rounded-[30px]  ">
+            Subscribe
+          </button>
+          </div>
+        </form>
       </div>
     </section>
   )

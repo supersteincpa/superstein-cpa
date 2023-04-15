@@ -131,6 +131,26 @@ export default {
           },
           to: [{type: 'cta'}],
         },
+        {
+          title: 'Mini Hero Section',
+          name: 'miniHeroSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'miniHeroSection'}],
+        },
+        {
+          title: 'Blogs Reference',
+          name: 'blogsReference',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'blogsReference'}],
+        },
       ],
     },
   ],

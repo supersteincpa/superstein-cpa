@@ -134,9 +134,9 @@ export const Navbar = ({ otherClasses }) => {
                     <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
                       Testimonial
                     </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
+                    <Link to='/blog' className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
                       Blog
-                    </li>
+                    </Link>
                   </ul>
                 </div>
               </div>

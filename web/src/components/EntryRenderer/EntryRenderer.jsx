@@ -8,6 +8,8 @@ import TestimonialSection from '../../sections/TestimonialSection/TestimonialSec
 import FeaturedBlogSection from '../../sections/FeaturedBlogSection/FeaturedBlogSection'
 import WhereWeLocated from '../../sections/WhereWeLocated/WhereWeLocated'
 import Cta from '../Cta/Cta'
+import MiniHeroSection from '../../sections/MiniHeroSection/MiniHeroSection'
+import BlogPage from '../../sections/BlogPage/BlogPage'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -38,6 +40,10 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
         return <WhereWeLocated key={__typename} {...sectionData} {...props} />
       case 'SanityCta':
         return <Cta key={__typename} {...sectionData} {...props} />
+      case 'SanityMiniHeroSection':
+        return <MiniHeroSection key={__typename} {...sectionData} {...props} />
+      case 'SanityBlogsReference':
+        return <BlogPage key={__typename} {...sectionData} {...props} />
       default:
         return null
     }
