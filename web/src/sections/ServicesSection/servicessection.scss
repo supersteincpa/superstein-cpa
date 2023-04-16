@@ -1,0 +1,7 @@
+.service-clip-path {
+    clip-path: polygon(0% 1.8%, 100% 0%, 100% 97.3%, 0% 100%);
+
+    @media (min-width: 1024px) {
+        clip-path: polygon(0% 5.5%, 100% 0%, 100% 93.8%, 0% 100%);
+    }
+}

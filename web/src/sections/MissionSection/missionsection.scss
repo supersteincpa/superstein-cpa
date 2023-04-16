@@ -1,0 +1,7 @@
+.mission-clip-path {
+    clip-path: polygon(0% 3.8%, 100% 0%, 100% 95.3%, 0% 100%);
+
+    @media (min-width: 1024px) {
+        clip-path: polygon(0% 10.8%, 100% 0%, 100% 88.3%, 0% 100%);
+    }
+}
