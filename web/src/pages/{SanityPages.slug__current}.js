@@ -37,6 +37,7 @@ export const query = graphql`
         ...CTASection
         ...MiniHeroSection
         ...BlogsSection
+        ...ReviewsPageSection
       }
     }
   }

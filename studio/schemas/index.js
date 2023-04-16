@@ -13,6 +13,7 @@ import meetTheTeamSection from './documents/meetTheTeamSection'
 import miniHeroSection from './documents/miniHeroSection'
 import pages from './documents/pages'
 import positions from './documents/positions'
+import reviewsReference from './documents/reviewsReference'
 import reviewsSection from './documents/reviewsSection'
 import servicesPages from './documents/servicesPages'
 import servicesSection from './documents/servicesSection'
@@ -54,6 +55,7 @@ export const schemaTypes = [
   locationSection,
   miniHeroSection,
   blogsReference,
+  reviewsReference,
 
   // Objects
   genericSectionFields,

@@ -151,6 +151,16 @@ export default {
           },
           to: [{type: 'blogsReference'}],
         },
+        {
+          title: 'Reviews Reference',
+          name: 'reviewsReference',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'reviewsReference'}],
+        },
       ],
     },
   ],
