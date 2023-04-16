@@ -23,21 +23,21 @@ export default {
       title: 'Section Title',
       name: 'sectionTitle',
       type: 'string',
-      hidden: ({parent}) => !parent?.type || parent?.type === 'secondary',  
-          },
+      hidden: ({parent}) => !parent?.type || parent?.type === 'secondary',
+    },
 
-          {
-            title: 'Background Desktop Image',
-            name: 'backgroundDesktopImage',
-            type: 'customImage',
-            hidden: ({parent}) => !parent?.type || parent?.type === 'primary', 
-          },
-          {
-            title: 'Background Mobile Image',
-            name: 'backgroundMobileImage',
-            type: 'customImage',
-            hidden: ({parent}) => !parent?.type || parent?.type === 'primary', 
-          },
+    {
+      title: 'Background Desktop Image',
+      name: 'backgroundDesktopImage',
+      type: 'customImage',
+      hidden: ({parent}) => !parent?.type || parent?.type === 'primary',
+    },
+    {
+      title: 'Background Mobile Image',
+      name: 'backgroundMobileImage',
+      type: 'customImage',
+      hidden: ({parent}) => !parent?.type || parent?.type === 'primary',
+    },
     {
       title: 'Main Heading',
       name: 'mainHeading',
@@ -47,7 +47,6 @@ export default {
       title: 'Sub Text',
       name: 'subText',
       type: 'bodyPortableText',
-      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Button',

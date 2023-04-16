@@ -1,23 +1,24 @@
 .mini_hero_section_rich_text {
-    > div {
-      > p {
-        @media (min-width: 1024px) {
-          font-size: 20px;
-        }
-        font-family: 'Public Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 30px;
-        font-size: 16px;
-        letter-spacing: 0.03em;
-        color: #ffffff;
+  > div {
+    > p {
+      @media (min-width: 1024px) {
+        font-size: 20px;
       }
+      font-family: 'Public Sans', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
     }
   }
+}
 
+.main_container_min_hero_section {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 
-  .mini_hero_section_main_container {
-    -webkit-clip-path: polygon(0 0, 100% 1%, 100% 85%, 0% 100%);
-    clip-path: polygon(0 0, 100% 1%, 100% 85%, 0% 100%);
+  @media (min-width: 1024px) {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   }
-  
+}

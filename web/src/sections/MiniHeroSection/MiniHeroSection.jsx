@@ -20,11 +20,10 @@ export const MiniHeroSection = ({
 }) => {
   const miniHeroSectionClasses = clsx(
     otherClasses,
-    _rawSubText ? 'lg:h-[480px]' : 'lg:h-[390px]',
+    'main_container_min_hero_section  mt-[66px] lg:mt-[84px] pt-[85px] lg:pt-[134px]  pb-[109px] lg:pb-[176px]',
     type === 'secondary',
-    ' w-full relative mt-[66px] lg:mt-[84px] z-10',
-    type === 'primary' &&
-      '  mini_hero_section_main_container bg-gray-900 mt-[60px] lg:mt-[84px]'
+    ' w-full relative z-10',
+    type === 'primary' && 'bg-gray-900'
   )
 
   return (
@@ -44,42 +43,51 @@ export const MiniHeroSection = ({
         />
       )}
       <div
-        className={clsx('max-w-[1512px]  mx-auto',
-          type === 'secondary' &&
-            ' items-center flex justify-center px-6 pt-10 pb-[70px] md:pb-[170px] lg:pl-20 xl:pl-[164px] lg:pr-0 ',
-          _rawSubText ? 'md:pt-[80px]' : 'md:pt-[134px]',
-          type === 'primary' &&
-            ' px-6 pt-10 pb-[60px] relative md:pt-[118px] md:pb-[156px] lg:pl-[118px] '
+        className={clsx(
+          'max-w-[1512px]  mx-auto px-6 lg:px-20 xl:px-[164px]',
+          type === 'secondary' && ' items-center flex justify-center',
+          type === 'primary' && ' relative'
         )}
       >
         {type === 'primary' && sectionTitle && (
-          <p className="hidden lg:block absolute left-6 translate-y-[-50%] top-[50%] -rotate-90 text-gray-500">
-            {sectionTitle}
-          </p>
+          <div className="absolute lg:left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 ">
+            <p className="text-sm leading-[18px] font-Public_Sans font-bold text-gray-500 tracking-[0.03em] w-5 whitespace-nowrap uppercase">
+              {sectionTitle}
+            </p>
+          </div>
         )}
         <div
           className={clsx(
-            type === 'secondary' &&
-              ' w-full relative lg:max-w-[875px] flex flex-col justify-center items-center',
-            type === 'primary' && ' w-full  lg:max-w-[848px]'
+            'w-full relative lg:max-w-[875px] flex flex-col',
+            type === 'secondary' && ' justify-center items-center',
+            type === 'primary' && ' w-full'
           )}
         >
           {mainHeading && (
             <Heading
-              type="h1"
-              otherClasses="lg:text-[52px] lg:leading-[78px] text-[34px] leading-[44px] mb-8 text-white font-light font-Poppins "
+              type="h6"
+              otherClasses={clsx(
+                'font-light text-[34px] lg:text-[52px] leading-[44px] lg:leading-[78px] text-white font-Poppins',
+                type === 'secondary' ? 'text-center' : 'text-left'
+              )}
             >
               {mainHeading}
             </Heading>
           )}
-          {type === 'primary' && <div className='bg-addition_button_color h-[2px] mb-6'></div>}
+          {type === 'primary' && (
+            <div className="bg-addition_button_color h-[2px] mb-6"></div>
+          )}
           {_rawSubText && (
             <article className="mb-6 mini_hero_section_rich_text ">
               <RichText richText={_rawSubText} />
             </article>
           )}
           {button && (
-            <Button onClick={() => toggleFunc('Contact Us')} {...button} />
+            <Button
+              onClick={() => toggleFunc('Contact Us')}
+              {...button}
+              otherClasses="w-fit"
+            />
           )}
         </div>
       </div>

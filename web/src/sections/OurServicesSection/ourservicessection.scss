@@ -51,3 +51,17 @@
     }
   }
 }
+
+.our_services_button_color_icon {
+  > img {
+    filter: invert(71%) sepia(100%) saturate(1%) hue-rotate(15deg)
+      brightness(95%) contrast(91%);
+  }
+}
+
+.active_services_hub_icon {
+  > img {
+    filter: invert(65%) sepia(65%) saturate(6371%) hue-rotate(205deg)
+      brightness(94%) contrast(91%);
+  }
+}

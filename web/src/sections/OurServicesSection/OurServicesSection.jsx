@@ -8,6 +8,10 @@ import OurServicesCard from '../../components/OurServicesCard/OurServicesCard'
 import { graphql, useStaticQuery } from 'gatsby'
 import { RichText } from '../../components/RichText'
 import { useState } from 'react'
+import allServicesImage from '../../images/all-services-icon.png'
+import advisoryBulb from '../../images/advisory-bulb-icon.png'
+import taxCalculatorIcon from '../../images/tax-calculator-icon.png'
+import assuranceIcon from '../../images/assurance-icon.png'
 export const OurServicesSection = ({
   otherClasses,
   isBackgroundColor,
@@ -18,8 +22,11 @@ export const OurServicesSection = ({
 }) => {
   const ourServicesSectionClasses = clsx(
     otherClasses,
-    'our_services_main_container w-full  py-[100px] lg:py-[150px] relative z-10',
-    isBackgroundColor ? 'bg-transparent' : 'bg-gray-900'
+    'our_services_main_container w-full relative z-10',
+    isBackgroundColor ? 'bg-transparent' : 'bg-gray-900',
+    isFilterBar
+      ? 'mb-[34px] lg:mb-[-108px] pt-[100px] pb-[150px] lg:pt-[150px] lg:pb-[230px]'
+      : 'py-[100px] lg:py-[150px]'
   )
 
   const ourServices = useStaticQuery(graphql`
@@ -188,10 +195,21 @@ export const OurServicesSection = ({
                 active ? ' border-b-[3px] border-b-[#3F73E1]' : ''
               )}
             >
-              <span className="our_services_button_color_icon"></span>
+              <span
+                className={clsx(
+                  'our_services_button_color_icon',
+                  active && 'active_services_hub_icon'
+                )}
+              >
+                <img
+                  src={allServicesImage}
+                  alt="all-services-icon"
+                  className="w-6 h-6"
+                />
+              </span>
               <p
                 className={clsx(
-                  'text-base font-semibold py-3 px-12 font-Public_Sans text capitalize',
+                  'text-base font-semibold pb-3 px-12 font-Public_Sans text capitalize',
                   active ? 'text-addition_button_color' : 'text-gray-200'
                 )}
               >
@@ -209,10 +227,37 @@ export const OurServicesSection = ({
                     toggle === index ? ' border-b-[3px] border-b-[#3F73E1]' : ''
                   )}
                 >
-                  <span className="our_services_button_color_icon"></span>
+                  <span
+                    className={clsx(
+                      'our_services_button_color_icon',
+                      toggle === index && 'active_services_hub_icon'
+                    )}
+                  >
+                    {servicesType === 'Advisory' && (
+                      <img
+                        src={advisoryBulb}
+                        alt="all-services-icon"
+                        className="w-6 h-6"
+                      />
+                    )}
+                    {servicesType === 'Tax' && (
+                      <img
+                        src={taxCalculatorIcon}
+                        alt="all-services-icon"
+                        className="w-6 h-6"
+                      />
+                    )}
+                    {servicesType === 'Assurance' && (
+                      <img
+                        src={assuranceIcon}
+                        alt="all-services-icon"
+                        className="w-6 h-6"
+                      />
+                    )}
+                  </span>
                   <p
                     className={clsx(
-                      'text-base font-semibold py-3 px-12 font-Public_Sans text',
+                      'text-base font-semibold pb-3 px-12 font-Public_Sans text',
                       toggle === index
                         ? 'text-addition_button_color'
                         : 'text-gray-200'
