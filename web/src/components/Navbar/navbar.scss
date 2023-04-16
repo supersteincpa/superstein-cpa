@@ -26,13 +26,36 @@
   }
 }
 .navbar_mobile_menu_bar {
-  @media (min-width: 1024px) {
-    height: auto;
-  }
   overflow: auto;
   height: calc(100vh - 62px);
+  clip-path: circle(0% at 100% 0px);
+  transition: all 0.5s ease-in-out;
+
+  > ul {
+    opacity: 0;
+    width: 0;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+  }
+  @media (min-width: 1024px) {
+    height: auto;
+    clip-path: none;
+    > ul {
+      width: auto;
+      opacity: 1;
+      transition: 0.3s;
+      transition-delay: 0.3s;
+    }
+  }
 }
 
+.navbar_clip_path_rounde {
+  clip-path: circle(100%);
+  > ul {
+    width: 100%;
+    opacity: 1;
+  }
+}
 .navbar_menu_list_wrapper {
   > div {
     padding: 0px;

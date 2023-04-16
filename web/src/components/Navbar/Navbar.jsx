@@ -11,7 +11,7 @@ import { useState } from 'react'
 export const Navbar = ({ otherClasses }) => {
   const navbarClasses = clsx(
     otherClasses,
-    'fixed top-0 translate-x-[-50%] left-2/4 z-20 w-full bg-black border-t-[4px] border-t-gray-600'
+    'fixed top-0 left-0 z-20 w-full bg-black border-t-[4px] border-t-gray-600'
   )
 
   const [toggleNav, setToggleNav] = useState(false)
@@ -21,7 +21,7 @@ export const Navbar = ({ otherClasses }) => {
 
   return (
     <nav className={navbarClasses} id="navbar" data-testid="navbar">
-      <div className="max-w-[1512px] mx-auto px-6  lg:px-10 flex items-center justify-between relative">
+      <div className="max-w-[1512px] mx-auto px-6 xl:px-10 flex items-center justify-between relative">
         <div className="border-r-[1px] border-r-gray-800 pr-[22px] lg:hidden h-[62px] flex items-center ">
           <div className="navbar_phone_button p-2 active:p-[5px] rounded-full ">
             <Icon
@@ -40,13 +40,15 @@ export const Navbar = ({ otherClasses }) => {
         </Link>
         <div
           className={clsx(
-            toggleNav ? 'flex' : 'hidden lg:flex',
-            ' flex-col lg:flex-row items-center gap-8 absolute lg:static top-[62px] lg:top-0 navbar_mobile_menu_bar lg:bg-transparent bg-gray-900 lg:w-auto w-full lg:left-0 left-0 lg:p-0 px-6 pt-8'
+            toggleNav
+              ? 'flex navbar_clip_path_rounde right-0 top-[62px]'
+              : ' flex top-[62px] right-0',
+            ' flex-col lg:flex-row items-center gap-6 xl:gap-8 absolute lg:static  lg:top-0 navbar_mobile_menu_bar lg:bg-transparent bg-gray-900 lg:w-auto w-full lg:left-0  lg:p-0 px-6 pt-8'
           )}
         >
           <ul className="lg:w-auto w-full flex flex-col lg:gap-0 gap-4 lg:flex-row items-center">
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
-              <button className="flex lg:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
+              <button className="flex lg:px-4 xl:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
                 Services
                 <span className="group-hover:rotate-180 lg:group-hover:bg-addition_button_color  bg-white block navbar_drop_down_chevron"></span>
               </button>
@@ -79,7 +81,7 @@ export const Navbar = ({ otherClasses }) => {
               </div>
             </li>
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
-              <button className="flex lg:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
+              <button className="flex lg:px-4 xl:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
                 Industries
                 <span className="group-hover:bg-addition_button_color bg-white block navbar_drop_down_chevron"></span>
               </button>
@@ -118,7 +120,7 @@ export const Navbar = ({ otherClasses }) => {
               </div>
             </li>
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
-              <button className="flex lg:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
+              <button className="flex lg:px-4 xl:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
                 About
                 <span className="group-hover:bg-addition_button_color bg-white block navbar_drop_down_chevron"></span>
               </button>
@@ -142,7 +144,7 @@ export const Navbar = ({ otherClasses }) => {
               </div>
             </li>
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
-              <button className="flex lg:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
+              <button className="flex lg:px-4 xl:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
                 Locations
                 <span className="group-hover:bg-addition_button_color bg-white block navbar_drop_down_chevron"></span>
               </button>
