@@ -6,6 +6,8 @@ import cta from './documents/cta'
 import featuredBlogsSection from './documents/featuredBlogsSection'
 import heroSection from './documents/heroSection'
 import industriesSection from './documents/industriesSection'
+import industryPages from './documents/industryPages'
+import industryServicesSection from './documents/industryServicesSection'
 import locationSection from './documents/locationSection'
 import locationsPages from './documents/locationsPages'
 import meetTheTeam from './documents/meetTheTeam'
@@ -28,6 +30,7 @@ import checkList from './objects/checkList'
 import genericSectionFields from './objects/genericSectionFields'
 import iframe from './objects/iframe'
 import image from './objects/image'
+import industryServicesCardObject from './objects/industryServicesCardObject'
 import ourBodyObject from './objects/ourBodyObject'
 import servicesCardObject from './objects/servicesCardObject'
 import whySuperSteinCpaObject from './objects/whySuperSteinCpaObject'
@@ -59,11 +62,14 @@ export const schemaTypes = [
   blogsReference,
   reviewsReference,
   ourBodySection,
+  industryServicesSection,
+  industryPages,
 
   // Objects
   genericSectionFields,
   whySuperSteinCpaObject,
   servicesCardObject,
+  industryServicesCardObject,
   ourBodyObject,
   button,
   bodyPortableText,

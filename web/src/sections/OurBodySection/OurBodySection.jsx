@@ -21,7 +21,6 @@ export const OurBodySection = ({
     otherClasses,
     'w-full bg-gray-900 py-[92px] lg:py-[212px] our_body_section_main_container relative z-10'
   )
-  console.log(cards)
 
   const [isMounted, setIsMounted] = useState(false) // Need this for the react-tooltip
   useEffect(() => {

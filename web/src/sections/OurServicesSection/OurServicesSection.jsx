@@ -129,6 +129,16 @@ export const OurServicesSection = ({
     setActive(true)
   }
 
+  const location = typeof window !== 'undefined' && window.location.pathname
+  const currentLocation =
+    location &&
+    location.substring(0, location.length - 1).slice(1, location.length - 1)
+  console.log(currentLocation)
+
+  const filterBypathName = nodes.filter(
+    (nodes) => nodes.slug.current != currentLocation
+  )
+
   return (
     <section
       className={ourServicesSectionClasses}
@@ -296,11 +306,9 @@ export const OurServicesSection = ({
           </select>
         </div>
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-y-12 gap-x-10 xl:gap-x-20 mt-6 lg:mt-16">
-          {data.length === 0 ? (
+          {isBackgroundColor ? (
             <>
-              {nodes.map((nodes) => {
-                console.log(nodes)
-
+              {filterBypathName.map((nodes) => {
                 return (
                   <OurServicesCard
                     {...nodes}
@@ -313,16 +321,33 @@ export const OurServicesSection = ({
             </>
           ) : (
             <>
-              {data.map((nodes) => {
-                return (
-                  <OurServicesCard
-                    {...nodes}
-                    otherClasses={clsx(
-                      isBackgroundColor && 'our_services_card_black_color'
-                    )}
-                  />
-                )
-              })}
+              {data.length === 0 ? (
+                <>
+                  {nodes.map((nodes) => {
+                    return (
+                      <OurServicesCard
+                        {...nodes}
+                        otherClasses={clsx(
+                          isBackgroundColor && 'our_services_card_black_color'
+                        )}
+                      />
+                    )
+                  })}
+                </>
+              ) : (
+                <>
+                  {data.map((nodes) => {
+                    return (
+                      <OurServicesCard
+                        {...nodes}
+                        otherClasses={clsx(
+                          isBackgroundColor && 'our_services_card_black_color'
+                        )}
+                      />
+                    )
+                  })}
+                </>
+              )}
             </>
           )}
         </div>

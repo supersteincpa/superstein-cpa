@@ -18,7 +18,6 @@ export const Cta = ({
     otherClasses,
     'w-full cta-clip-path bg-gray-50 py-[91px] lg:py-[210px] -mb-8 lg:mb-[-65px]'
   )
-  console.log(ctaButtons);
 
   return (
     <section className={ctaClasses} data-testid="cta">
