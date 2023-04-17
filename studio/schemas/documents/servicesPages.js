@@ -58,6 +58,16 @@ export default {
           to: [{type: 'twoColumnHeroes'}],
         },
         {
+          title: 'Our Body Section',
+          name: 'ourBodySection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'ourBodySection'}],
+        },
+        {
           title: 'Two Column Generic Sections',
           name: 'twoColumnGenericSections',
           type: 'reference',

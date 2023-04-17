@@ -28,6 +28,7 @@ export const query = graphql`
       metaDescription
       pageBuilder {
         ...TwoColumnHeroesSection
+        ...OurBodySection
         ...GenericTwoColumnSection
         ...IndustrySection
         ...TestmionailSection

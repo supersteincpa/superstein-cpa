@@ -1,0 +1,987 @@
+export default {
+  __typename: 'SanityOurBodySection',
+  identifier: 'BUSINESS ADVISORY',
+  title: '02.  solutions',
+  mainHeading: 'The Benefits of Getting Professional Business Advice',
+  _rawSubText: [
+    {
+      _key: '00745bd8d4c5',
+      _type: 'block',
+      children: [
+        {
+          _key: '702321ebfb0c0',
+          _type: 'span',
+          marks: [],
+          text: 'Gain an edge in your industry with an outside perspective that can open you up to new ideas. We can help you:',
+        },
+      ],
+      markDefs: [],
+      style: 'normal',
+    },
+    {
+      _key: '475be7710560',
+      _type: 'block',
+      children: [
+        {
+          _key: '892ffa023f400',
+          _type: 'span',
+          marks: [],
+          text: 'Identify market opportunities',
+        },
+      ],
+      level: 1,
+      listItem: 'bullet',
+      markDefs: [],
+      style: 'normal',
+    },
+    {
+      _key: 'ac15d00ffa33',
+      _type: 'block',
+      children: [
+        {
+          _key: '0a0583517ba50',
+          _type: 'span',
+          marks: [],
+          text: 'Improve overall efficiency',
+        },
+      ],
+      level: 1,
+      listItem: 'bullet',
+      markDefs: [],
+      style: 'normal',
+    },
+    {
+      _key: '1a4b424e9f38',
+      _type: 'block',
+      children: [
+        {
+          _key: 'f5e39b3a58c40',
+          _type: 'span',
+          marks: [],
+          text: 'Prevent or reduce risks',
+        },
+      ],
+      level: 1,
+      listItem: 'bullet',
+      markDefs: [],
+      style: 'normal',
+    },
+    {
+      _key: 'af53064fdd8f',
+      _type: 'block',
+      children: [
+        {
+          _key: '9708d8e8158c0',
+          _type: 'span',
+          marks: [],
+          text: 'Refine a product idea or business plan',
+        },
+      ],
+      level: 1,
+      listItem: 'bullet',
+      markDefs: [],
+      style: 'normal',
+    },
+    {
+      _key: 'ee4ea60a6fe3',
+      _type: 'block',
+      children: [
+        {
+          _key: 'c94c1be4554c0',
+          _type: 'span',
+          marks: [],
+          text: 'Gain competitive insight',
+        },
+      ],
+      level: 1,
+      listItem: 'bullet',
+      markDefs: [],
+      style: 'normal',
+    },
+    {
+      _key: '7dcf04efae1d',
+      _type: 'block',
+      children: [
+        {
+          _key: 'a36e589c22220',
+          _type: 'span',
+          marks: [],
+          text: 'Superstein PA can also be an impartial party that gives you the “unvarnished” truth—the honest answers that may help you avoid costly missteps.',
+        },
+      ],
+      markDefs: [],
+      style: 'normal',
+    },
+  ],
+  cards: [
+    {
+      title: 'Our Business Advisory Services',
+      heading: 'Our Business Advisory Services',
+      _rawSubText: [
+        {
+          _key: '79595b44d034',
+          _type: 'block',
+          children: [
+            {
+              _key: '0efc9d91e8110',
+              _type: 'span',
+              marks: [],
+              text: 'Superstein PA’s professionals have the financial and regulatory knowledge to help you analyze opportunities and conduct due diligence for a wide range of needs. We then review our findings with you to help you make the best decisions moving forward.',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+      ],
+      button: {
+        label: null,
+        variant: null,
+        action: null,
+        form: null,
+        slug: null,
+      },
+    },
+    {
+      title: 'Accounting Software: Advice & Implementation',
+      heading: 'Accounting Software: Advice & Implementation',
+      _rawSubText: [
+        {
+          _key: 'e30918e34637',
+          _type: 'block',
+          children: [
+            {
+              _key: '2a66f4d693620',
+              _type: 'span',
+              marks: [],
+              text: 'We work with you to learn about your business needs and activities so we can recommend the best accounting software platform.',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'c484878538f1',
+          _type: 'block',
+          children: [
+            {
+              _key: '6a9fe6891f290',
+              _type: 'span',
+              marks: [],
+              text: 'Once you’ve landed on a decision, we’re with you every step of the way—from the original set-up and data input to conversion and final implementation, training, and use.',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+      ],
+      button: {
+        label: null,
+        variant: null,
+        action: null,
+        form: null,
+        slug: null,
+      },
+    },
+    {
+      title: 'Mergers & Acquisitions',
+      heading: 'Mergers & Acquisitions',
+      _rawSubText: [
+        {
+          _key: '45d6237e63f3',
+          _type: 'block',
+          children: [
+            {
+              _key: '3d244184f6870',
+              _type: 'span',
+              marks: [],
+              text: 'These are two critical junctures for business organizations that require high-level planning, strategy, and structure to ensure a smooth transition. Superstein PA offers a full range of comprehensive services for mergers and acquisitions, including:',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'ad089a593cd4',
+          _type: 'block',
+          children: [
+            {
+              _key: '1aa43a63ccb30',
+              _type: 'span',
+              marks: [],
+              text: 'Deal Structure Consulting',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '9c61556a3696',
+          _type: 'block',
+          children: [
+            {
+              _key: '79f9df17922a0',
+              _type: 'span',
+              marks: [],
+              text: 'Due Diligence & Reporting',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'c2e6a2b94ef7',
+          _type: 'block',
+          children: [
+            {
+              _key: '659e1ae15f810',
+              _type: 'span',
+              marks: [],
+              text: 'Earnings Report Review & Consultation',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '32d0f65a0496',
+          _type: 'block',
+          children: [
+            {
+              _key: 'c75dece0de830',
+              _type: 'span',
+              marks: [],
+              text: 'Financial Statement Review',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'cf45fb428596',
+          _type: 'block',
+          children: [
+            {
+              _key: 'db4c6644dece0',
+              _type: 'span',
+              marks: [],
+              text: 'Implementation of New Procedures & Reporting',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '236ff35eafce',
+          _type: 'block',
+          children: [
+            {
+              _key: 'e521fac368770',
+              _type: 'span',
+              marks: [],
+              text: 'Integration of Accounting Systems',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '19458007a50c',
+          _type: 'block',
+          children: [
+            {
+              _key: '788c1d1cf9e60',
+              _type: 'span',
+              marks: [],
+              text: 'Pre-Sale Planning & Post-Sale Execution',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'aadd2bb5b831',
+          _type: 'block',
+          children: [
+            {
+              _key: 'ed6ca0a4ccc00',
+              _type: 'span',
+              marks: [],
+              text: 'Projections & Forecasting',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '3cf8c7d54700',
+          _type: 'block',
+          children: [
+            {
+              _key: '58f1f4a583ef0',
+              _type: 'span',
+              marks: [],
+              text: 'Tax Implication Analysis & Review',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'cdeeda98d978',
+          _type: 'block',
+          children: [
+            {
+              _key: '601827efec370',
+              _type: 'span',
+              marks: [],
+              text: 'Tax Structure Advising',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+      ],
+      button: {
+        label: null,
+        variant: null,
+        action: null,
+        form: null,
+        slug: null,
+      },
+    },
+    {
+      title: 'Projections & Forecasting',
+      heading: 'Projections & Forecasting',
+      _rawSubText: [
+        {
+          _key: 'f3585c01c7a0',
+          _type: 'block',
+          children: [
+            {
+              _key: 'b840ada89d0f0',
+              _type: 'span',
+              marks: [],
+              text: 'While it’s impossible to eliminate all risk, our projections and forecasting work provides you with the information you need to make important decisions and operate well daily. We can help create predictability and predict potential outcomes for your:',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'bf84d62080e7',
+          _type: 'block',
+          children: [
+            {
+              _key: '8e004c7f27f50',
+              _type: 'span',
+              marks: [],
+              text: 'Accounts Payable/Receivable Processes',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'e2167da7c3f5',
+          _type: 'block',
+          children: [
+            {
+              _key: '6f061b98e5070',
+              _type: 'span',
+              marks: [],
+              text: 'Financial Controlling',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '5cece9623497',
+          _type: 'block',
+          children: [
+            {
+              _key: '23233ddf9e620',
+              _type: 'span',
+              marks: [],
+              text: 'Planned Disbursements',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '3f42e6141cb1',
+          _type: 'block',
+          children: [
+            {
+              _key: '717cf477a9b50',
+              _type: 'span',
+              marks: [],
+              text: 'Risk Analysis',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+      ],
+      button: {
+        label: null,
+        variant: null,
+        action: null,
+        form: null,
+        slug: null,
+      },
+    },
+    {
+      title: 'Our Specialties',
+      heading: null,
+      _rawSubText: [
+        {
+          _key: '437ea4d82620',
+          _type: 'block',
+          children: [
+            {
+              _key: '05b7f7a49f200',
+              _type: 'span',
+              marks: [],
+              text: 'Our Specialties',
+            },
+          ],
+          markDefs: [],
+          style: 'h2',
+        },
+        {
+          _key: 'c5685fef2293',
+          _type: 'block',
+          children: [
+            {
+              _key: '5220b9adfdd10',
+              _type: 'span',
+              marks: [],
+              text: 'Healthcare Reporting & Consulting',
+            },
+          ],
+          markDefs: [],
+          style: 'h3',
+        },
+        {
+          _key: '52d3334a0d76',
+          _type: 'block',
+          children: [
+            {
+              _key: '956beaddcb430',
+              _type: 'span',
+              marks: [],
+              text: 'Superstein PA has worked extensively with the healthcare industry and can bring scale to your organization or project to help you meet regulatory, privacy, and reporting obligations.',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+      ],
+      button: {
+        label: null,
+        variant: null,
+        action: null,
+        form: null,
+        slug: null,
+      },
+    },
+    {
+      title: 'Real Estate',
+      heading: 'Real Estate',
+      _rawSubText: [
+        {
+          _key: '642e11dbccf0',
+          _type: 'block',
+          children: [
+            {
+              _key: '03a685030ddc0',
+              _type: 'span',
+              marks: [],
+              text: 'Our team’s goal is to make your real estate investments work for you. Our services include:',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '1d867b583c19',
+          _type: 'block',
+          children: [
+            {
+              _key: 'ca6745e7078b0',
+              _type: 'span',
+              marks: [],
+              text: 'Tax Planning & Advising',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '9888eef4800d',
+          _type: 'block',
+          children: [
+            {
+              _key: '3ae7703fcb1b0',
+              _type: 'span',
+              marks: [],
+              text: 'Estimates for Various Scenarios',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '8264a84258b1',
+          _type: 'block',
+          children: [
+            {
+              _key: 'd3f4a978367f0',
+              _type: 'span',
+              marks: [],
+              text: 'K-1 Processing & Filing',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'ee0806203c59',
+          _type: 'block',
+          children: [
+            {
+              _key: 'a53d87c526460',
+              _type: 'span',
+              marks: [],
+              text: 'Tax Preparation',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'da492122ae06',
+          _type: 'block',
+          children: [
+            {
+              _key: '5bbd551a4f6e0',
+              _type: 'span',
+              marks: [],
+              text: 'Scaling Up as Holdings Grow',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+      ],
+      button: {
+        label: null,
+        variant: null,
+        action: null,
+        form: null,
+        slug: null,
+      },
+    },
+    {
+      title: 'Start-Up & New Venture Accounting',
+      heading: 'Start-Up & New Venture Accounting',
+      _rawSubText: [
+        {
+          _key: 'd98b47ca4373',
+          _type: 'block',
+          children: [
+            {
+              _key: '7e1f824b7a040',
+              _type: 'span',
+              marks: [],
+              text: 'We’ve watched South Florida’s start-up community grow over the years and are always proud to contribute to our region’s entrepreneurial spirit by advising new ventures. And with our new office in Greenville, South Carolina, we’re excited to help new businesses get their start there as well.',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '7f047f9c6064',
+          _type: 'block',
+          children: [
+            {
+              _key: '5712a8e427d40',
+              _type: 'span',
+              marks: [],
+              text: 'For start-ups and new ventures, our business advisory services include but are not limited to:',
+            },
+          ],
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '0fbe8dbf5d04',
+          _type: 'block',
+          children: [
+            {
+              _key: '35c22d4b0add0',
+              _type: 'span',
+              marks: [],
+              text: 'Accounting Software Recommendations & Implementation',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '9cd74d2f0ec1',
+          _type: 'block',
+          children: [
+            {
+              _key: 'd123b1ad6bea0',
+              _type: 'span',
+              marks: [],
+              text: 'Bookkeeping',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '388e1f8ba9c4',
+          _type: 'block',
+          children: [
+            {
+              _key: '8422b1a8967f0',
+              _type: 'span',
+              marks: [],
+              text: 'Business Models',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'eb6229ae4530',
+          _type: 'block',
+          children: [
+            {
+              _key: '2575bc2443ef0',
+              _type: 'span',
+              marks: [],
+              text: 'Business Structure Consulting',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '85760a597bcc',
+          _type: 'block',
+          children: [
+            {
+              _key: 'b7b022294e270',
+              _type: 'span',
+              marks: [],
+              text: 'Cash Flow Analysis & Review',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'bffb61e52bbb',
+          _type: 'block',
+          children: [
+            {
+              _key: '4babfd2771170',
+              _type: 'span',
+              marks: [],
+              text: 'Compliance',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '28e030deb3bc',
+          _type: 'block',
+          children: [
+            {
+              _key: '4ab5849e9a530',
+              _type: 'span',
+              marks: [],
+              text: 'Contract Review & Advising',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'e0b7419413e7',
+          _type: 'block',
+          children: [
+            {
+              _key: '9ab938d36cfd0',
+              _type: 'span',
+              marks: [],
+              text: 'Cost Accounting',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '2022b8276054',
+          _type: 'block',
+          children: [
+            {
+              _key: '1fe900575ba60',
+              _type: 'span',
+              marks: [],
+              text: 'Due Diligence',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'ce9ecfa41e82',
+          _type: 'block',
+          children: [
+            {
+              _key: '8c78a79744a80',
+              _type: 'span',
+              marks: [],
+              text: 'Exit Strategies',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '26025a60776f',
+          _type: 'block',
+          children: [
+            {
+              _key: 'b3616554e0250',
+              _type: 'span',
+              marks: [],
+              text: 'Financial Documentation & Statements',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'c489036632f4',
+          _type: 'block',
+          children: [
+            {
+              _key: 'b5108eee22610',
+              _type: 'span',
+              marks: [],
+              text: 'Funding Option Reviews',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '0ebd912f36b9',
+          _type: 'block',
+          children: [
+            {
+              _key: 'c32df7505ce10',
+              _type: 'span',
+              marks: [],
+              text: 'Growth Capital Assistance',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '5e0a3d145a22',
+          _type: 'block',
+          children: [
+            {
+              _key: '6c67b50184280',
+              _type: 'span',
+              marks: [],
+              text: 'Internal Controls',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'c3989e6f37f5',
+          _type: 'block',
+          children: [
+            {
+              _key: '7bac29a191410',
+              _type: 'span',
+              marks: [],
+              text: 'Investment Planning & Reviews for Funders',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'c2ef506688ef',
+          _type: 'block',
+          children: [
+            {
+              _key: '26f481a4a1010',
+              _type: 'span',
+              marks: [],
+              text: 'Licensing & Royalties',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: 'dcce53544cfb',
+          _type: 'block',
+          children: [
+            {
+              _key: 'd47d82549ece0',
+              _type: 'span',
+              marks: [],
+              text: 'Ownership Structure',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '7a0e953fb444',
+          _type: 'block',
+          children: [
+            {
+              _key: '6d3be5b63eb70',
+              _type: 'span',
+              marks: [],
+              text: 'Payroll',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '41b58fc9a633',
+          _type: 'block',
+          children: [
+            {
+              _key: '3c6f882027c60',
+              _type: 'span',
+              marks: [],
+              text: 'State & Local Tax Planning (SALT)',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+        {
+          _key: '4f5f6fdde67c',
+          _type: 'block',
+          children: [
+            {
+              _key: '833ace6301500',
+              _type: 'span',
+              marks: [],
+              text: 'Tax Planning, Preparation & Compliance Advice',
+            },
+          ],
+          level: 1,
+          listItem: 'bullet',
+          markDefs: [],
+          style: 'normal',
+        },
+      ],
+      button: {
+        label: null,
+        variant: null,
+        action: null,
+        form: null,
+        slug: null,
+      },
+    },
+  ],
+}

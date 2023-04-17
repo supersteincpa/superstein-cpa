@@ -12,6 +12,7 @@ import MiniHeroSection from '../../sections/MiniHeroSection/MiniHeroSection'
 import BlogPage from '../../sections/BlogPage/BlogPage'
 import ReviewsSection from '../../sections/ReviewsSection/ReviewsSection'
 import TwoColumnHeroesSection from '../../sections/TwoColumnHeroesSection/TwoColumnHeroesSection'
+import OurBodySection from '../../sections/OurBodySection/OurBodySection'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -56,6 +57,8 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
         return <BlogPage key={__typename} {...sectionData} {...props} />
       case 'SanityReviewsReference':
         return <ReviewsSection key={__typename} {...sectionData} {...props} />
+      case 'SanityOurBodySection':
+        return <OurBodySection key={__typename} {...sectionData} {...props} />
       default:
         return null
     }

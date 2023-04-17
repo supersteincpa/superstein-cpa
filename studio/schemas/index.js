@@ -11,6 +11,7 @@ import locationsPages from './documents/locationsPages'
 import meetTheTeam from './documents/meetTheTeam'
 import meetTheTeamSection from './documents/meetTheTeamSection'
 import miniHeroSection from './documents/miniHeroSection'
+import ourBodySection from './documents/ourBodySection'
 import pages from './documents/pages'
 import positions from './documents/positions'
 import reviewsReference from './documents/reviewsReference'
@@ -27,6 +28,7 @@ import checkList from './objects/checkList'
 import genericSectionFields from './objects/genericSectionFields'
 import iframe from './objects/iframe'
 import image from './objects/image'
+import ourBodyObject from './objects/ourBodyObject'
 import servicesCardObject from './objects/servicesCardObject'
 import whySuperSteinCpaObject from './objects/whySuperSteinCpaObject'
 import youtube from './objects/youtube'
@@ -56,11 +58,13 @@ export const schemaTypes = [
   miniHeroSection,
   blogsReference,
   reviewsReference,
+  ourBodySection,
 
   // Objects
   genericSectionFields,
   whySuperSteinCpaObject,
   servicesCardObject,
+  ourBodyObject,
   button,
   bodyPortableText,
   checkList,
