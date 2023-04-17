@@ -159,15 +159,17 @@ export const OurServicesSection = ({
           >
             {mainHeading}
           </Heading>
-          <article
-            className={clsx(
-              isBackgroundColor
-                ? 'our_services_section_rich_text_black'
-                : 'our_services_section_rich_text_white'
-            )}
-          >
-            <RichText richText={_rawSubText} />
-          </article>
+          {_rawSubText && (
+            <article
+              className={clsx(
+                isBackgroundColor
+                  ? 'our_services_section_rich_text_black'
+                  : 'our_services_section_rich_text_white'
+              )}
+            >
+              <RichText richText={_rawSubText} />
+            </article>
+          )}
         </div>
         <div
           className={clsx(

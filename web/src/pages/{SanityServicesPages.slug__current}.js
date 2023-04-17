@@ -1,0 +1,40 @@
+import { graphql } from 'gatsby'
+import React from 'react'
+import Seo from '../components/seo'
+import EntryRenderer from '../components/EntryRenderer/EntryRenderer'
+import Layout from '../components/Layout/Layout'
+
+const ServicePageTemplate = (props) => {
+  return (
+    <Layout>
+      <EntryRenderer pageBuilderData={props.data.page.pageBuilder} />
+    </Layout>
+  )
+}
+
+export const Head = ({
+  data: {
+    page: { seoTitle, metaDescription },
+  },
+}) => <Seo title={seoTitle} description={metaDescription} />
+
+export default ServicePageTemplate
+
+export const query = graphql`
+  query ServicesQuery($id: String!) {
+    page: sanityServicesPages(id: { eq: $id }) {
+      __typename
+      seoTitle
+      metaDescription
+      pageBuilder {
+        ...TwoColumnHeroesSection
+        ...GenericTwoColumnSection
+        ...IndustrySection
+        ...TestmionailSection
+        ...OurServicesSection
+        ...WhereWeLocated
+        ...CTASection
+      }
+    }
+  }
+`

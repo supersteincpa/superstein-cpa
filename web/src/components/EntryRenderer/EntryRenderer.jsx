@@ -11,6 +11,7 @@ import Cta from '../Cta/Cta'
 import MiniHeroSection from '../../sections/MiniHeroSection/MiniHeroSection'
 import BlogPage from '../../sections/BlogPage/BlogPage'
 import ReviewsSection from '../../sections/ReviewsSection/ReviewsSection'
+import TwoColumnHeroesSection from '../../sections/TwoColumnHeroesSection/TwoColumnHeroesSection'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -43,6 +44,14 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
         return <Cta key={__typename} {...sectionData} {...props} />
       case 'SanityMiniHeroSection':
         return <MiniHeroSection key={__typename} {...sectionData} {...props} />
+      case 'SanityTwoColumnHeroes':
+        return (
+          <TwoColumnHeroesSection
+            key={__typename}
+            {...sectionData}
+            {...props}
+          />
+        )
       case 'SanityBlogsReference':
         return <BlogPage key={__typename} {...sectionData} {...props} />
       case 'SanityReviewsReference':

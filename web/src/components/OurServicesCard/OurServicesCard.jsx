@@ -24,7 +24,7 @@ export const OurServicesCard = ({
       data-testid="our-services-card"
     >
       <div className="relative lg:block hidden">
-        <div className="absolute  min-w-[132px] min-h-[140px] w-[132px] h-[140px] left-0 top-0  bg-[#00000080] hidden group-hover:flex rounded-[15px]  items-center justify-center">
+        <div className="absolute  min-w-[132px] min-h-[140px] w-[132px] h-[140px] left-0 top-0  bg-[#00000080] hidden group-hover:flex rounded-[15px]  group-hover:z-10 items-center justify-center">
           <Icon icon="white-plus-icon" iconHeight={32} iconWidth={32} />
         </div>
         <Image

@@ -21,7 +21,7 @@ export const IndustriesSection = ({
     otherClasses,
     ' w-full',
     isBackground
-      ? 'py-[91px] lg:py-[190px] industries_main_container bg-gray-50'
+      ? 'py-[91px] lg:py-[190px] industries_main_container bg-gray-50 mb-[-30px] lg:mb-[-110px]'
       : 'lg:py-[140px] py-[64px] relative overflow-x-clip'
   )
 

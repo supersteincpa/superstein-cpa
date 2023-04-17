@@ -58,6 +58,26 @@ export default {
           to: [{type: 'twoColumnHeroes'}],
         },
         {
+          title: 'Two Column Generic Sections',
+          name: 'twoColumnGenericSections',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'twoColumnGenericSections'}],
+        },
+        {
+          title: 'Industries Section',
+          name: 'industriesSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'industriesSection'}],
+        },
+        {
           title: 'Testimonials',
           name: 'testimonials',
           type: 'reference',
@@ -66,6 +86,36 @@ export default {
             disableNew: true,
           },
           to: [{type: 'testimonials'}],
+        },
+        {
+          title: 'Services Section',
+          name: 'servicesSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'servicesSection'}],
+        },
+        {
+          title: 'Location Section',
+          name: 'locationSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'locationSection'}],
+        },
+        {
+          title: 'CTA',
+          name: 'cta',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'cta'}],
         },
       ],
     },
