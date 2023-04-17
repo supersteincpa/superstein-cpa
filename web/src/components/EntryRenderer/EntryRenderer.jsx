@@ -14,6 +14,7 @@ import ReviewsSection from '../../sections/ReviewsSection/ReviewsSection'
 import TwoColumnHeroesSection from '../../sections/TwoColumnHeroesSection/TwoColumnHeroesSection'
 import OurBodySection from '../../sections/OurBodySection/OurBodySection'
 import IndustryServicesSection from '../../sections/IndustryServicesSection/IndustryServicesSection'
+import Challenges from '../../sections/Challenges/Challenges'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -68,6 +69,8 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
             {...props}
           />
         )
+      case 'SanityChallengesSection':
+        return <Challenges key={__typename} {...sectionData} {...props} />
       default:
         return null
     }

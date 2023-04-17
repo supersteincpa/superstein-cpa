@@ -2,6 +2,7 @@ import authors from './documents/authors'
 import blogs from './documents/blogs'
 import blogsReference from './documents/blogsReference'
 import categories from './documents/categories'
+import challengesSection from './documents/challengesSection'
 import cta from './documents/cta'
 import featuredBlogsSection from './documents/featuredBlogsSection'
 import heroSection from './documents/heroSection'
@@ -64,6 +65,7 @@ export const schemaTypes = [
   ourBodySection,
   industryServicesSection,
   industryPages,
+  challengesSection,
 
   // Objects
   genericSectionFields,

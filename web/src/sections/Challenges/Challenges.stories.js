@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import Challenges from './Challenges'
+import mocks from './mocks'
 
 export default {
   title: 'Sections/Challenges',
@@ -10,4 +11,4 @@ export default {
 const Template = (args) => <Challenges {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {...mocks}

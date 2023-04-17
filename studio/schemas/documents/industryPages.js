@@ -58,44 +58,14 @@ export default {
           to: [{type: 'twoColumnHeroes'}],
         },
         {
-          title: 'Our Body Section',
-          name: 'ourBodySection',
+          title: 'Challenges Section',
+          name: 'challengesSection',
           type: 'reference',
           validation: (Rule) => Rule.required(),
           options: {
             disableNew: true,
           },
-          to: [{type: 'ourBodySection'}],
-        },
-        {
-          title: 'Two Column Generic Sections',
-          name: 'twoColumnGenericSections',
-          type: 'reference',
-          validation: (Rule) => Rule.required(),
-          options: {
-            disableNew: true,
-          },
-          to: [{type: 'twoColumnGenericSections'}],
-        },
-        {
-          title: 'Industries Section',
-          name: 'industriesSection',
-          type: 'reference',
-          validation: (Rule) => Rule.required(),
-          options: {
-            disableNew: true,
-          },
-          to: [{type: 'industriesSection'}],
-        },
-        {
-          title: 'Testimonials',
-          name: 'testimonials',
-          type: 'reference',
-          validation: (Rule) => Rule.required(),
-          options: {
-            disableNew: true,
-          },
-          to: [{type: 'testimonials'}],
+          to: [{type: 'challengesSection'}],
         },
         {
           title: 'Services Section',
@@ -106,6 +76,16 @@ export default {
             disableNew: true,
           },
           to: [{type: 'servicesSection'}],
+        },
+        {
+          title: 'Testimonials',
+          name: 'testimonials',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'testimonials'}],
         },
         {
           title: 'Location Section',

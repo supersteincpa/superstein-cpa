@@ -1,76 +1,89 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import Heading from '../../components/Heading/Heading';
+import Heading from '../../components/Heading/Heading'
 import image from '../../images/temp/challenges-icon.png'
 import Icon from '../../components/Icon/Icon'
 
 import './challenges.scss'
+import { graphql } from 'gatsby'
+import { RichText } from '../../components/RichText'
+import { Image } from '../../components/Image'
 
 export const Challenges = ({
-  otherClasses
+  otherClasses,
+  title,
+  mainHeading,
+  _rawSubText,
+  image,
+  cards,
 }) => {
-  const challengesClasses = clsx(otherClasses, 'w-full bg-gray-50 py-[92px] lg:py-[212px] cta-clip-path');
-
-  const arr = [
-    {
-      icon: 'chat-circle',
-      title: 'Challenge',
-      _rawText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
-    },
-    {
-      icon: 'statistic-icon',
-      title: 'Challenge',
-      _rawText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
-    },
-    {
-      icon: 'model-game',
-      title: 'Challenge',
-      _rawText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
-    },
-    {
-      icon: 'law-icon',
-      title: 'Challenge',
-      _rawText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
-    },
-  ]
+  const challengesClasses = clsx(
+    otherClasses,
+    'w-full bg-gray-50 pb-[140px] pt-[92px] lg:py-[212px] cta-clip-path mb-[-60px] lg:mb-[-120px]'
+  )
 
   return (
-    <section className={challengesClasses} data-testid='challenges'>
-      <div className='w-full max-w-[1512px] mx-auto px-6 lg:px-[229px] flex flex-col items-start justify-start relative'>
-        <p className='absolute top-[50%] left-0 text-sm font-bold text-gray-300 transition sm:hidden -translate-y-[-50%] -rotate-90 hidden lg:block'>
-          02. challenges
-        </p>
-        <div className='flex flex-col lg:flex-row gap-6 lg:gap-10 items-start mb-10 lg:mb-16'>
-          <div className='w-20 lg:w-[160px] rounded-[30px]'>
-            <img src={image} alt="" className='w-full 
-            '/>
+    <section className={challengesClasses} data-testid="challenges">
+      <div className="w-full max-w-[1512px] mx-auto px-6 lg:px-20 xl:px-[229px] flex flex-col items-start justify-start relative">
+        {title && (
+          <div className="absolute lg:left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 ">
+            <p className="text-sm leading-[18px] font-Public_Sans font-bold text-gray-500 tracking-[0.03em] w-5 whitespace-nowrap uppercase">
+              {title}
+            </p>
           </div>
-          <div className='w-full max-w-[848px] flex flex-col gap-6'>
-            <Heading type='h2'>Unique Challenges Heading</Heading>
-            <div className='border boder-[1px] border-[#4679E6] w-full'></div>
-            <p className='font-normal text-base text-gray-800 leading-6 tracking-[0.03em]'>~30 words lorem ipsum dolor sit amet consectetur. Nunc cras placerat sit faucibus in ac ornare vitae. At euismod aliquet imperdiet mattis. Nunc ornare dignissim aenean vestibulum sit molestie felis.</p>
+        )}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start mb-10 lg:mb-16">
+          <Image imageData={image} otherClasses="" />
+          <div className="w-full max-w-[848px] flex flex-col gap-6">
+            <Heading type="h2">{mainHeading}</Heading>
+            <div className="border boder-[1px] border-[#4679E6] w-full"></div>
+            <article className="challenges_section_rich_text">
+              <RichText richText={_rawSubText} />
+            </article>
           </div>
         </div>
-        <div className='grid grid-cols-1 sm:grid=cols-2 lg:grid-cols-2 items-center gap-x-40 gap-y-6'>
-
-          {
-            arr.map((nodes) => {
-              return <div className='flex flex-col items-start justify-start'>
-
-                <Heading type='h5' otherClasses='flex items-center justify-center mb-3 gap-[10px]'>
-                  <Icon icon={nodes.icon} iconWidth={20} iconHeight={20} />
-                  {nodes.title}
+        <div className="grid grid-cols-1 sm:grid=cols-2 lg:grid-cols-2 gap-x-40 gap-y-6">
+          {cards.map(({ icon, heading, _rawSubText }) => {
+            return (
+              <div className="flex flex-col items-start justify-start">
+                <Heading
+                  type="h5"
+                  otherClasses="flex justify-center mb-3 gap-[10px]"
+                >
+                  <span className="min-w-[20px] min-h-[20px]">
+                    <Icon icon={icon} iconWidth={20} iconHeight={20} />
+                  </span>
+                  {heading}
                 </Heading>
-
-                <p className=' font-Public_Sans font-normal text-sm lg:text-base leading-6 tracking-[0.03em] text-gray-900'>{nodes._rawText}</p>
+                <article className="challenges_inner_rich_text">
+                  <RichText richText={_rawSubText} />
+                </article>
               </div>
-            })
-          }
+            )
+          })}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Challenges;
+export default Challenges
+
+export const query = graphql`
+  fragment ChallengesSection on SanityChallengesSection {
+    __typename
+    identifier
+    title
+    image {
+      ...CustomImage
+    }
+    mainHeading
+    _rawSubText
+    cards {
+      icon
+      heading
+      _rawSubText
+    }
+  }
+`
