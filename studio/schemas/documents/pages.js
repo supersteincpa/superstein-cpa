@@ -161,6 +161,16 @@ export default {
           },
           to: [{type: 'reviewsReference'}],
         },
+        {
+          title: 'Industry Services Section',
+          name: 'industryServicesSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'industryServicesSection'}],
+        },
       ],
     },
   ],

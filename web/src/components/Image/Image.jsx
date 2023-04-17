@@ -15,6 +15,7 @@ export const Image = ({ imageData, otherClasses, ...props }) => {
     <GatsbyImage
       {...props}
       alt={title}
+      imgClassName=''
       title={title}
       className={imageClasses}
       image={gatsbyImageData}

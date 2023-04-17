@@ -6,94 +6,65 @@ import ServicesCard from '../../components/ServicesCard/ServicesCard'
 import image from '../../images/temp/services-card-image.png'
 
 import './industryservicessection.scss'
+import { graphql, useStaticQuery } from 'gatsby'
+import { RichText } from '../../components/RichText'
 
-export const IndustryServicesSection = ({ otherClasses }) => {
-  const industryServicesSectionClasses = clsx(otherClasses, 'w-full')
+export const IndustryServicesSection = ({
+  otherClasses,
+  title,
+  mainHeading,
+  _rawSubText,
+}) => {
+  const industryServicesSectionClasses = clsx(
+    otherClasses,
+    'w-full my-[64px] lg:my-[100px]'
+  )
 
-  const arr = [
-    {
-      id: '01',
-      image: image,
-      title: 'Healthcare & Medical',
-      _rawText:
-        ' 15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-    {
-      id: '02',
-      image: image,
-      title: 'Real Estate',
-      _rawText:
-        '15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-    {
-      id: '03',
-      image: image,
-      title: 'Construction',
-      _rawText:
-        '15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-    {
-      id: '04',
-      image: image,
-      title: 'International',
-      _rawText:
-        '15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-    {
-      id: '05',
-      image: image,
-      title: 'Wholesale',
-      _rawText:
-        '15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-    {
-      id: '06',
-      image: image,
-      title: 'Professional Services',
-      _rawText:
-        '15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-    {
-      id: '07',
-      image: image,
-      title: 'Family Offices & Groups',
-      _rawText:
-        '15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-    {
-      id: '08',
-      image: image,
-      title: 'Entertainers & Athletes',
-      _rawText:
-        '15-20 words Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliq purus sit amet luctu venenatis',
-    },
-  ]
-
+  const industries = useStaticQuery(graphql`
+    query IndustryData {
+      allSanityIndustryPages {
+        nodes {
+          slug {
+            current
+          }
+          industryCard {
+            image {
+              ...CustomImage
+            }
+            heading
+            _rawSubText
+          }
+        }
+      }
+    }
+  `)
+  const nodes = industries.allSanityIndustryPages.nodes
   return (
     <section
       className={industryServicesSectionClasses}
       data-testid="services-section"
     >
-      <div className="w-full max-w-[1512px] mx-auto flex flex-col px-6 lg:px-[121px] items-center justify-center relative">
-        <p className="absolute top-[50%] left-0 text-sm font-bold text-gray-500 transition sm:hidden -translate-y-[-50%] -rotate-90 hidden lg:block">
-          01. - services
-        </p>
-
-        <div className="max-w-[613px] mb-[64px]">
+      <div className="w-full max-w-[1512px] mx-auto px-6 lg:px-20 xl:px-[121px] relative">
+        {title && (
+          <div className="absolute lg:left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 ">
+            <p className="text-sm leading-[18px] font-Public_Sans font-bold text-gray-500 tracking-[0.03em] w-5 whitespace-nowrap uppercase">
+              {title}
+            </p>
+          </div>
+        )}
+        <div className="max-w-[613px] mb-[64px] mx-auto">
           <Heading type="h1" otherClasses="mb-6 text-center">
-            Services
+            {mainHeading}
           </Heading>
           <div className="border boder-[1px] border-[#4679E6] w-full lg:w-[613px] mb-6"></div>
-          <p className="font-normal font-Public_Sans text-sm lg:text-base text-typography leading-6 tracking-[0.03em]">
-            20-30 words lorem ipsum dolor sit amet consectetur. Nisi orci in
-            tellus ut elementum elementum venenatis pellentesque amet. Nisl nibh
-            pulvinar fermentum justo amet vitae feugiat
-          </p>
+          <article className="industry_services_section_rich_text">
+            <RichText richText={_rawSubText} />
+          </article>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[22px]">
-          {arr.map((nodes) => {
-            return <ServicesCard key={nodes.id} {...nodes} />
+          {nodes.map((nodes, index) => {
+            return <ServicesCard key={index} {...nodes} />
           })}
         </div>
       </div>
@@ -102,3 +73,13 @@ export const IndustryServicesSection = ({ otherClasses }) => {
 }
 
 export default IndustryServicesSection
+
+export const query = graphql`
+  fragment IndustryServicesSection on SanityIndustryServicesSection {
+    __typename
+    identifier
+    title
+    mainHeading
+    _rawSubText
+  }
+`

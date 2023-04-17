@@ -13,6 +13,7 @@ import BlogPage from '../../sections/BlogPage/BlogPage'
 import ReviewsSection from '../../sections/ReviewsSection/ReviewsSection'
 import TwoColumnHeroesSection from '../../sections/TwoColumnHeroesSection/TwoColumnHeroesSection'
 import OurBodySection from '../../sections/OurBodySection/OurBodySection'
+import IndustryServicesSection from '../../sections/IndustryServicesSection/IndustryServicesSection'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -59,6 +60,14 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
         return <ReviewsSection key={__typename} {...sectionData} {...props} />
       case 'SanityOurBodySection':
         return <OurBodySection key={__typename} {...sectionData} {...props} />
+      case 'SanityIndustryServicesSection':
+        return (
+          <IndustryServicesSection
+            key={__typename}
+            {...sectionData}
+            {...props}
+          />
+        )
       default:
         return null
     }
