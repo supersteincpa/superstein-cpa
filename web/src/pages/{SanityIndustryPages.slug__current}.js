@@ -29,8 +29,9 @@ export const query = graphql`
       pageBuilder {
         ...TwoColumnHeroesSection
         ...ChallengesSection
-        ...TestmionailSection
         ...OurServicesSection
+        ...IndustryTwoColumnSection
+        ...TestmionailSection
         ...WhereWeLocated
         ...CTASection
       }

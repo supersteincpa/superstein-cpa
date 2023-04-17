@@ -26,7 +26,7 @@ export const OurServicesSection = ({
     isBackgroundColor ? 'bg-transparent' : 'bg-gray-900',
     isFilterBar
       ? 'mb-[34px] lg:mb-[-108px] pt-[100px] pb-[150px] lg:pt-[150px] lg:pb-[230px]'
-      : 'py-[100px] lg:py-[150px]'
+      : 'py-[100px] lg:py-[200px]'
   )
 
   const ourServices = useStaticQuery(graphql`

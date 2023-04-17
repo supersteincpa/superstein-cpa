@@ -68,6 +68,16 @@ export default {
           to: [{type: 'challengesSection'}],
         },
         {
+          title: 'Industry Two Column Section',
+          name: 'industryTwoColumnSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'industryTwoColumnSection'}],
+        },
+        {
           title: 'Services Section',
           name: 'servicesSection',
           type: 'reference',

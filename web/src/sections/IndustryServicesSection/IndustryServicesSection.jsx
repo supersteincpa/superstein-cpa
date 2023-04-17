@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import Heading from '../../components/Heading/Heading'
 import ServicesCard from '../../components/ServicesCard/ServicesCard'
 import image from '../../images/temp/services-card-image.png'
+import roundedImage from '../../images/background-circle-pattern.svg'
 
 import './industryservicessection.scss'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -17,7 +18,7 @@ export const IndustryServicesSection = ({
 }) => {
   const industryServicesSectionClasses = clsx(
     otherClasses,
-    'w-full my-[64px] lg:my-[100px]'
+    'w-full my-[64px] lg:my-[100px] relative overflow-x-clip'
   )
 
   const industries = useStaticQuery(graphql`
@@ -44,6 +45,11 @@ export const IndustryServicesSection = ({
       className={industryServicesSectionClasses}
       data-testid="services-section"
     >
+      <img
+        src={roundedImage}
+        alt="rounded-image"
+        className={clsx('absolute top-[200px]  right-[-144px] lg:block hidden')}
+      />
       <div className="w-full max-w-[1512px] mx-auto px-6 lg:px-20 xl:px-[121px] relative">
         {title && (
           <div className="absolute lg:left-6 translate-y-[-50%] top-2/4 left hidden lg:block -rotate-90 ">

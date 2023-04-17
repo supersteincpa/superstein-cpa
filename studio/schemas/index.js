@@ -9,6 +9,7 @@ import heroSection from './documents/heroSection'
 import industriesSection from './documents/industriesSection'
 import industryPages from './documents/industryPages'
 import industryServicesSection from './documents/industryServicesSection'
+import industryTwoColumnSection from './documents/industryTwoColumnSection'
 import locationSection from './documents/locationSection'
 import locationsPages from './documents/locationsPages'
 import meetTheTeam from './documents/meetTheTeam'
@@ -66,6 +67,7 @@ export const schemaTypes = [
   industryServicesSection,
   industryPages,
   challengesSection,
+  industryTwoColumnSection,
 
   // Objects
   genericSectionFields,
