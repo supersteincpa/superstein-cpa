@@ -1,0 +1,5 @@
+.last_child {
+    >div:nth-last-child(1) {
+        border: none;
+    }
+}
