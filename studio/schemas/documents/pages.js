@@ -181,6 +181,16 @@ export default {
           },
           to: [{type: 'missionSection'}],
         },
+        {
+          title: 'Our History',
+          name: 'ourHistory',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'ourHistory'}],
+        },
       ],
     },
   ],

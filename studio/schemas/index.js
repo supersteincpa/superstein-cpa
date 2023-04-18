@@ -18,6 +18,7 @@ import meetTheTeamSection from './documents/meetTheTeamSection'
 import miniHeroSection from './documents/miniHeroSection'
 import missionSection from './documents/missionSection'
 import ourBodySection from './documents/ourBodySection'
+import ourHistory from './documents/ourHistory'
 import pages from './documents/pages'
 import positions from './documents/positions'
 import reviewsReference from './documents/reviewsReference'
@@ -36,6 +37,7 @@ import iframe from './objects/iframe'
 import image from './objects/image'
 import industryServicesCardObject from './objects/industryServicesCardObject'
 import ourBodyObject from './objects/ourBodyObject'
+import ourHistoryObject from './objects/ourHistoryObject'
 import servicesCardObject from './objects/servicesCardObject'
 import whySuperSteinCpaObject from './objects/whySuperSteinCpaObject'
 import youtube from './objects/youtube'
@@ -72,6 +74,7 @@ export const schemaTypes = [
   industryTwoColumnSection,
   industriesSliderSection,
   missionSection,
+  ourHistory,
 
   // Objects
   genericSectionFields,
@@ -79,6 +82,7 @@ export const schemaTypes = [
   servicesCardObject,
   industryServicesCardObject,
   ourBodyObject,
+  ourHistoryObject,
   button,
   bodyPortableText,
   checkList,

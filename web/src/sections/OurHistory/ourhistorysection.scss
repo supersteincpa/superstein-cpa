@@ -1,5 +1,23 @@
 .last_child {
-    >div:nth-last-child(1) {
-        border: none;
+  > div:nth-last-child(1) {
+    border: none;
+  }
+}
+.our_mission_rich_text {
+  > div {
+    p {
+      @media (min-width: 1024px) {
+        font-size: 20px;
+      }
+      font-family: 'Public Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+      color: #333333;
+      opacity: 0.8;
     }
+  }
 }

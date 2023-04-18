@@ -24,15 +24,15 @@
 
 .mission_two_column_section {
   > div {
-    @media (min-width: 1280px) {
-      padding: 0 229px;
-    }
-    @media (min-width: 1024px) {
-      padding: 0 80px;
-    }
     padding: 0 24px;
     margin-top: 0px;
     margin-bottom: 0px;
+    @media (min-width: 1024px) {
+      padding: 0 80px;
+    }
+    @media (min-width: 1280px) {
+      padding: 0 229px;
+    }
     > div:nth-child(1) {
       h2 {
         color: white;
