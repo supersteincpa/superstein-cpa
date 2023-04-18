@@ -35,7 +35,12 @@ export const ReviewsSection = ({ otherClasses }) => {
 
   return (
     <section className={reviewsSectionClasses} data-testid="reviews-section">
-      <div className="max-w-[1512px] mx-auto w-full px-4 lg:px-[100px] xl:px-[156px] flex flex-col lg:flex-row gap-12">
+      <img
+        src={circleImage}
+        alt="circle-image"
+        className="absolute  bottom-[-180px] right-0 "
+      />
+      <div className="max-w-[1512px] relative mx-auto w-full px-4 lg:px-[100px] xl:px-[156px] flex flex-col lg:flex-row gap-12">
         <div className="w-full lg:w-2/4 flex flex-col gap-12">
           {firstHalfOfArray.map((item, index) => {
             return <ReviewCard {...item} key={index} />
@@ -47,11 +52,6 @@ export const ReviewsSection = ({ otherClasses }) => {
           })}
         </div>
       </div>
-      <img
-        src={circleImage}
-        alt="circle-image"
-        className="absolute left-0  bottom-[-180px] rotate-180 lg:top-auto lg:bottom-[-798px] lg:h-[1236px] lg:w-[1236px]"
-      />
     </section>
   )
 }

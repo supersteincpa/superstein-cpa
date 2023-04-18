@@ -191,6 +191,16 @@ export default {
           },
           to: [{type: 'ourHistory'}],
         },
+        {
+          title: 'Meet The Team Section',
+          name: 'meetTheTeamSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'meetTheTeamSection'}],
+        },
       ],
     },
   ],

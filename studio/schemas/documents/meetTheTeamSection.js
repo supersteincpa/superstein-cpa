@@ -8,18 +8,6 @@ export default {
       name: 'identifier',
       type: 'string',
     },
-
-    {
-      title: 'Main Heading',
-      name: 'mainHeading',
-      type: 'string',
-    },
-    {
-      title: 'Sub Text',
-      name: 'subText',
-      type: 'bodyPortableText',
-      validation: (Rule) => Rule.required(),
-    },
   ],
   preview: {
     select: {

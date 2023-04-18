@@ -20,10 +20,9 @@ export const MiniHeroSection = ({
 }) => {
   const miniHeroSectionClasses = clsx(
     otherClasses,
-    'main_container_min_hero_section  mt-[66px] lg:mt-[84px] pt-[85px] lg:pt-[134px]  pb-[109px] lg:pb-[176px]',
-    type === 'secondary' && ' w-full relative mt-[66px] lg:mt-[84px] z-10',
-    type === 'primary' &&
-      '  mini_hero_section_main_container bg-gray-900 mt-[60px] lg:mt-[77px]'
+    'main_container_min_hero_section  mt-[66px] lg:mt-[84px] pt-[85px] lg:pt-[134px]  pb-[109px] lg:pb-[176px] relative z-10',
+    type === 'secondary' && ' w-full relative z-10',
+    type === 'primary' && '  mini_hero_section_main_container bg-gray-900 '
   )
 
   return (
@@ -75,7 +74,7 @@ export const MiniHeroSection = ({
             </Heading>
           )}
           {type === 'primary' && (
-            <div className="bg-addition_button_color h-[2px] mb-6"></div>
+            <div className="bg-addition_button_color h-[2px] my-6 "></div>
           )}
           {_rawSubText && (
             <article

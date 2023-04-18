@@ -13,7 +13,7 @@ import industryServicesSection from './documents/industryServicesSection'
 import industryTwoColumnSection from './documents/industryTwoColumnSection'
 import locationSection from './documents/locationSection'
 import locationsPages from './documents/locationsPages'
-import meetTheTeam from './documents/meetTheTeam'
+import meetTheTeamPages from './documents/meetTheTeamPages'
 import meetTheTeamSection from './documents/meetTheTeamSection'
 import miniHeroSection from './documents/miniHeroSection'
 import missionSection from './documents/missionSection'
@@ -21,6 +21,7 @@ import ourBodySection from './documents/ourBodySection'
 import ourHistory from './documents/ourHistory'
 import pages from './documents/pages'
 import positions from './documents/positions'
+import profileSection from './documents/profileSection'
 import reviewsReference from './documents/reviewsReference'
 import reviewsSection from './documents/reviewsSection'
 import servicesPages from './documents/servicesPages'
@@ -45,7 +46,7 @@ import youtube from './objects/youtube'
 export const schemaTypes = [
   // Documents
   heroSection,
-  meetTheTeam,
+  meetTheTeamPages,
   reviewsSection,
   positions,
   testimonials,
@@ -75,6 +76,7 @@ export const schemaTypes = [
   industriesSliderSection,
   missionSection,
   ourHistory,
+  profileSection,
 
   // Objects
   genericSectionFields,
