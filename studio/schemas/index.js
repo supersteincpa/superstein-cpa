@@ -16,6 +16,7 @@ import locationsPages from './documents/locationsPages'
 import meetTheTeam from './documents/meetTheTeam'
 import meetTheTeamSection from './documents/meetTheTeamSection'
 import miniHeroSection from './documents/miniHeroSection'
+import missionSection from './documents/missionSection'
 import ourBodySection from './documents/ourBodySection'
 import pages from './documents/pages'
 import positions from './documents/positions'
@@ -70,6 +71,7 @@ export const schemaTypes = [
   challengesSection,
   industryTwoColumnSection,
   industriesSliderSection,
+  missionSection,
 
   // Objects
   genericSectionFields,

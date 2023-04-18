@@ -171,6 +171,16 @@ export default {
           },
           to: [{type: 'industryServicesSection'}],
         },
+        {
+          title: 'Mission Section',
+          name: 'missionSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'missionSection'}],
+        },
       ],
     },
   ],

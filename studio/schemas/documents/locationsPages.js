@@ -135,6 +135,26 @@ export default {
           },
           to: [{type: 'featuredBlogsSection'}],
         },
+        {
+          title: 'Location Section',
+          name: 'locationSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'locationSection'}],
+        },
+        {
+          title: 'CTA',
+          name: 'cta',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'cta'}],
+        },
       ],
     },
   ],
