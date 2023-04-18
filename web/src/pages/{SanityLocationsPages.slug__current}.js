@@ -4,7 +4,7 @@ import Seo from '../components/seo'
 import EntryRenderer from '../components/EntryRenderer/EntryRenderer'
 import Layout from '../components/Layout/Layout'
 
-const IndexPage = (props) => {
+const LocationTemplate = (props) => {
   return (
     <Layout>
       <EntryRenderer pageBuilderData={props.data.page.pageBuilder} />
@@ -18,11 +18,12 @@ export const Head = ({
   },
 }) => <Seo title={seoTitle} description={metaDescription} />
 
-export default IndexPage
+export default LocationTemplate
 
 export const query = graphql`
-  query PageQuery($id: String!) {
-    page: sanityPages(id: { eq: $id }) {
+  query LocationQuery($id: String!) {
+    page: sanityLocationsPages(id: { eq: $id }) {
+      __typename
       seoTitle
       metaDescription
       pageBuilder {
@@ -35,11 +36,6 @@ export const query = graphql`
         ...FeaturedBlogSection
         ...WhereWeLocated
         ...CTASection
-        ...MiniHeroSection
-        ...BlogsSection
-        ...ReviewsPageSection
-        ...IndustryServicesSection
-        ...MissionSection
       }
     }
   }

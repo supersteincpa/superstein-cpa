@@ -17,6 +17,7 @@ import IndustryServicesSection from '../../sections/IndustryServicesSection/Indu
 import Challenges from '../../sections/Challenges/Challenges'
 import IndustryTwoColumnSection from '../../sections/IndustryTwoColumnSection/IndustryTwoColumnSection'
 import IndustriesSliderSection from '../../sections/IndustriesSliderSection/IndustriesSliderSection'
+import MissionSection from '../../sections/MissionSection/MissionSection'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -89,6 +90,8 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
             {...props}
           />
         )
+      case 'SanityMissionSection':
+        return <MissionSection key={__typename} {...sectionData} {...props} />
       default:
         return null
     }

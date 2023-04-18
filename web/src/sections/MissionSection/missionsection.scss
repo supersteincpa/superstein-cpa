@@ -1,7 +1,48 @@
 .mission-clip-path {
-    clip-path: polygon(0% 3.8%, 100% 0%, 100% 95.3%, 0% 100%);
+  clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
 
-    @media (min-width: 1024px) {
-        clip-path: polygon(0% 10.8%, 100% 0%, 100% 88.3%, 0% 100%);
+  @media (min-width: 1024px) {
+    clip-path: polygon(0% 7%, 100% 0%, 100% 93%, 0% 100%);
+  }
+}
+.mission_section_rich_text {
+  > div {
+    p {
+      @media (min-width: 1024px) {
+        font-size: 16px;
+      }
+      font-family: 'Public Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
     }
+  }
+}
+
+.mission_two_column_section {
+  > div {
+    @media (min-width: 1280px) {
+      padding: 0 229px;
+    }
+    @media (min-width: 1024px) {
+      padding: 0 80px;
+    }
+    padding: 0 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    > div:nth-child(1) {
+      h2 {
+        color: white;
+        &::after {
+          display: none;
+        }
+      }
+      article > div > p {
+        color: white;
+      }
+    }
+  }
 }

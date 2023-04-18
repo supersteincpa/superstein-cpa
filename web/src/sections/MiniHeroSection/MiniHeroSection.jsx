@@ -21,8 +21,7 @@ export const MiniHeroSection = ({
   const miniHeroSectionClasses = clsx(
     otherClasses,
     'main_container_min_hero_section  mt-[66px] lg:mt-[84px] pt-[85px] lg:pt-[134px]  pb-[109px] lg:pb-[176px]',
-    type === 'secondary'&&
-    ' w-full relative mt-[66px] lg:mt-[84px] z-10',
+    type === 'secondary' && ' w-full relative mt-[66px] lg:mt-[84px] z-10',
     type === 'primary' &&
       '  mini_hero_section_main_container bg-gray-900 mt-[60px] lg:mt-[77px]'
   )
@@ -33,14 +32,14 @@ export const MiniHeroSection = ({
         <Image
           objectFit="fill"
           imageData={backgroundDesktopImage}
-          otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block"
+          otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block mini_hero_backgrounde_image"
         />
       )}
       {backgroundMobileImage && type === 'secondary' && (
         <Image
           objectFit="fill"
           imageData={backgroundMobileImage}
-          otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden"
+          otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden mini_hero_backgrounde_image"
         />
       )}
       <div
@@ -79,7 +78,12 @@ export const MiniHeroSection = ({
             <div className="bg-addition_button_color h-[2px] mb-6"></div>
           )}
           {_rawSubText && (
-            <article className="mb-6 mini_hero_section_rich_text ">
+            <article
+              className={clsx(
+                'mb-6 mini_hero_section_rich_text ',
+                type === 'secondary' && 'text-center'
+              )}
+            >
               <RichText richText={_rawSubText} />
             </article>
           )}

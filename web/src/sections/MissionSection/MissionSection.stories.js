@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import MissionSection from './MissionSection'
+import mocks from './mocks'
 
 export default {
   title: 'Sections/MissionSection',
@@ -10,4 +11,4 @@ export default {
 const Template = (args) => <MissionSection {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = { ...mocks }

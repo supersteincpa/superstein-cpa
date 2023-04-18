@@ -20,7 +20,7 @@ export const HeroSection = ({
 }) => {
   const heroSectionClasses = clsx(
     otherClasses,
-    'lg:h-[627px] w-full relative mt-[66px] lg:mt-[84px] z-10'
+    'lg:h-[627px] w-full relative mt-[66px] lg:mt-[84px] z-10 main_container_min_hero_section'
   )
 
   return (
@@ -29,12 +29,12 @@ export const HeroSection = ({
         <Image
           objectFit="fill"
           imageData={backgroundDesktopImage}
-          otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block"
+          otherClasses="!absolute left-0 top-0 w-full h-full !hidden md:!block mini_hero_backgrounde_image"
         />
         <Image
           objectFit="fill"
           imageData={backgroundMobileImage}
-          otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden"
+          otherClasses="!absolute left-0 top-0 w-full h-full md:!hidden mini_hero_backgrounde_image"
         />
         <div className="max-w-[1512px] mx-auto  px-4 pt-10 pb-[70px] md:pt-[110px] md:pb-[170px] lg:pl-20 xl:pl-[164px] lg:pr-0 ">
           <div className=" w-full relative lg:max-w-[875px]">
