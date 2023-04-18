@@ -16,6 +16,7 @@ import OurBodySection from '../../sections/OurBodySection/OurBodySection'
 import IndustryServicesSection from '../../sections/IndustryServicesSection/IndustryServicesSection'
 import Challenges from '../../sections/Challenges/Challenges'
 import IndustryTwoColumnSection from '../../sections/IndustryTwoColumnSection/IndustryTwoColumnSection'
+import IndustriesSliderSection from '../../sections/IndustriesSliderSection/IndustriesSliderSection'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -75,6 +76,14 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
       case 'SanityIndustryTwoColumnSection':
         return (
           <IndustryTwoColumnSection
+            key={__typename}
+            {...sectionData}
+            {...props}
+          />
+        )
+      case 'SanityIndustriesSliderSection':
+        return (
+          <IndustriesSliderSection
             key={__typename}
             {...sectionData}
             {...props}

@@ -98,6 +98,16 @@ export default {
           to: [{type: 'testimonials'}],
         },
         {
+          title: 'Industries Slider Section',
+          name: 'industriesSliderSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'industriesSliderSection'}],
+        },
+        {
           title: 'Location Section',
           name: 'locationSection',
           type: 'reference',

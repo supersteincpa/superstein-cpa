@@ -32,6 +32,7 @@ export const query = graphql`
         ...OurServicesSection
         ...IndustryTwoColumnSection
         ...TestmionailSection
+        ...IndustriesSliderSection
         ...WhereWeLocated
         ...CTASection
       }

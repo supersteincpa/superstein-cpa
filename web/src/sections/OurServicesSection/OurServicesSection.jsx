@@ -51,52 +51,7 @@ export const OurServicesSection = ({
 
   const nodes = ourServices.allSanityServicesPages.nodes
 
-  // console.log(nodes)
 
-  const arr = [
-    {
-      heading: 'Business Advisory',
-      _rawText:
-        'Get the expert advice you need to make smart business decisions that’ll help you reach your goals.',
-      image: cardImage,
-      type: 'Advisory',
-    },
-    {
-      heading: 'Business Advisory',
-      _rawText:
-        'Get the expert advice you need to make smart business decisions that’ll help you reach your goals.',
-      image: cardImage,
-      type: 'Advisory',
-    },
-    {
-      heading: 'Business Assurance',
-      _rawText:
-        'Get the expert advice you need to make smart business decisions that’ll help you reach your goals.',
-      image: cardImage,
-      type: 'Assurance',
-    },
-    {
-      heading: 'Business Tax',
-      _rawText:
-        'Get the expert advice you need to make smart business decisions that’ll help you reach your goals.',
-      image: cardImage,
-      type: 'Tax',
-    },
-    {
-      heading: 'Business Tax',
-      _rawText:
-        'Get the expert advice you need to make smart business decisions that’ll help you reach your goals.',
-      image: cardImage,
-      type: 'Tax',
-    },
-    {
-      heading: 'Business Assurance',
-      _rawText:
-        'Get the expert advice you need to make smart business decisions that’ll help you reach your goals.',
-      image: cardImage,
-      type: 'Assurance',
-    },
-  ]
 
   const uniqueChars = [
     ...new Map(nodes.map((m) => [m.servicesCard.servicesType, m])).values(),

@@ -7,6 +7,7 @@ import cta from './documents/cta'
 import featuredBlogsSection from './documents/featuredBlogsSection'
 import heroSection from './documents/heroSection'
 import industriesSection from './documents/industriesSection'
+import industriesSliderSection from './documents/industriesSliderSection'
 import industryPages from './documents/industryPages'
 import industryServicesSection from './documents/industryServicesSection'
 import industryTwoColumnSection from './documents/industryTwoColumnSection'
@@ -68,6 +69,7 @@ export const schemaTypes = [
   industryPages,
   challengesSection,
   industryTwoColumnSection,
+  industriesSliderSection,
 
   // Objects
   genericSectionFields,
