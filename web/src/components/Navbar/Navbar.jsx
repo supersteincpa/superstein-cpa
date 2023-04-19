@@ -8,7 +8,7 @@ import Heading from '../Heading/Heading'
 import Icon from '../Icon/Icon'
 import { useState } from 'react'
 
-export const Navbar = ({ otherClasses }) => {
+export const Navbar = ({ otherClasses, services, industries, locations }) => {
   const navbarClasses = clsx(
     otherClasses,
     'fixed top-0 left-0 z-20 w-full bg-black border-t-[4px] border-t-gray-600'
@@ -54,28 +54,24 @@ export const Navbar = ({ otherClasses }) => {
               </button>
               <div className="flex flex-col items-center lg:absolute lg:top-20 lg:left-0 w-full pt-4 pb-0 lg:py-8 bg-gray-900 lg:border-y-[1px] lg:border-y-gray-800">
                 <div className="w-full lg:w-fit">
-                  <p className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]">
+                  <Link
+                    to="/services"
+                    className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]"
+                  >
                     Services
-                  </p>
+                  </Link>
                   <ul className="grid lg:grid-cols-2 gap-y-5 gap-x-12 w-fit mt-5">
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Business Advisory
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Estates & Trusts
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Tax Planning & Preparation
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Audit & Assurance
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Account Services
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      IRS Representation
-                    </li>
+                    {services.map(({ title, slug: { current } }, index) => {
+                      return (
+                        <Link
+                          key={index}
+                          to={`/${current}`}
+                          className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]"
+                        >
+                          {title}
+                        </Link>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
@@ -87,34 +83,23 @@ export const Navbar = ({ otherClasses }) => {
               </button>
               <div className="flex flex-col items-center lg:absolute lg:top-20 lg:left-0 w-full py-4 lg:py-8 bg-gray-900 lg:border-y-[1px] lg:border-y-gray-800">
                 <div className="w-full lg:w-fit">
-                  <p className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]">
+                  <Link
+                    to="/industries"
+                    className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]"
+                  >
                     Industries
-                  </p>
+                  </Link>
                   <ul className="grid lg:grid-cols-3 gap-y-5 gap-x-12 w-fit mt-5">
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Healthcare & Medical
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      International
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Family Offices & Groups
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Real Estate
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Wholesale
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Entertainers
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Construction
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Professional Services
-                    </li>
+                    {industries.map(({ title, slug: { current } }) => {
+                      return (
+                        <Link
+                          to={`/${current}`}
+                          className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]"
+                        >
+                          {title}
+                        </Link>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
@@ -126,17 +111,29 @@ export const Navbar = ({ otherClasses }) => {
               </button>
               <div className="flex flex-col items-center lg:absolute lg:top-20 lg:left-0 w-full py-4 lg:py-8 bg-gray-900 lg:border-y-[1px] lg:border-y-gray-800">
                 <div className="w-full lg:w-fit">
-                  <p className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]">
+                  <Link
+                    to="/about"
+                    className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]"
+                  >
                     About
-                  </p>
+                  </Link>
                   <ul className="grid lg:grid-cols-1 gap-y-5 gap-x-12 w-fit mt-5">
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
+                    <Link
+                      to="/meet-the-team"
+                      className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]"
+                    >
                       Meet The Team
-                    </li>
-                    <Link to ='/about/testimonials' className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
+                    </Link>
+                    <Link
+                      to="/about/testimonials"
+                      className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]"
+                    >
                       Testimonials
                     </Link>
-                    <Link to='/blog' className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
+                    <Link
+                      to="/blog"
+                      className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]"
+                    >
                       Blog
                     </Link>
                   </ul>
@@ -150,16 +147,23 @@ export const Navbar = ({ otherClasses }) => {
               </button>
               <div className="flex flex-col items-center lg:absolute lg:top-20 lg:left-0 w-full py-4 lg:py-8 bg-gray-900 lg:border-y-[1px] lg:border-y-gray-800">
                 <div className="w-full lg:w-fit">
-                  <p className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]">
+                  <Link
+                    to="/locations"
+                    className="text-base lg:text-xl leading-6 lg:leading-[30px] font-normal font-Public_Sans text-white tracking-[0.03em]"
+                  >
                     Locations
-                  </p>
+                  </Link>
                   <ul className="grid lg:grid-cols-1 gap-y-5 gap-x-12 w-fit mt-5">
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Broward, Florida
-                    </li>
-                    <li className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]">
-                      Greenville, South Carolina
-                    </li>
+                    {locations.map(({ title, slug: { current } }) => {
+                      return (
+                        <Link
+                          to={`/${current}`}
+                          className="text-base leading-6 font-normal font-Public_Sans text-white tracking-[0.03em]"
+                        >
+                          {title}
+                        </Link>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>

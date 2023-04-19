@@ -77,7 +77,7 @@ export const Layout = ({ children }) => {
 
   return (
     <>
-      <Navbar />
+      <Navbar {...pageData} />
       <div
         className={clsx(
           'w-full fixed top-0 right-0 flex justify-end h-full z-[100] overflow-hidden',
@@ -100,7 +100,7 @@ export const Layout = ({ children }) => {
         />
       </div>
       <main>{childrenWithProps}</main>
-      <Footer />
+      <Footer {...pageData} />
     </>
   )
 }
