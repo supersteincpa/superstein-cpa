@@ -1,0 +1,60 @@
+.gray_disabled_image {
+  > img {
+    filter: invert(71%) sepia(100%) saturate(1%) hue-rotate(15deg)
+      brightness(95%) contrast(91%);
+  }
+}
+
+.active_image_blue {
+  > img {
+    filter: invert(52%) sepia(85%) saturate(4098%) hue-rotate(206deg)
+      brightness(94%) contrast(90%);
+  }
+}
+
+.profile_section_rich_text {
+  > div {
+    p {
+      font-family: 'Public Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 16px;
+      letter-spacing: 0.03em;
+      color: #333333;
+    }
+    h1 {
+      margin-bottom: 24px;
+    }
+    h2 {
+      margin-bottom: 24px;
+    }
+    h3 {
+      margin-bottom: 24px;
+    }
+    h4 {
+      margin-bottom: 24px;
+    }
+    h5 {
+      margin-bottom: 24px;
+    }
+    h6 {
+      margin-bottom: 24px;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      li {
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        letter-spacing: 0.03em;
+        color: #333333;
+      }
+    }
+  }
+}
