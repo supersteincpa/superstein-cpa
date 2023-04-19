@@ -13,7 +13,6 @@ import industryServicesSection from './documents/industryServicesSection'
 import industryTwoColumnSection from './documents/industryTwoColumnSection'
 import locationSection from './documents/locationSection'
 import locationsPages from './documents/locationsPages'
-import meetTheTeamPages from './documents/meetTheTeamPages'
 import meetTheTeamSection from './documents/meetTheTeamSection'
 import miniHeroSection from './documents/miniHeroSection'
 import missionSection from './documents/missionSection'
@@ -46,7 +45,6 @@ import youtube from './objects/youtube'
 export const schemaTypes = [
   // Documents
   heroSection,
-  meetTheTeamPages,
   reviewsSection,
   positions,
   testimonials,

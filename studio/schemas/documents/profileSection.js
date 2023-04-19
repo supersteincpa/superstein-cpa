@@ -4,9 +4,37 @@ export default {
   type: 'document',
   fields: [
     {
-      title: 'Identifier',
-      name: 'identifier',
+      title: 'SEO Title',
+      name: 'seoTitle',
       type: 'string',
+    },
+    {
+      title: 'Meta Description',
+      name: 'metaDescription',
+      type: 'text',
+    },
+    {
+      title: 'Slug',
+      description: 'Exclude leading and trailing backslashes',
+      name: 'slug',
+      type: 'slug',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'title',
+      },
+    },
+    {
+      title: 'Indexed',
+      name: 'isIndexed',
+      type: 'boolean',
+      initialValue: true,
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Image',
@@ -21,8 +49,8 @@ export default {
       type: 'string',
     },
     {
-      title: 'Title',
-      name: 'title',
+      title: 'About',
+      name: 'about',
       type: 'string',
     },
     {
@@ -74,7 +102,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'identifier',
+      title: 'name',
       media: 'image',
     },
     prepare({title = 'No title', media}) {
