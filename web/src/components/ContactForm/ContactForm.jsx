@@ -13,10 +13,16 @@ function encode(data) {
   return formData
 }
 
-export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
+export const ContactForm = ({
+  otherClasses,
+  toggleCancel,
+  services,
+  industries,
+  locations,
+}) => {
   const contactFormClasses = clsx(
     otherClasses,
-    'max-w-[720px] bg-white overflow-y-auto h-full lg:rounded-tl-[40px] lg:rounded-bl-[40px]'
+    'max-w-[720px] bg-white overflow-y-auto h-full'
   )
 
   const messageRef = useRef('')
@@ -59,9 +65,9 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
   }
   return (
     <div className={contactFormClasses} data-testid="contact-form">
-      <div className="flex justify-between items-center px-6 lg:pl-20 lg:pr-6 py-4 border-b-[1px] border-b-gray-200">
+      <div className="flex justify-between items-center px-6 py-4 border-b-[1px] border-b-gray-200">
         <div className="flex items-center gap-2 cursor-pointer">
-          <Icon icon="phone-green-icon" iconHeight={24} iconWidth={24} />
+          <Icon icon="phone-outline-black" iconHeight={24} iconWidth={24} />
           <a
             href="tel:7603491750"
             className="font-crimson_pro text-primary_green_600 font-bold text-base "
@@ -70,7 +76,7 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
           </a>
         </div>
         <button onClick={() => toggleCancel()}>
-          <Icon icon="nav-cancel-icon" iconHeight={12} iconWidth={12} />
+          <Icon icon="cancel-icon" iconHeight={12} iconWidth={12} />
         </button>
       </div>
       <div className="pb-10 px-4 md:px-[84px] w-full mt-8">
@@ -80,21 +86,21 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
         >
           Contact Us
         </Heading>
-        <div className="w-full flex flex-col gap-4 sm:gap-0 sm:flex-row items-center">
+        <div className="w-full flex flex-row items-center">
           <button
             onClick={() => toggleTab('book-meeting')}
             className={clsx(
-              'flex items-center gap-2 justify-center font-sm leading-5 font-raleway font-semibold w-full py-[10px] rounded-sm sm:rounded-none sm:rounded-tl-[4px] sm:rounded-bl-[4px]',
+              'flex items-center gap-2 justify-center text-xs sm:text-sm  font-sm leading-5 font-raleway font-semibold w-full py-[10px] rounded-tl-full rounded-bl-full',
               toggleState === 'book-meeting'
-                ? 'bg-[#D0DED4] text-primary_green_800 '
-                : 'bg-gray-50 text-gray-500'
+                ? 'bg-addition_button_color text-white '
+                : 'bg-gray-50 text-gray-400'
             )}
           >
             <span
               className={clsx(
                 'calender_book_a_meeting',
                 toggleState === 'book-meeting'
-                  ? 'bg-[#062E16]'
+                  ? 'bg-white'
                   : 'bg-black opacity-40'
               )}
             ></span>
@@ -103,17 +109,17 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
           <button
             onClick={() => toggleTab('send-message')}
             className={clsx(
-              'flex items-center gap-2 justify-center font-sm leading-5 font-raleway font-semibold w-full py-[10px] rounded-sm sm:rounded-none sm:rounded-tr-[4px] sm:rounded-br-[4px] ',
+              'flex items-center gap-2 justify-center text-xs sm:text-sm font-sm leading-5 font-raleway font-semibold w-full py-[10px] rounded-tr-full rounded-br-full',
               toggleState === 'send-message'
-                ? 'bg-[#D0DED4] text-primary_green_800 '
-                : 'bg-gray-50 text-gray-500'
+                ? 'bg-addition_button_color text-white '
+                : 'bg-gray-50 text-gray-400'
             )}
           >
             <span
               className={clsx(
                 'eamil_send_a_message',
                 toggleState === 'send-message'
-                  ? 'bg-[#062E16]'
+                  ? 'bg-white'
                   : 'bg-black opacity-40'
               )}
             ></span>
@@ -162,7 +168,7 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
                 required
                 type="text"
                 onChange={handleChange}
-                className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-primary_blue_600 outline-offset-2 outline-[3px] outline-[#ADC0B5]"
+                className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
               />
             </div>
             <div className="mb-6 flex flex-col md:flex-row gap-5 lg:gap-[21px]">
@@ -179,7 +185,7 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
                   required
                   onChange={handleChange}
                   type="text"
-                  className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-primary_blue_600 outline-offset-2 outline-[3px] outline-[#ADC0B5]"
+                  className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
                 />
               </div>
               <div className="w-full md:w-2/4">
@@ -194,7 +200,7 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
                   id="email"
                   type="email"
                   onChange={handleChange}
-                  className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-primary_blue_600 outline-offset-2 outline-[3px] outline-[#ADC0B5]"
+                  className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
                 />
               </div>
             </div>
@@ -210,10 +216,24 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
                 type="text"
                 onChange={handleChange}
                 name="What Can We Help You With?"
-                className="w-full border-[1px]  border-gray-300 flex justify-between px-4 h-12 items-center rounded-full  text-base font-normal font-Work-Sans focus:ring-0 focus:border-primary_blue_600  focus:border-[1px] focus:outline-offset-2 focus:outline-[3px] focus:outline-[#ADC0B5]"
+                className="w-full border-[1px]  border-gray-300 flex justify-between px-4 h-12 items-center rounded-full  text-base font-normal font-Work-Sans focus:ring-0 focus:border-addition_button_color  focus:border-[1px] focus:outline-offset-2 focus:outline-[3px] outline-[#C7D7F7]"
               >
                 <option value="Select one...">Select one...</option>
                 {services.map(({ title }, index) => {
+                  return (
+                    <option key={index} value={'Interested in ' + title}>
+                      I’m interested in {title}
+                    </option>
+                  )
+                })}
+                {industries.map(({ title }, index) => {
+                  return (
+                    <option key={index} value={'Interested in ' + title}>
+                      I’m interested in {title}
+                    </option>
+                  )
+                })}
+                {locations.map(({ title }, index) => {
                   return (
                     <option key={index} value={'Interested in ' + title}>
                       I’m interested in {title}
@@ -236,7 +256,7 @@ export const ContactForm = ({ otherClasses, toggleCancel, services }) => {
                 id="description"
                 cols="30"
                 rows="10"
-                className="w-full border-[1px] font-raleway pl-4 pt-4 border-gray-300 rounded-[30px] min-h-[136px] max-h-[136px] mt-2 focus:border-primary_blue_600 outline-offset-2 outline-[3px] outline-[#ADC0B5]"
+                className="w-full border-[1px] font-raleway pl-4 pt-4 border-gray-300 rounded-[30px] min-h-[136px] max-h-[136px] mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
               ></textarea>
             </div>
             <Button label="Submit" />
