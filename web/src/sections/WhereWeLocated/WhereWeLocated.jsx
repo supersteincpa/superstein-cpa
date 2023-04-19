@@ -12,7 +12,7 @@ import { Image } from '../../components/Image'
 export const WhereWeLocated = ({ otherClasses, title, mainHeading }) => {
   const whereWeLocatedClasses = clsx(
     otherClasses,
-    'w-full bg-gray-900 cta-clip-path -mb-10 lg:mb-[-115px] relative z-10'
+    'w-full bg-gray-900 located-clip-path -mb-10 lg:mb-[-115px] relative z-10'
   )
 
   const arr = [
