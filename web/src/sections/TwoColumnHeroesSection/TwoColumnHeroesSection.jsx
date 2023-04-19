@@ -4,7 +4,11 @@ import GenericTwoColumn from '../../components/GenericTwoColumn/GenericTwoColumn
 import { graphql } from 'gatsby'
 import './twocolumnheroessection.scss'
 
-export const TwoColumnHeroesSection = ({ otherClasses, genericSections }) => {
+export const TwoColumnHeroesSection = ({
+  otherClasses,
+  genericSections,
+  ...props
+}) => {
   const twoColumnHeroesSectionClasses = clsx(
     otherClasses,
     'mt-[66px] lg:mt-[84px] two_columns_hero_section_main_container pt-[64px] lg:pt-[96px]'
@@ -15,7 +19,7 @@ export const TwoColumnHeroesSection = ({ otherClasses, genericSections }) => {
       className={twoColumnHeroesSectionClasses}
       data-testid="two-column-heroes-section"
     >
-      <GenericTwoColumn genericSections={genericSections} />
+      <GenericTwoColumn {...props} genericSections={genericSections} />
     </section>
   )
 }

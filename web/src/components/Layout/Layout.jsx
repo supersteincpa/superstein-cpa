@@ -77,7 +77,7 @@ export const Layout = ({ children }) => {
 
   return (
     <>
-      <Navbar {...pageData} />
+      <Navbar {...pageData} toggleFunc={toggleFunc} />
       <div
         className={clsx(
           'w-full fixed top-0 right-0 flex justify-end h-full z-[100] overflow-hidden',

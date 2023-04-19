@@ -7,8 +7,15 @@ import Button from '../Button/Button'
 import Heading from '../Heading/Heading'
 import Icon from '../Icon/Icon'
 import { useState } from 'react'
+import { hideBodyScroll, showBodyScroll } from '../../utils/helpers'
 
-export const Navbar = ({ otherClasses, services, industries, locations }) => {
+export const Navbar = ({
+  otherClasses,
+  toggleFunc,
+  services,
+  industries,
+  locations,
+}) => {
   const navbarClasses = clsx(
     otherClasses,
     'fixed top-0 left-0 z-20 w-full bg-black border-t-[4px] border-t-gray-600'
@@ -19,6 +26,11 @@ export const Navbar = ({ otherClasses, services, industries, locations }) => {
     setToggleNav(!elm)
   }
 
+  if (toggleNav) {
+    hideBodyScroll()
+  } else {
+    showBodyScroll()
+  }
   return (
     <nav className={navbarClasses} id="navbar" data-testid="navbar">
       <div className="max-w-[1512px] mx-auto px-6 xl:px-10 flex items-center justify-between relative">
@@ -79,7 +91,7 @@ export const Navbar = ({ otherClasses, services, industries, locations }) => {
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
               <button className="flex lg:px-4 xl:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
                 Industries
-                <span className="group-hover:bg-addition_button_color bg-white block navbar_drop_down_chevron"></span>
+                <span className="group-hover:rotate-180 lg:group-hover:bg-addition_button_color  bg-white block navbar_drop_down_chevron"></span>
               </button>
               <div className="flex flex-col items-center lg:absolute lg:top-20 lg:left-0 w-full py-4 lg:py-8 bg-gray-900 lg:border-y-[1px] lg:border-y-gray-800">
                 <div className="w-full lg:w-fit">
@@ -107,7 +119,7 @@ export const Navbar = ({ otherClasses, services, industries, locations }) => {
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
               <button className="flex lg:px-4 xl:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
                 About
-                <span className="group-hover:bg-addition_button_color bg-white block navbar_drop_down_chevron"></span>
+                <span className="group-hover:rotate-180 lg:group-hover:bg-addition_button_color  bg-white block navbar_drop_down_chevron"></span>
               </button>
               <div className="flex flex-col items-center lg:absolute lg:top-20 lg:left-0 w-full py-4 lg:py-8 bg-gray-900 lg:border-y-[1px] lg:border-y-gray-800">
                 <div className="w-full lg:w-fit">
@@ -143,7 +155,7 @@ export const Navbar = ({ otherClasses, services, industries, locations }) => {
             <li className="group flex flex-col lg:flex-row lg:items-center navbar_menu_list_wrapper w-full lg:w-auto">
               <button className="flex lg:px-4 xl:px-8 lg:group-hover:bg-gray-900 border-gray-600 lg:border-gray-800 border-b-[1px] lg:border-b-[0px] lg:border-x-[1px] items-center justify-between lg:justify-start w-full pb-3 lg:pb-0 lg:h-20 gap-2 text-xl lg:text-base font-normal font-Public_Sans leading-[30px] lg:leading-6 text-white tracking-[0.03em] navbar_drop_down_button">
                 Locations
-                <span className="group-hover:bg-addition_button_color bg-white block navbar_drop_down_chevron"></span>
+                <span className="group-hover:rotate-180 lg:group-hover:bg-addition_button_color  bg-white block navbar_drop_down_chevron"></span>
               </button>
               <div className="flex flex-col items-center lg:absolute lg:top-20 lg:left-0 w-full py-4 lg:py-8 bg-gray-900 lg:border-y-[1px] lg:border-y-gray-800">
                 <div className="w-full lg:w-fit">
@@ -171,6 +183,7 @@ export const Navbar = ({ otherClasses, services, industries, locations }) => {
           </ul>
           <Button
             variant="primary"
+            onClick={() => toggleFunc('Contact Us')}
             label="Book a Call"
             otherClasses="lg:block hidden"
           />

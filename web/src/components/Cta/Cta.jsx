@@ -13,6 +13,7 @@ export const Cta = ({
   mainHeading,
   _rawSubText,
   ctaButtons,
+  toggleFunc,
 }) => {
   const ctaClasses = clsx(
     otherClasses,
@@ -42,8 +43,14 @@ export const Cta = ({
           </article>
         </div>
         <div className="flex gap-6">
-          {(ctaButtons||[]).map((nodes) => {
-            return <Button {...nodes} otherClasses="whitespace-nowrap" />
+          {ctaButtons.map((nodes) => {
+            return (
+              <Button
+                onClick={() => toggleFunc('Contact Us')}
+                {...nodes}
+                otherClasses="whitespace-nowrap"
+              />
+            )
           })}
         </div>
       </div>

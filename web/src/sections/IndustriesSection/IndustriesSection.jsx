@@ -58,7 +58,9 @@ export const IndustriesSection = ({
             <article className="industries_list_text">
               <RichText richText={_rawListText} />
             </article>
-            <Button {...button} otherClasses="mt-8 lg:mt-10" />
+            <div className="mt-8 lg:mt-10">
+              <Button {...button} />
+            </div>
           </div>
           <div className="w-full lg:w-2/4">
             <Image imageData={image} otherClasses="w-full" />
