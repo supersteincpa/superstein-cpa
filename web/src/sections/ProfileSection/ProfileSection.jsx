@@ -84,6 +84,9 @@ export const ProfileSection = ({
         <p className="mt-4 font-Public_Sans font-bold text-sm text-gray-800">
           {about}
         </p>
+        <article className="profile_section_rich_text my-6">
+          <RichText richText={_rawInfoText} />
+        </article>
 
         <div className="border-b-[1px] border-gray-400 hidden lg:flex mt-12">
           {_rawBiographyText && (
@@ -152,7 +155,7 @@ export const ProfileSection = ({
               Areas of Expertise
             </button>
           )}
-          {reviewCards && (
+          {reviewCards.length > 0 && (
             <button
               onClick={() => toggleTabFunc('Reviews')}
               className={clsx(
