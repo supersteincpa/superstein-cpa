@@ -201,6 +201,16 @@ export default {
           },
           to: [{type: 'meetTheTeamSection'}],
         },
+        {
+          title: 'Location Two Column Section',
+          name: 'locationTwoColumnSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'locationTwoColumnSection'}],
+        },
       ],
     },
   ],

@@ -61,6 +61,11 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Street Text',
+      name: 'streetText',
+      type: 'bodyPortableText',
+    },
+    {
       name: 'pageBuilder',
       type: 'array',
       title: 'Page Builder',

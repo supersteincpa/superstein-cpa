@@ -5,11 +5,18 @@ import Heading from '../../components/Heading/Heading'
 import icon from '../../images/temp/location-two-column.png'
 import image from '../../images/temp/location-two-column-map.png'
 import Icon from '../../components/Icon/Icon'
-
-export const LocationTwoColumnSection = ({ otherClasses }) => {
+import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Image } from '../../components/Image'
+import { RichText } from '../../components/RichText'
+import './locationtwocolumnsection.scss'
+export const LocationTwoColumnSection = ({
+  otherClasses,
+  desktopImage,
+  mobileImage,
+}) => {
   const locationTwoColumnSectionClasses = clsx(
     otherClasses,
-    'w-full py-[78.5px] py-12'
+    'w-full my-[64px] lg:my-[110px]'
   )
 
   const arr = [
@@ -26,6 +33,24 @@ export const LocationTwoColumnSection = ({ otherClasses }) => {
     },
   ]
 
+  const location = useStaticQuery(graphql`
+    query LocationSectionQuery {
+      allSanityLocationsPages {
+        nodes {
+          slug {
+            current
+          }
+          mobileImage {
+            ...CustomImage
+          }
+          heading
+          _rawStreetText
+        }
+      }
+    }
+  `)
+  const nodes = location?.allSanityLocationsPages?.nodes
+
   return (
     <section
       className={locationTwoColumnSectionClasses}
@@ -33,38 +58,51 @@ export const LocationTwoColumnSection = ({ otherClasses }) => {
     >
       <div className="w-full max-w-[1512px] mx-auto flex flex-col lg:flex-row items-center justify-center gap-14 xl:gap-20 px-6 lg:px-20 xl:px-[156px]">
         <div className="flex flex-col w-full lg:w-2/4 items-cemter justify-center gap-12">
-          {arr.map((nodes) => {
-            return (
-              <div className="flex flex-col lg:flex-row items-center justify-start gap-[29px] group cursor-pointer">
-                <div className="w-[132px] relative rounded-[15px] overflow-hidden  hidden lg:block">
-                  <img src={nodes.icon} alt="" className="full" />
-                  <div className="absolute top-0 left-0 bottom-0 flex items-center justify-center text-white bg-black opacity-0 transition duration-500 w-full group-hover:opacity-50 ">
-                    <Icon
-                      icon="white-plus-icon"
-                      iconHeight={32}
-                      iconWidth={32}
+          {nodes.map(
+            ({ mobileImage, heading, _rawStreetText, slug: { current } }) => {
+              return (
+                <Link
+                  to={`/${current}`}
+                  className="flex flex-col lg:flex-row items-center justify-start gap-[29px] group cursor-pointer"
+                >
+                  <div className="w-[140px] h-[132px] min-w-[140px] min-h-[132px] relative rounded-[15px] overflow-hidden  hidden lg:block">
+                    <Image
+                      imageData={mobileImage}
+                      imgClassName="rounded-[15px]"
+                      otherClasses="w-[140px] h-[132px] min-w-[140px] min-h-[132px] rounded-[15px]"
                     />
+                    <div className="absolute top-0 left-0 bottom-0 flex items-center justify-center text-white bg-black opacity-0 transition duration-500 w-full group-hover:opacity-50 ">
+                      <Icon
+                        icon="white-plus-icon"
+                        iconHeight={32}
+                        iconWidth={32}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="w-full lg:max-w-[391px] border-b-[1px] border-b-gray-300 group-hover:border-b-blue-400">
-                  <Heading
-                    type="h5"
-                    otherClasses="flex items-center justify-between mb-4 group-hover:text-blue-400"
-                  >
-                    {nodes.title}{' '}
-                    <span className="our_services_card_share_icon bg-typography group-hover:bg-blue-400"></span>
-                  </Heading>
-                  <p className=" font-Public_Sans font-normal leading-6 tracking-[0.03em] text-typography text-base mb-4">
-                    {nodes._rawText}
-                  </p>
-                </div>
-              </div>
-            )
-          })}
+                  <div className="w-full lg:max-w-[391px] border-b-[1px] border-b-gray-300 group-hover:border-b-blue-400">
+                    <Heading
+                      type="h5"
+                      otherClasses="flex items-center justify-between mb-4 group-hover:text-blue-400"
+                    >
+                      {heading}
+                      <span className="our_services_card_share_icon bg-typography group-hover:bg-blue-400"></span>
+                    </Heading>
+                    <article className="location_two_column_rich_text pb-6">
+                      <RichText richText={_rawStreetText} />
+                    </article>
+                  </div>
+                </Link>
+              )
+            }
+          )}
         </div>
 
         <div className="w-full lg:w-2/4 rounded-[15px]">
-          <img src={image} alt="" className="w-full" />
+          <Image
+            imageData={desktopImage}
+            otherClasses="w-full !hiddem lg:!block"
+          />
+          <Image imageData={mobileImage} otherClasses="w-full lg:!hidden" />
         </div>
       </div>
     </section>
@@ -72,3 +110,16 @@ export const LocationTwoColumnSection = ({ otherClasses }) => {
 }
 
 export default LocationTwoColumnSection
+
+export const query = graphql`
+  fragment LocationTwoColumnSection on SanityLocationTwoColumnSection {
+    __typename
+    identifier
+    desktopImage {
+      ...CustomImage
+    }
+    mobileImage {
+      ...CustomImage
+    }
+  }
+`

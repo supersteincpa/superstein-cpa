@@ -12,6 +12,7 @@ import industryPages from './documents/industryPages'
 import industryServicesSection from './documents/industryServicesSection'
 import industryTwoColumnSection from './documents/industryTwoColumnSection'
 import locationSection from './documents/locationSection'
+import locationTwoColumnSection from './documents/locationTwoColumnSection'
 import locationsPages from './documents/locationsPages'
 import meetTheTeamSection from './documents/meetTheTeamSection'
 import miniHeroSection from './documents/miniHeroSection'
@@ -65,6 +66,7 @@ export const schemaTypes = [
   locationSection,
   miniHeroSection,
   blogsReference,
+  locationTwoColumnSection,
   reviewsReference,
   ourBodySection,
   industryServicesSection,
