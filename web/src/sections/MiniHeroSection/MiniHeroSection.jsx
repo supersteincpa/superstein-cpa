@@ -64,7 +64,7 @@ export const MiniHeroSection = ({
         >
           {mainHeading && (
             <Heading
-              type="h6"
+              type="h1"
               otherClasses={clsx(
                 'font-light text-[34px] lg:text-[52px] leading-[44px] lg:leading-[78px] text-white font-Poppins',
                 type === 'secondary' ? 'text-center' : 'text-left'

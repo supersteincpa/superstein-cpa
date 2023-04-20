@@ -13,6 +13,21 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
 
   const Year = new Date().getFullYear()
 
+  let orderArr = [
+    'Business Advisory',
+    'Tax Planning & Preparation',
+    'Estates & Trusts',
+    'IRS Representation',
+    'Audit & Assurance',
+    'Accounting Services',
+  ]
+
+  let orderedNodes = orderArr.map((item) =>
+  services.find(({title}) => title === item)
+  )
+
+
+
   return (
     <div className={footerClasses} data-testid="footer">
       <div className="w-full max-w-[1512px] px-[50px] lg:px-[50px] xl:px-[156px] text-white mx-auto">
@@ -31,9 +46,10 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             >
               Services
             </Link>
-            {services.map(({ title, slug: { current } }) => {
+            {orderedNodes.map(({ title, slug: { current } },index) => {
               return (
                 <Link
+                key ={index}
                   to={`/${current}`}
                   className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70"
                 >
@@ -115,9 +131,10 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
                 <Icon iconWidth={8} icon="dropdown-arrow" />
               </p>
               <ul className="group-hover:flex hidden flex-col ml-7 lg:ml-0 gap-2 min-w-[250px] p-6 rounded-2xl bg-white absolute bottom-6 translate-x-[-50%] left-2/4 ">
-                {industries.map(({ title, slug: { current } }) => {
+                {industries.map(({ title, slug: { current } },index) => {
                   return (
                     <Link
+                    key ={index}
                       to={`/${current}`}
                       className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-gray-600 hover:text-gray-900 hover:font-bold cursor-pointer"
                     >

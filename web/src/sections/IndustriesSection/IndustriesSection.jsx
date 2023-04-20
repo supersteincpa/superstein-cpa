@@ -46,7 +46,7 @@ export const IndustriesSection = ({
           </div>
         )}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center mb-6">
-          <Heading otherClasses="font-Poppins text-gray-900 w-full lg:min-w-[337px] lg:w-[337px] pb-6 lg:pr-8 border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-b-addition_button_color lg:border-r-addition_button_color">
+          <Heading type='h2' otherClasses="font-Poppins text-gray-900 w-full lg:min-w-[337px] lg:w-[337px] pb-6 lg:pr-8 border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-b-addition_button_color lg:border-r-addition_button_color">
             {mainHeading}
           </Heading>
           <article className="industries_rich_text w-full">

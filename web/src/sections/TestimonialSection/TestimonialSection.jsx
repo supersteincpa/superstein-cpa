@@ -132,9 +132,9 @@ export const TestimonialSection = ({
             customSettings={settings}
             customClass="testimonial_main_container"
           >
-            {reviewData.map(({ logo, _rawSubText, name }) => {
+            {reviewData.map(({ logo, _rawSubText, name },index) => {
               return (
-                <div className="px-4">
+                <div className="px-4" key = {index}>
                   <div className="w-full flex flex-col items-center gap-8">
                     <article className="testimonial_rich_text">
                       <RichText richText={_rawSubText} />

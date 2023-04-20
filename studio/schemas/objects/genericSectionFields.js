@@ -12,7 +12,6 @@ export default {
       title: 'Heading',
       name: 'heading',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Sub Text',

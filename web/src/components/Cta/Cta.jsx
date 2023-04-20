@@ -43,9 +43,10 @@ export const Cta = ({
           </article>
         </div>
         <div className="flex gap-6">
-          {ctaButtons.map((nodes) => {
+          {ctaButtons.map((nodes,i) => {
             return (
               <Button
+              key ={i}
                 onClick={() => toggleFunc('Contact Us')}
                 {...nodes}
                 otherClasses="whitespace-nowrap"

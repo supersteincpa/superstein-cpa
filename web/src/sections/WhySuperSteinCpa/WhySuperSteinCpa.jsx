@@ -37,9 +37,9 @@ export const WhySuperSteinCpa = ({
         </Heading>
         <div className="border boder-[1px] border-[#4679E6] w-[125px] mb-8"></div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-6 lg:gap-x-10 xl:gap-x-20 lg:gap-y-8">
-          {cards.map(({ icon, heading, _rawSubText }) => {
+          {cards.map(({ icon, heading, _rawSubText },index) => {
             return (
-              <div className="flex flex-col items-start justify-start">
+              <div key = {index} className="flex flex-col items-start justify-start">
                 <Heading
                   type="h5"
                   otherClasses="flex items-start justify-center mb-3 gap-2"

@@ -18,7 +18,7 @@ export const OurServicesSection = ({
   title,
   mainHeading,
   isFilterBar,
-  _rawSubText,
+  _rawText,
 }) => {
   const ourServicesSectionClasses = clsx(
     otherClasses,
@@ -29,7 +29,7 @@ export const OurServicesSection = ({
       : 'py-[100px] lg:py-[200px]'
   )
 
-  const ourServices = useStaticQuery(graphql`
+  const {allSanityServicesPages} = useStaticQuery(graphql`
     query sanityServicesSection {
       allSanityServicesPages {
         nodes {
@@ -49,9 +49,7 @@ export const OurServicesSection = ({
     }
   `)
 
-  const nodes = ourServices.allSanityServicesPages.nodes
-
-
+  const nodes = allSanityServicesPages.nodes
 
   const uniqueChars = [
     ...new Map(nodes.map((m) => [m.servicesCard.servicesType, m])).values(),
@@ -88,12 +86,25 @@ export const OurServicesSection = ({
   const currentLocation =
     location &&
     location.substring(0, location.length - 1).slice(1, location.length - 1)
-  console.log(currentLocation)
 
   const filterBypathName = nodes.filter(
     (nodes) => nodes.slug.current != currentLocation
   )
 
+  let orderArr = [
+    'Business Advisory',
+    'Tax Planning & Preparation',
+    'Estates & Trusts',
+    'IRS Representation',
+    'Audit & Assurance',
+    'Accounting Services',
+  ]
+  
+  let orderedNodes = orderArr.map((item) =>
+  nodes.find(({servicesCard:{heading}}) => heading === item)
+  )
+  console.log(orderedNodes);  
+  console.log(nodes);  
   return (
     <section
       className={ourServicesSectionClasses}
@@ -124,7 +135,7 @@ export const OurServicesSection = ({
           >
             {mainHeading}
           </Heading>
-          {_rawSubText && (
+          {_rawText && (
             <article
               className={clsx(
                 isBackgroundColor
@@ -132,7 +143,7 @@ export const OurServicesSection = ({
                   : 'our_services_section_rich_text_white'
               )}
             >
-              <RichText richText={_rawSubText} />
+              <RichText richText={_rawText} />
             </article>
           )}
         </div>
@@ -186,6 +197,7 @@ export const OurServicesSection = ({
             {uniqueChars.map(({ servicesCard: { servicesType } }, index) => {
               return (
                 <button
+                key = {index}
                   onClick={() => {
                     toggleFilter(servicesType, index)
                   }}
@@ -248,9 +260,10 @@ export const OurServicesSection = ({
             >
               All
             </option>
-            {uniqueChars.map(({ servicesCard: { servicesType } }) => {
+            {uniqueChars.map(({ servicesCard: { servicesType } },index) => {
               return (
                 <option
+                key = {index}
                   value={servicesType}
                   className="font-Poppins text-gray-900 font-normal text-base leading-6 capitalize"
                 >
@@ -263,9 +276,10 @@ export const OurServicesSection = ({
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-y-12 gap-x-10 xl:gap-x-20 mt-6 lg:mt-16">
           {isBackgroundColor ? (
             <>
-              {filterBypathName.map((nodes) => {
+              {filterBypathName.map((nodes,index) => {
                 return (
                   <OurServicesCard
+                  key = {index}
                     {...nodes}
                     otherClasses={clsx(
                       isBackgroundColor && 'our_services_card_black_color'
@@ -278,9 +292,10 @@ export const OurServicesSection = ({
             <>
               {data.length === 0 ? (
                 <>
-                  {nodes.map((nodes) => {
+                  {orderedNodes.map((nodes,index) => {
                     return (
                       <OurServicesCard
+                      key ={index}
                         {...nodes}
                         otherClasses={clsx(
                           isBackgroundColor && 'our_services_card_black_color'
@@ -291,10 +306,11 @@ export const OurServicesSection = ({
                 </>
               ) : (
                 <>
-                  {data.map((nodes) => {
+                  {orderedNodes.map((nodes,index) => {
                     return (
                       <OurServicesCard
                         {...nodes}
+                        key ={index}
                         otherClasses={clsx(
                           isBackgroundColor && 'our_services_card_black_color'
                         )}
