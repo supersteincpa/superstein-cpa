@@ -24,7 +24,7 @@ export const OurHistory = ({
     <section className={ourHistoryClasses} data-testid="our-history">
       <img
         src={roundedImage}
-        alt="rounded-image"
+        alt="rounded"
         className={clsx(
           'absolute bottom-0 lg:bottom-[-400px] rotate-180 left-0'
         )}
@@ -37,7 +37,7 @@ export const OurHistory = ({
             </p>
           </div>
         )}
-        <div className="lg:sticky flex flex-col items-start justify-start gap-6 w-full h-fit lg:top-[86px] lg:w-2/4">
+        <div className="lg:sticky flex flex-col items-start justify-start gap-6 w-full h-fit lg:top-[86px]  lg:w-2/4">
           <Heading type="h2">{mainHeading}</Heading>
           <article className="our_mission_rich_text">
             <RichText richText={_rawSubText} />
@@ -45,8 +45,8 @@ export const OurHistory = ({
         </div>
 
         <div className="last_child w-full lg:w-2/4">
-          {cards.map((nodes) => {
-            return <OurHistoryCard {...nodes} />
+          {cards.map((nodes,index) => {
+            return <OurHistoryCard key ={index} {...nodes} />
           })}
         </div>
       </div>

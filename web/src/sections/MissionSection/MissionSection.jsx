@@ -1,10 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import icon from '../../images/temp/challenges-icon.png'
 import Heading from '../../components/Heading/Heading'
-import Button from '../../components/Button/Button'
-import image from '../../images/temp/mission-image.png'
 
 import './missionsection.scss'
 import { Image } from '../../components/Image'

@@ -2,8 +2,6 @@ import React from 'react'
 import clsx from 'clsx'
 import Heading from '../../components/Heading/Heading'
 
-import icon from '../../images/temp/location-two-column.png'
-import image from '../../images/temp/location-two-column-map.png'
 import Icon from '../../components/Icon/Icon'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { Image } from '../../components/Image'
@@ -18,22 +16,8 @@ export const LocationTwoColumnSection = ({
     otherClasses,
     'w-full my-[64px] lg:my-[110px]'
   )
-
-  const arr = [
-    {
-      icon: icon,
-      title: 'Broward',
-      _rawText: '3830 Hollywood Blvd.Suite 101Hollywood FL 33021954-602-9100',
-    },
-    {
-      icon: icon,
-      title: 'Greenville',
-      _rawText:
-        '355 South Main Street 1st & 2nd FloorsGreenville, SC 29601123-456-7890',
-    },
-  ]
-
-  const location = useStaticQuery(graphql`
+ 
+ const location = useStaticQuery(graphql`
     query LocationSectionQuery {
       allSanityLocationsPages {
         nodes {

@@ -106,7 +106,7 @@ export const ProfileSection = ({
                     : 'gray_disabled_image'
                 )}
               >
-                <img src={contactImage} alt="contact-image" />
+                <img src={contactImage} alt="contact" />
               </span>
               Biography
             </button>
@@ -128,7 +128,7 @@ export const ProfileSection = ({
                     : 'gray_disabled_image'
                 )}
               >
-                <img src={linkRotate} alt="contact-image" />
+                <img src={linkRotate} alt="contact" />
               </span>
               Affiliation
             </button>
@@ -150,7 +150,7 @@ export const ProfileSection = ({
                     : 'gray_disabled_image'
                 )}
               >
-                <img src={starProfile} alt="contact-image" />
+                <img src={starProfile} alt="contact" />
               </span>
               Areas of Expertise
             </button>
@@ -172,7 +172,7 @@ export const ProfileSection = ({
                     : 'gray_disabled_image'
                 )}
               >
-                <img src={chatCircleImage} alt="contact-image" />
+                <img src={chatCircleImage} alt="contact" />
               </span>
               Reviews
             </button>
@@ -256,7 +256,7 @@ export const ProfileSection = ({
             >
               What Clients Say About Working With {myArray[0]}
             </Heading>
-            <div>
+            <div className='flex flex-col gap-y-6'>
               {reviewCards.map((nodes) => {
                 return <ReviewCard {...nodes} />
               })}

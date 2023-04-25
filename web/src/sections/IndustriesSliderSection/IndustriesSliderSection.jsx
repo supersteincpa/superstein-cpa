@@ -41,10 +41,9 @@ export const IndustriesSliderSection = ({
   const currentLocation =
     location &&
     location.substring(0, location.length - 1).slice(1, location.length - 1)
-  console.log(currentLocation)
 
   const filterBypathName = nodes.filter(
-    (nodes) => nodes.slug.current != currentLocation
+    (nodes) => nodes.slug.current !== currentLocation
   )
 
   const TestimonailPrevArrow = (props) => {
@@ -140,12 +139,12 @@ export const IndustriesSliderSection = ({
           customSettings={settings}
           customClass="industries_inner_slider px-6 lg:pr-0 lg:pl-20 xl:pl-[156px]"
         >
-          {filterBypathName.map((nodes, index) => {
+          {filterBypathName.map((nodes,index) => {
             return (
-              <div className="px-[11px]">
+              <div className="px-[11px]" key = {index}>
                 <ServicesCard
                   otherClasses="min-h-[363px]"
-                  key={index}
+               
                   {...nodes}
                 />
               </div>

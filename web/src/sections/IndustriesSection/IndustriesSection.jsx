@@ -33,7 +33,7 @@ export const IndustriesSection = ({
       {!isBackground && (
         <img
           src={circleImage}
-          alt="circle-image"
+          alt="circle"
           className="absolute right-0 top-0 lg:top-auto lg:bottom-[-238px]"
         />
       )}

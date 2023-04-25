@@ -46,7 +46,7 @@ export const ContactForm = ({
           ...state,
         }),
       })
-      console.log(response)
+      
       const { status } = response
       if (status === 200) {
         messageRef.current.innerHTML =
@@ -69,10 +69,10 @@ export const ContactForm = ({
         <div className="flex items-center gap-2 cursor-pointer">
           <Icon icon="phone-outline-black" iconHeight={24} iconWidth={24} />
           <a
-            href="tel:7603491750"
+            href="tel:9546029100"
             className="font-crimson_pro text-primary_green_600 font-bold text-base "
           >
-            (760) 349-1750
+            954-602-9100
           </a>
         </div>
         <button onClick={() => toggleCancel()}>
@@ -127,7 +127,7 @@ export const ContactForm = ({
           </button>
         </div>
 
-        {toggleState === 'book-meeting' && (
+        {/* {toggleState === 'book-meeting' && (
           <div className="mt-8">
             <Heading
               type="h4"
@@ -136,13 +136,13 @@ export const ContactForm = ({
               Let's Start a Conversation
             </Heading>
             <p className="font-crimson_pro font-normal text-base text-gray-600 ">
-              Take this brief questionnaire to find out how Shared Vision Wealth
+              Take this brief questionaire to find out how Superstein CPA
               can help you.
             </p>
           </div>
-        )}
+        )} */}
 
-        {toggleState === 'send-message' && (
+        {/* {toggleState === 'send-message' && (
           <form
             onSubmit={handleSubmit}
             name="Contact Us"
@@ -221,11 +221,16 @@ export const ContactForm = ({
                 <option value="Select one...">Select one...</option>
                 {services.map(({ title }, index) => {
                   return (
-                    <option key={index} value={'Interested in ' + title}>
-                      I’m interested in {title}
+                    <option key={index} value={title}>
+                     {title}
                     </option>
                   )
                 })}
+                    <option value='Interested in Other'>
+                      Other
+                    </option>
+                
+                
               </select>
             </div>
             <div className="w-full mb-6">
@@ -247,7 +252,120 @@ export const ContactForm = ({
             </div>
             <Button label="Submit" />
           </form>
-        )}
+        )} */}
+
+
+        <form
+            onSubmit={handleSubmit}
+            name="Contact Us"
+            method="post"
+            action=""
+            data-netlify = 'true'
+            className={clsx('w-full mt-5 md:mt-8')}
+          >
+            <p
+              className="font-Work-Sans text-gray-800  text-base font-bold mb-4"
+              ref={messageRef}
+            ></p>
+
+            <div className="mb-6">
+              <label
+                htmlFor="name"
+                className="font-mulish text-sm font-semibold text-gray-900 "
+              >
+                Name
+              </label>
+              <input
+                name="name"
+                id="name"
+                required
+                type="text"
+                onChange={handleChange}
+                className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
+              />
+            </div>
+            <div className="mb-6 flex flex-col md:flex-row gap-5 lg:gap-[21px]">
+              <div className="w-full md:w-2/4">
+                <label
+                  htmlFor="phone"
+                  className="font-mulish text-sm font-semibold text-gray-900 "
+                >
+                  Phone Number
+                </label>
+                <input
+                  name="phone"
+                  id="phone"
+                  required
+                  onChange={handleChange}
+                  type="text"
+                  className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
+                />
+              </div>
+              <div className="w-full md:w-2/4">
+                <label
+                  htmlFor="email"
+                  className="font-mulish text-sm font-semibold text-gray-900  "
+                >
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  onChange={handleChange}
+                  className="w-full border-[1px] pl-4 font-raleway border-gray-300 rounded-full h-12 mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
+                />
+              </div>
+            </div>
+            <div className="w-full flex flex-col gap-2 mb-6">
+              <label
+                htmlFor="option"
+                className="font-mulish text-sm font-semibold text-gray-900 "
+              >
+                What Can We Help You With?
+              </label>
+              <select
+                id="option"
+                type="text"
+                onChange={handleChange}
+                name="What Can We Help You With?"
+                className="w-full border-[1px]  border-gray-300 flex justify-between px-4 h-12 items-center rounded-full  text-base font-normal font-Work-Sans focus:ring-0 focus:border-addition_button_color  focus:border-[1px] focus:outline-offset-2 focus:outline-[3px] outline-[#C7D7F7]"
+              >
+                <option value="Select one...">Select one...</option>
+                {services.map(({ title }, index) => {
+                  return (
+                    <option key={index} value={title}>
+                     {title}
+                    </option>
+                  )
+                })}
+                    <option value='Interested in Other'>
+                      Other
+                    </option>
+                
+                
+              </select>
+            </div>
+            <div className="w-full mb-6">
+              <label
+                htmlFor="description"
+                className="font-mulish text-sm font-semibold text-gray-900 "
+              >
+                Message (optional)
+              </label>
+              <textarea
+                type="text"
+                onChange={handleChange}
+                name="description"
+                id="description"
+                cols="30"
+                rows="10"
+                className="w-full border-[1px] font-raleway pl-4 pt-4 border-gray-300 rounded-[30px] min-h-[136px] max-h-[136px] mt-2 focus:border-addition_button_color outline-offset-2 outline-[3px] outline-[#C7D7F7]"
+              ></textarea>
+            </div>
+            <Button label="Submit" />
+          </form>
+
       </div>
     </div>
   )

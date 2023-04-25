@@ -2,7 +2,6 @@ import React from 'react'
 import clsx from 'clsx'
 
 import Heading from '../Heading/Heading'
-import image from '../../images/temp/where-we-located-imageOne.png'
 import { Image } from '../Image'
 import { Link } from 'gatsby'
 

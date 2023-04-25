@@ -11,6 +11,7 @@ import roundedImage from '../../images/background-circle-pattern.svg'
 export const GenericTwoColumn = ({
   otherClasses,
   toggleFunc,
+  isWhite,
   genericSections: {
     title,
     heading,
@@ -31,9 +32,9 @@ export const GenericTwoColumn = ({
       {isDecorator && (
         <img
           src={roundedImage}
-          alt="rounded-image"
+          alt="rounded"
           className={clsx(
-            'absolute translate-y-[-50%] top-2/4 ',
+            'absolute translate-y-[-50%] top-2/4 custom_class',
             reversed ? 'left-0 rotate-180' : ' right-0'
           )}
         />
@@ -56,17 +57,17 @@ export const GenericTwoColumn = ({
           {heading && (
             <Heading
               type="h2"
-              otherClasses=" text-gray-900 mb-6 after:mt-6 after:w-full after:h-[1px] after:bg-addition_button_color after:block"
+              otherClasses={clsx(isWhite ?'text-white' : 'text-gray-900' ,"  mb-6 after:mt-6 after:w-full after:h-[1px] after:bg-addition_button_color after:block")}
             >
               {heading}
             </Heading>
           )}
-          <article className="generic_rich_text mb-6">
+          <article className={clsx(isWhite ? "generic_rich_text_white mb-6": "generic_rich_text mb-6")}>
             <RichText richText={_rawSubText} />
           </article>
           {button && (
             <Button
-              onClick={(formType) => toggleFunc(formType)}
+              onClick={() => toggleFunc(button?.form)}
               otherClasses="w-fit"
               {...button}
             />

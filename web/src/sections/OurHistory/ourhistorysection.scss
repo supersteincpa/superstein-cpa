@@ -20,7 +20,7 @@
     padding-bottom: 60px;
   }
 }
-.our_mission_rich_text {
+.our_history_mission_rich_text {
   > div {
     p {
       @media (min-width: 1024px) {
@@ -30,11 +30,12 @@
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
+      margin-bottom: 20px;
       line-height: 30px;
       letter-spacing: 0.03em;
-      margin-bottom: 16px;
       color: #333333;
       opacity: 0.8;
     }
   }
 }
+

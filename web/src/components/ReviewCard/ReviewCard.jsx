@@ -1,8 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import image from '../../images/temp/review-card-user-image.png'
-import logoImage from '../../images/temp/google-logo.png'
 import Image from '../../components/Image/Image'
 import './reviewscard.scss'
 import { RichText } from '../RichText'

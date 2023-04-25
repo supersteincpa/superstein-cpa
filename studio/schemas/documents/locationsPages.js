@@ -141,14 +141,14 @@ export default {
           to: [{type: 'featuredBlogsSection'}],
         },
         {
-          title: 'Location Section',
-          name: 'locationSection',
+          title: 'location Page Two Column Section',
+          name: 'locationPageTwoColumnSection',
           type: 'reference',
           validation: (Rule) => Rule.required(),
           options: {
             disableNew: true,
           },
-          to: [{type: 'locationSection'}],
+          to: [{type: 'locationPageTwoColumnSection'}],
         },
         {
           title: 'CTA',

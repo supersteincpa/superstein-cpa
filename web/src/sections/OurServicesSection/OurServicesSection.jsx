@@ -1,6 +1,5 @@
 import React from 'react'
 import clsx from 'clsx'
-import cardImage from '../../images/temp/our-services-image1.png'
 import './ourservicessection.scss'
 import { Heading } from '../../components/Heading'
 import circleImage from '../../images/background-circle-pattern.svg'
@@ -88,7 +87,7 @@ export const OurServicesSection = ({
     location.substring(0, location.length - 1).slice(1, location.length - 1)
 
   const filterBypathName = nodes.filter(
-    (nodes) => nodes.slug.current != currentLocation
+    (nodes) => nodes.slug.current !== currentLocation
   )
 
   let orderArr = [
@@ -103,8 +102,6 @@ export const OurServicesSection = ({
   let orderedNodes = orderArr.map((item) =>
   nodes.find(({servicesCard:{heading}}) => heading === item)
   )
-  console.log(orderedNodes);  
-  console.log(nodes);  
   return (
     <section
       className={ourServicesSectionClasses}
@@ -113,7 +110,7 @@ export const OurServicesSection = ({
       {isBackgroundColor && (
         <img
           src={circleImage}
-          alt="circle-img"
+          alt="circle"
           className="absolute left-[10px] bottom-[-740px] rotate-180 hidden lg:block"
         />
       )}
@@ -150,7 +147,7 @@ export const OurServicesSection = ({
         <div
           className={clsx(
             'max-w-[1184px] mx-auto w-full lg:border-b-[1px] lg:border-b-gray-700',
-            isFilterBar ? 'block' : 'hidden'
+            isFilterBar ? 'block mt-[112px]' : 'hidden'
           )}
         >
           <Heading
@@ -306,7 +303,7 @@ export const OurServicesSection = ({
                 </>
               ) : (
                 <>
-                  {orderedNodes.map((nodes,index) => {
+                  {data.map((nodes,index) => {
                     return (
                       <OurServicesCard
                         {...nodes}

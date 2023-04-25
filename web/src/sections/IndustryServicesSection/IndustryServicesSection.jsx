@@ -3,7 +3,6 @@ import clsx from 'clsx'
 
 import Heading from '../../components/Heading/Heading'
 import ServicesCard from '../../components/ServicesCard/ServicesCard'
-import image from '../../images/temp/services-card-image.png'
 import roundedImage from '../../images/background-circle-pattern.svg'
 
 import './industryservicessection.scss'
@@ -47,7 +46,7 @@ export const IndustryServicesSection = ({
     >
       <img
         src={roundedImage}
-        alt="rounded-image"
+        alt="rounded"
         className={clsx('absolute top-[200px]  right-[-144px] lg:block hidden')}
       />
       <div className="w-full max-w-[1512px] mx-auto px-6 lg:px-20 xl:px-[121px] relative">

@@ -1,0 +1,6 @@
+.two_page_two_columns_section{
+    @media (min-width: 1024px) {
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+      }
+      clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+}

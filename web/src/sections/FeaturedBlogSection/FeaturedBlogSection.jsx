@@ -9,7 +9,7 @@ import { BlogCard } from '../../components/BlogCard'
 export const FeaturedBlogSection = ({ otherClasses, heading, title }) => {
   const FeaturedBlogSectionClasses = clsx(
     otherClasses,
-    'w-full  px-4 lg:px-20 overflow-hidden xl:px-[156px] mx-auto max-w-[1512px] mb-[60px] lg:mb-[120px] relative mt-[112px]'
+    'w-full  px-4 lg:px-20 overflow-hidden xl:px-[156px] mx-auto max-w-[1512px] mb-[60px] lg:mb-[120px] relative mt-[112px] '
   )
 
   const FeaturedBlogs = useStaticQuery(graphql`
@@ -37,6 +37,7 @@ export const FeaturedBlogSection = ({ otherClasses, heading, title }) => {
   `)
 
   const nodes = FeaturedBlogs?.allSanityBlogs?.nodes
+
   return (
     <section className={FeaturedBlogSectionClasses} data-testid="blog-section">
       {title && (
@@ -48,8 +49,8 @@ export const FeaturedBlogSection = ({ otherClasses, heading, title }) => {
       )}
       <img
         src={circleImage}
-        alt="circle-image"
-        className="absolute left-0 bottom-[-180px] rotate-180 lg:top-auto lg:bottom-[-798px] lg:h-[1236px] lg:w-[1236px]"
+        alt="circle"
+        className="absolute left-0 bottom-[-475px]  lg:rotate-180 lg:top-auto lg:bottom-[-930px] lg:h-[1236px] lg:w-[1236px]"
       />
       {heading && (
         <Heading

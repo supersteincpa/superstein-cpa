@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Image } from '../../components/Image'
 import { Heading } from '../../components/Heading'
-import image1 from '../../images/temp/google-logo.png'
 import Slider from '../../components/Slider/Slider'
 import './testimonialsection.scss'
 import Icon from '../../components/Icon/Icon'
@@ -20,26 +19,6 @@ export const TestimonialSection = ({
     'w-full relative pt-[100px] pb-[158px] lg:py-0 lg:h-[740px] flex items-center'
   )
 
-  const arr = [
-    {
-      name: 'Lisa Chancey',
-      _rawText:
-        'I have been a client of the firm for 30 years and have always been able to count on Superstein PA for the best tax advice and planning. I am extremely happy with the technical knowledge and superior service. This firm is the place you want to have your business and personal returns prepared!',
-      company: image1,
-    },
-    {
-      name: 'Lisa Chancey',
-      _rawText:
-        'I have been a client of the firm for 30 years and have always been able to count on Superstein PA for the best tax advice and planning. I am extremely happy with the technical knowledge and superior service. This firm is the place you want to have your business and personal returns prepared!',
-      company: image1,
-    },
-    {
-      name: 'Lisa Chancey',
-      _rawText:
-        'I have been a client of the firm for 30 years and have always been able to count on Superstein PA for the best tax advice and planning. I am extremely happy with the technical knowledge and superior service. This firm is the place you want to have your business and personal returns prepared!',
-      company: image1,
-    },
-  ]
   const reviews = useStaticQuery(graphql`
     query TesimonialReviews {
       allSanityReviews {

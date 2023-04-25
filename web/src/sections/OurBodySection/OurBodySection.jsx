@@ -16,6 +16,7 @@ export const OurBodySection = ({
   mainHeading,
   _rawSubText,
   cards,
+  toggleFunc
 }) => {
   const ourBodySectionClasses = clsx(
     otherClasses,
@@ -118,16 +119,17 @@ export const OurBodySection = ({
             </ul>
           </div>
           <div className="our_body_card_border_bottom_mobile w-full lg:w-[65%]">
-            {cards.map(({ heading, _rawSubText, button, title }) => {
+            {cards.map(({ heading, _rawSubText, button, title },index) => {
               const linkId = title?.split(' ').join('')
               return (
                 <div
+                key = {index}
                   id={linkId}
                   className="solution_section pt-8 pb-1 lg:pb-8 lg:pt-6 lg:px-5 xl:px-10 border-b-[1px] border-b-gray-300 scroll-mt-[200px]"
                 >
                   {heading && (
                     <Heading
-                      type="h3"
+                      type="h2"
                       otherClasses="text-white font-normal font-Poppins mb-6"
                     >
                       {heading}
@@ -136,7 +138,7 @@ export const OurBodySection = ({
                   <article className="our_body_card_rich_text">
                     <RichText richText={_rawSubText} />
                   </article>
-                  <Button {...button} />
+                  <Button {...button} onClick={()=>toggleFunc(button?.form)} />
                 </div>
               )
             })}

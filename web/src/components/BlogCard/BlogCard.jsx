@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 
 import Image from '../Image'
 import Heading from '../Heading/Heading'
-import Button from '../Button/Button'
 import { differenceInDays, format, formatDistance } from 'date-fns'
 
 export const BlogCard = ({

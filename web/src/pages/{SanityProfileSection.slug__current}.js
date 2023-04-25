@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import Seo from '../components/seo'
-import EntryRenderer from '../components/EntryRenderer/EntryRenderer'
 import Layout from '../components/Layout/Layout'
 import ProfileSection from '../sections/ProfileSection/ProfileSection'
 import Cta from '../components/Cta/Cta'

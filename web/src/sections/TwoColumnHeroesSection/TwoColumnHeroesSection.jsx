@@ -13,7 +13,7 @@ export const TwoColumnHeroesSection = ({
     otherClasses,
     'mt-[66px] lg:mt-[84px] two_columns_hero_section_main_container pt-[64px] lg:pt-[96px]'
   )
-
+ 
   return (
     <section
       className={twoColumnHeroesSectionClasses}

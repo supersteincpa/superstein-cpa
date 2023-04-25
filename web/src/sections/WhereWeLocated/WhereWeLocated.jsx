@@ -2,8 +2,6 @@ import React from 'react'
 import clsx from 'clsx'
 
 import Heading from '../../components/Heading/Heading'
-import imageOne from '../../images/temp/where-we-located-imageOne.png'
-import imageTwo from '../../images/temp/where-we-located-imageTwo.png'
 
 import './wherewelocated.scss'
 import { Link, graphql, useStaticQuery } from 'gatsby'
@@ -14,19 +12,6 @@ export const WhereWeLocated = ({ otherClasses, title, mainHeading }) => {
     otherClasses,
     'w-full bg-gray-900 located-clip-path -mb-10 lg:mb-[-115px] relative z-10'
   )
-
-  const arr = [
-    {
-      image: imageOne,
-      title: 'Broward',
-      _rawText: 'Florida',
-    },
-    {
-      image: imageTwo,
-      title: 'Greenville',
-      _rawText: 'South carolina',
-    },
-  ]
 
   const location = useStaticQuery(graphql`
     query LocationSection {

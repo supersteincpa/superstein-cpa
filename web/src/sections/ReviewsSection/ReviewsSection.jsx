@@ -37,7 +37,7 @@ export const ReviewsSection = ({ otherClasses }) => {
     <section className={reviewsSectionClasses} data-testid="reviews-section">
       <img
         src={circleImage}
-        alt="circle-image"
+        alt="circle"
         className="absolute  bottom-[-180px] right-0 "
       />
       <div className="max-w-[1512px] relative mx-auto w-full px-4 lg:px-[100px] xl:px-[156px] flex flex-col lg:flex-row gap-12">

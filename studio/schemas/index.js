@@ -11,6 +11,7 @@ import industriesSliderSection from './documents/industriesSliderSection'
 import industryPages from './documents/industryPages'
 import industryServicesSection from './documents/industryServicesSection'
 import industryTwoColumnSection from './documents/industryTwoColumnSection'
+import locationPageTwoColumn from './documents/locationPageTwoColumn'
 import locationSection from './documents/locationSection'
 import locationTwoColumnSection from './documents/locationTwoColumnSection'
 import locationsPages from './documents/locationsPages'
@@ -77,6 +78,7 @@ export const schemaTypes = [
   missionSection,
   ourHistory,
   profileSection,
+  locationPageTwoColumn,
 
   // Objects
   genericSectionFields,

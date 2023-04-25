@@ -21,6 +21,7 @@ import MissionSection from '../../sections/MissionSection/MissionSection'
 import OurHistory from '../../sections/OurHistory/OurHistory'
 import MeetTheTeamSection from '../../sections/MeetTheTeamSection/MeetTheTeamSection'
 import LocationTwoColumnSection from '../../sections/LocationTwoColumnSection/LocationTwoColumnSection'
+import LocationPageTwoColumn from '../../sections/LocationPageTwoColumn/LocationPageTwoColumn'
 
 export const EntryRenderer = ({ pageBuilderData, ...props }) => {
   return pageBuilderData.map(({ __typename, ...sectionData }) => {
@@ -104,6 +105,14 @@ export const EntryRenderer = ({ pageBuilderData, ...props }) => {
       case 'SanityLocationTwoColumnSection':
         return (
           <LocationTwoColumnSection
+            key={__typename}
+            {...sectionData}
+            {...props}
+          />
+        )
+      case 'SanityLocationPageTwoColumnSection':
+        return (
+          <LocationPageTwoColumn
             key={__typename}
             {...sectionData}
             {...props}
