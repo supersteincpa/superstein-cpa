@@ -23,10 +23,8 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
   ]
 
   let orderedNodes = orderArr.map((item) =>
-  services.find(({title}) => title === item)
+    services.find(({ title }) => title === item)
   )
-
-
 
   return (
     <div className={footerClasses} data-testid="footer">
@@ -46,10 +44,10 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             >
               Services
             </Link>
-            {orderedNodes.map(({ title, slug: { current } },index) => {
+            {orderedNodes.map(({ title, slug: { current } }, index) => {
               return (
                 <Link
-                key ={index}
+                  key={index}
                   to={`/${current}`}
                   className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70"
                 >
@@ -101,14 +99,13 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               Broward Office
             </li>
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              3830 Hollywood Blvd. Suite 101 Hollywood FL 33021 954-602-9100
+              3830 Hollywood Blvd. Suite 101 Hollywood FL 33021 <br /> 954-602-9100
             </li>
             <li className="text-white font-semibold text-base leading-6 mb-2">
               Greenville Office
             </li>
             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              355 South Main Street 1st & 2nd Floors Greenville, SC 29601
-              123-456-7890
+              355 South Main Street <br /> 1st & 2nd Floors <br /> Greenville, SC 29601
             </li>
           </ul>
         </div>
@@ -123,18 +120,16 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               Accessibility Statement
             </li>
-            {/* <li className=' font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70 flex gap-2 items-center justify-center'>
-            <span>Industries</span>  <Icon icon='dropdown-arrow' iconWidth={8} /> */}
             <li className="group relative ">
               <p className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70 flex gap-2 items-center">
                 Industries
                 <Icon iconWidth={8} icon="dropdown-arrow" />
               </p>
               <ul className="group-hover:flex hidden flex-col ml-7 lg:ml-0 gap-2 min-w-[250px] p-6 rounded-2xl bg-white absolute bottom-6 translate-x-[-50%] left-2/4 ">
-                {industries.map(({ title, slug: { current } },index) => {
+                {industries.map(({ title, slug: { current } }, index) => {
                   return (
                     <Link
-                    key ={index}
+                      key={index}
                       to={`/${current}`}
                       className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-gray-600 hover:text-gray-900 hover:font-bold cursor-pointer"
                     >

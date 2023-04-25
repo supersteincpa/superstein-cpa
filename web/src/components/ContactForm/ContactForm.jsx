@@ -226,20 +226,6 @@ export const ContactForm = ({
                     </option>
                   )
                 })}
-                {industries.map(({ title }, index) => {
-                  return (
-                    <option key={index} value={'Interested in ' + title}>
-                      I’m interested in {title}
-                    </option>
-                  )
-                })}
-                {locations.map(({ title }, index) => {
-                  return (
-                    <option key={index} value={'Interested in ' + title}>
-                      I’m interested in {title}
-                    </option>
-                  )
-                })}
               </select>
             </div>
             <div className="w-full mb-6">

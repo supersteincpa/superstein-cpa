@@ -34,7 +34,6 @@ export const query = graphql`
         ...WhySuperSteinCPASection
         ...TestmionailSection
         ...FeaturedBlogSection
-        ...WhereWeLocated
         ...CTASection
       }
     }

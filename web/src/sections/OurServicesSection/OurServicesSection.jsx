@@ -25,12 +25,12 @@ export const OurServicesSection = ({
     'our_services_main_container w-full relative z-10',
     isBackgroundColor ? 'bg-transparent' : 'bg-gray-900',
     isFilterBar
-      ? 'mb-[34px] lg:mb-[-108px] pt-[100px] pb-[150px] lg:pt-[150px] lg:pb-[230px]'
+      ? 'mb-[34px] lg:mb-[-108px] pt-[100px] pb-[150px] lg:pt-[230px] lg:pb-[230px]'
       : 'py-[100px] lg:py-[200px]'
   )
 
   const {allSanityServicesPages} = useStaticQuery(graphql`
-    query sanityServicesSection {
+    query sanityServicesSection { 
       allSanityServicesPages {
         nodes {
           slug {

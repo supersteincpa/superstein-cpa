@@ -115,3 +115,12 @@
     }
   }
 }
+
+.our_body_card_border_bottom_mobile {
+  > div:nth-last-child(1) {
+    @media (min-width: 1024px) {
+      border-bottom: 1px solid #b2b2b2;
+    }
+    border-bottom: none;
+  }
+}

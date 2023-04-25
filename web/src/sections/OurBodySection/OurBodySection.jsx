@@ -117,7 +117,7 @@ export const OurBodySection = ({
               })}
             </ul>
           </div>
-          <div className="w-full lg:w-[65%]">
+          <div className="our_body_card_border_bottom_mobile w-full lg:w-[65%]">
             {cards.map(({ heading, _rawSubText, button, title }) => {
               const linkId = title?.split(' ').join('')
               return (

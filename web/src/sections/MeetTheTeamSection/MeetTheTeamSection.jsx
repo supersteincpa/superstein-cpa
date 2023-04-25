@@ -20,7 +20,7 @@ export const MeetTheTeamSection = ({ otherClasses }) => {
             ...CustomImage
           }
           name
-          title
+          about
         }
       }
     }
@@ -31,7 +31,7 @@ export const MeetTheTeamSection = ({ otherClasses }) => {
       className={meetTheTeamSectionClasses}
       data-testid="meet-the-team-section"
     >
-      <div className="max-w-[1512px] px-6 lg:px-20 xl:px-[117px] grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+      <div className="max-w-[1512px] px-6 lg:px-20 xl:px-[117px] grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mx-auto">
         {nodes.map((nodes) => {
           return <OurTeamCard {...nodes} />
         })}

@@ -10,7 +10,7 @@ export const OurTeamCard = ({
   otherClasses,
   image,
   name,
-  title,
+  about,
   slug: { current },
 }) => {
   const ourTeamCardClasses = clsx(
@@ -34,7 +34,7 @@ export const OurTeamCard = ({
           {name}
         </Heading>
         <p className="font-bold  text-sm text-gary-900 leading-[18px] tracking-[0.03em]">
-          {title}
+          {about}
         </p>
       </div>
     </Link>

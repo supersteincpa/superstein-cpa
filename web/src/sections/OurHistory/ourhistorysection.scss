@@ -1,6 +1,23 @@
 .last_child {
   > div:nth-last-child(1) {
     border: none;
+    margin-top: -20px;
+    // h2 {
+    //   &::before {
+    //     top: 0;
+    //   }
+    // }
+  }
+  > div:nth-child(1) {
+    h2 {
+      &::before {
+        top: 0;
+      }
+    }
+  }
+
+  > div:nth-last-child(2) {
+    padding-bottom: 60px;
   }
 }
 .our_mission_rich_text {
