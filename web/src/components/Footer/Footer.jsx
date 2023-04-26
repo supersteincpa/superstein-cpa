@@ -88,7 +88,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               Case Studies
             </li>
             <Link
-              to="blog"
+              to="/blog"
               className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70"
             >
               Blog

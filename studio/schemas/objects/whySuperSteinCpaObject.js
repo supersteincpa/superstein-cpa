@@ -8,7 +8,7 @@ export default {
       name: 'icon',
       type: 'string',
       options: {
-        list: ['chat-circle', 'statistic-icon', 'model-game', 'law-icon'],
+        list: ['chat-circle', 'statistic-icon','star-icon', 'model-game', 'law-icon','laptop-setting'],
       },
       validation: (Rule) => Rule.required(),
     },
