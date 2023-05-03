@@ -67,7 +67,7 @@ export const WhereWeLocated = ({ otherClasses, title, mainHeading }) => {
                 >
                   <Image
                     imageData={desktopImage}
-                    otherClasses="mb-6 hidden lg:!block"
+                    otherClasses="mb-6 !hidden lg:!block"
                   />
                   <Image
                     imageData={mobileImage}
