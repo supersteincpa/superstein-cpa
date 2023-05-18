@@ -20,9 +20,9 @@ export const OurHistoryCard = ({ otherClasses, heading, _rawSubText }) => {
       >
         {heading}
       </Heading>
-      <article className="our_history_card_rich_text mt-4">
+      <div className="our_history_card_rich_text mt-4">
         <RichText richText={_rawSubText} />
-      </article>
+      </div>
     </div>
   )
 }

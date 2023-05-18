@@ -37,9 +37,9 @@ export const Challenges = ({
           <div className="w-full max-w-[848px] flex flex-col gap-6">
             <Heading type="h2">{mainHeading}</Heading>
             <div className="border boder-[1px] border-[#4679E6] w-full"></div>
-            <article className="challenges_section_rich_text">
+            <div className="challenges_section_rich_text">
               <RichText richText={_rawSubText} />
-            </article>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid=cols-2 lg:grid-cols-2 gap-x-40 gap-y-6">
@@ -55,9 +55,9 @@ export const Challenges = ({
                   </span>
                   {heading}
                 </Heading>
-                <article className="challenges_inner_rich_text">
+                <div className="challenges_inner_rich_text">
                   <RichText richText={_rawSubText} />
-                </article>
+                </div>
               </div>
             )
           })}

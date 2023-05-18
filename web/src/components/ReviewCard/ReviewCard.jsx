@@ -37,12 +37,12 @@ export const ReviewCard = ({
           <Image imageData={logoImage} otherClasses="w-auto h-auto" />
         )}
       </div>
-      <article className="reviews_rich_text mt-4">
+      <div className="reviews_rich_text mt-4">
         <RichText
           richText={_rawSubText}
           otherClasses="text-base text-[16px] font-medium text-typography_body montserrat leading-[24px] "
         />
-      </article>
+      </div>
     </div>
   )
 }

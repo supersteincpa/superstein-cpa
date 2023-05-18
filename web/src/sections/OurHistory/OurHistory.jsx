@@ -39,9 +39,9 @@ export const OurHistory = ({
         )}
         <div className="lg:sticky flex flex-col items-start justify-start gap-6 w-full h-fit lg:top-[86px]  lg:w-2/4">
           <Heading type="h2">{mainHeading}</Heading>
-          <article className="our_mission_rich_text">
+          <div className="our_mission_rich_text">
             <RichText richText={_rawSubText} />
-          </article>
+          </div>
         </div>
 
         <div className="last_child w-full lg:w-2/4">

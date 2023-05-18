@@ -77,14 +77,14 @@ export const MiniHeroSection = ({
             <div className="bg-addition_button_color h-[2px] my-6 "></div>
           )}
           {_rawSubText && (
-            <article
+            <div
               className={clsx(
                 'mb-6 mini_hero_section_rich_text ',
                 type === 'secondary' && 'text-center'
               )}
             >
               <RichText richText={_rawSubText} />
-            </article>
+            </div>
           )}
           {button && (
             <Button

@@ -18,7 +18,7 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   siteMetadata: {
     title: 'Super Stein CPA',
-    description: 'Super Stein CPA',
+    description: 'In-Depth Tax Planning & Strategy From CPAs With Industry Expertise',
     author: 'Wise Digital Partners',
     siteUrl: 'https://www.supersteincpa.com/',
   },

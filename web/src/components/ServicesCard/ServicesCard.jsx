@@ -40,9 +40,9 @@ export const ServicesCard = ({
       >
         {heading}
       </Heading>
-      <article className="services_card_rich_text">
+      <div className="services_card_rich_text">
         <RichText richText={_rawSubText} />
-      </article>
+      </div>
     </Link>
   )
 }

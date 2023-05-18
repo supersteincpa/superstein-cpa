@@ -42,9 +42,9 @@ export const MissionSection = ({
               {mainHeading}
             </Heading>
             <div className="border boder-[1px] border-[#4679E6] w-full"></div>
-            <article className="mission_section_rich_text">
+            <div className="mission_section_rich_text">
               <RichText richText={_rawSubText} />
-            </article>
+            </div>
           </div>
         </div>
         <GenericTwoColumn

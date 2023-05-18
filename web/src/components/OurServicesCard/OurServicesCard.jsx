@@ -40,9 +40,9 @@ export const OurServicesCard = ({
           {heading}
           <span className="our_services_card_share_icon group-hover:bg-addition_button_color bg-white block"></span>
         </Heading>
-        <article className="our_services_rich_text">
+        <div className="our_services_rich_text">
           <RichText richText={_rawSubText} />
-        </article>
+        </div>
       </div>
     </Link>
   )

@@ -49,9 +49,9 @@ export const WhySuperSteinCpa = ({
                   </span>
                   {heading}
                 </Heading>
-                <article className="why_super_stein_cpa_rich_text">
+                <div className="why_super_stein_cpa_rich_text">
                   <RichText richText={_rawSubText} />
-                </article>
+                </div>
               </div>
             )
           })}

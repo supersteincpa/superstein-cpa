@@ -49,15 +49,15 @@ export const IndustriesSection = ({
           <Heading type='h2' otherClasses="font-Poppins text-gray-900 w-full lg:min-w-[337px] lg:w-[337px] pb-6 lg:pr-8 border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-b-addition_button_color lg:border-r-addition_button_color">
             {mainHeading}
           </Heading>
-          <article className="industries_rich_text w-full">
+          <div className="industries_rich_text w-full">
             <RichText richText={_rawSubText} />
-          </article>
+          </div>
         </div>
         <div className="flex flex-col-reverse lg:flex-row items-center gap-4">
           <div className="w-full lg:w-2/4">
-            <article className="industries_list_text">
+            <div className="industries_list_text">
               <RichText richText={_rawListText} />
-            </article>
+            </div>
             <div className="mt-8 lg:mt-10">
               <Button {...button} />
             </div>

@@ -87,9 +87,9 @@ export const OurBodySection = ({
             {mainHeading}
           </Heading>
           {_rawSubText && (
-            <article className="mt-6 our_body_main_container_rich_text">
+            <div className="mt-6 our_body_main_container_rich_text">
               <RichText richText={_rawSubText} />
-            </article>
+            </div>
           )}
         </div>
         <div className="flex lg:gap-10 xl:gap-20">
@@ -135,9 +135,9 @@ export const OurBodySection = ({
                       {heading}
                     </Heading>
                   )}
-                  <article className="our_body_card_rich_text">
+                  <div className="our_body_card_rich_text">
                     <RichText richText={_rawSubText} />
-                  </article>
+                  </div>
                   <Button {...button} onClick={()=>toggleFunc(button?.form)} />
                 </div>
               )

@@ -62,9 +62,9 @@ export const GenericTwoColumn = ({
               {heading}
             </Heading>
           )}
-          <article className={clsx(isWhite ? "generic_rich_text_white mb-6": "generic_rich_text mb-6")}>
+          <div className={clsx(isWhite ? "generic_rich_text_white mb-6": "generic_rich_text mb-6")}>
             <RichText richText={_rawSubText} />
-          </article>
+          </div>
           {button && (
             <Button
               onClick={() => toggleFunc(button?.form)}

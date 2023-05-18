@@ -84,9 +84,9 @@ export const ProfileSection = ({
         <p className="mt-4 font-Public_Sans font-bold text-sm text-gray-800">
           {about}
         </p>
-        <article className="profile_section_rich_text my-6">
+        <div className="profile_section_rich_text my-6">
           <RichText richText={_rawInfoText} />
-        </article>
+        </div>
 
         <div className="border-b-[1px] border-gray-400 hidden lg:flex mt-12">
           {_rawBiographyText && (
@@ -217,9 +217,9 @@ export const ProfileSection = ({
             >
               Biography
             </Heading>
-            <article className="profile_section_rich_text">
+            <div className="profile_section_rich_text">
               <RichText richText={_rawBiographyText} />
-            </article>
+            </div>
           </div>
         )}
         {toggleTab === 'Affiliation' && (
@@ -230,9 +230,9 @@ export const ProfileSection = ({
             >
               Professional Affiliations
             </Heading>
-            <article className="profile_section_rich_text">
+            <div className="profile_section_rich_text">
               <RichText richText={_rawAffiliationText} />
-            </article>
+            </div>
           </div>
         )}
         {toggleTab === 'Expertise' && (
@@ -243,9 +243,9 @@ export const ProfileSection = ({
             >
               Areas of Expertise
             </Heading>
-            <article className="profile_section_rich_text">
+            <div className="profile_section_rich_text">
               <RichText richText={_rawExpertiseText} />
-            </article>
+            </div>
           </div>
         )}
         {toggleTab === 'Reviews' && (

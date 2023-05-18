@@ -71,9 +71,9 @@ export const LocationTwoColumnSection = ({
                       {heading}
                       <span className="our_services_card_share_icon bg-typography group-hover:bg-blue-400"></span>
                     </Heading>
-                    <article className="location_two_column_rich_text pb-6">
+                    <div className="location_two_column_rich_text pb-6">
                       <RichText richText={_rawStreetText} />
-                    </article>
+                    </div>
                   </div>
                 </Link>
               )

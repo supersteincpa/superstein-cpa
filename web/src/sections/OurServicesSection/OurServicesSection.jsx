@@ -133,7 +133,7 @@ export const OurServicesSection = ({
             {mainHeading}
           </Heading>
           {_rawText && (
-            <article
+            <div
               className={clsx(
                 isBackgroundColor
                   ? 'our_services_section_rich_text_black'
@@ -141,7 +141,7 @@ export const OurServicesSection = ({
               )}
             >
               <RichText richText={_rawText} />
-            </article>
+            </div>
           )}
         </div>
         <div

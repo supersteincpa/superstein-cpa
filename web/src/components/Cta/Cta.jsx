@@ -38,9 +38,9 @@ export const Cta = ({
         </Heading>
         <div className="border boder-[1px] border-[#4679E6] w-full h-0 lg:w-0 lg:h-[114px] float-left"></div>
         <div className="lg:max-w-[308px]">
-          <article className="cta_rich_text">
+          <div className="cta_rich_text">
             <RichText richText={_rawSubText} />
-          </article>
+          </div>
         </div>
         <div className="flex gap-6">
           {ctaButtons.map((nodes,i) => {

@@ -44,9 +44,9 @@ export const HeroSection = ({
             >
               {mainHeading}
             </Heading>
-            <article className="mb-6 hero_section_rich_text">
+            <div className="mb-6 hero_section_rich_text">
               <RichText richText={_rawSubText} />
-            </article>
+            </div>
             <Button onClick={() => toggleFunc('Contact Us')} {...button} />
           </div>
         </div>

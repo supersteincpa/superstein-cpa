@@ -115,9 +115,9 @@ export const TestimonialSection = ({
               return (
                 <div className="px-4" key = {index}>
                   <div className="w-full flex flex-col items-center gap-8">
-                    <article className="testimonial_rich_text">
+                    <div className="testimonial_rich_text">
                       <RichText richText={_rawSubText} />
-                    </article>
+                    </div>
                     <div className="h-[32px] w-[89.05px] justify-center rounded-full bg-white flex items-center">
                       <Image
                         imageData={logo}
