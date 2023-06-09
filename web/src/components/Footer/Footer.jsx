@@ -20,6 +20,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
     'IRS Representation',
     'Audit & Assurance',
     'Accounting Services',
+    'International Tax Services',
   ]
 
   let orderedNodes = orderArr.map((item) =>
