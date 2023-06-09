@@ -101,12 +101,12 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               3830 Hollywood Blvd. <br /> Suite 101 <br /> Hollywood FL 33021 <br/> (954) 602-9100
             </li>
-            <li className="text-white font-semibold text-base leading-6 mb-2">
+           {/* <li className="text-white font-semibold text-base leading-6 mb-2">
               Greenville Office
             </li>
             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               355 South Main Street <br /> 1st & 2nd Floors <br /> Greenville, SC 29601 <br/>(123) 456-7890
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="flex flex-col mt-6 gap-[26px] lg:gap-0 lg:flex-row items-start lg:justify-between">
