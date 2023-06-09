@@ -117,9 +117,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               Privacy Policy
             </li>
-            <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              Accessibility Statement
-            </li>
+         
             <li className="group relative ">
               <p className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70 flex gap-2 items-center">
                 Industries
