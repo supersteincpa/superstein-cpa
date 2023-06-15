@@ -27,8 +27,8 @@ export default Image
 
 export const query = graphql`
   fragment CustomImage on SanityCustomImage {
+    title
     asset {
-      title
       gatsbyImageData(placeholder: NONE)
     }
   }

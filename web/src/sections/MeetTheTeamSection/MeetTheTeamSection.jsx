@@ -26,13 +26,26 @@ export const MeetTheTeamSection = ({ otherClasses }) => {
     }
   `)
   const nodes = profiles.allSanityProfileSection.nodes
+
+  const orderNames = [
+    'Drew Superstein, CPA, CFE, MAcc',
+    'Esther Superstein, CPA, CGMA, MST',
+    'Matthew Milner',
+    'Rick Superstein, CPA, CGMA',
+    'Tinus Van Wyk, CPA',
+  ]
+
+  let orderedNames = orderNames.map((item) =>
+    nodes?.find(({ name }) => name === item)
+  )
+
   return (
     <section
       className={meetTheTeamSectionClasses}
       data-testid="meet-the-team-section"
     >
       <div className="max-w-[1512px] px-6 lg:px-20 xl:px-[117px] grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mx-auto">
-        {nodes.map((nodes) => {
+        {orderedNames?.map((nodes) => {
           return <OurTeamCard {...nodes} />
         })}
       </div>

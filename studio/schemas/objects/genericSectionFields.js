@@ -59,6 +59,11 @@ export default {
       name: 'button',
       type: 'button',
     },
+    {
+      title: 'Coming Soon Label',
+      name: 'commingSoonLabel',
+      type: 'boolean',
+    },
   ],
   preview: {
     select: {

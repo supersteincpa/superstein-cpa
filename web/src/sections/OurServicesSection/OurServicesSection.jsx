@@ -28,8 +28,8 @@ export const OurServicesSection = ({
       : 'py-[100px] lg:py-[200px]'
   )
 
-  const {allSanityServicesPages} = useStaticQuery(graphql`
-    query sanityServicesSection { 
+  const { allSanityServicesPages } = useStaticQuery(graphql`
+    query sanityServicesSection {
       allSanityServicesPages {
         nodes {
           slug {
@@ -97,11 +97,13 @@ export const OurServicesSection = ({
     'IRS Representation',
     'Audit & Assurance',
     'Accounting Services',
+    'International Tax Services',
   ]
-  
+
   let orderedNodes = orderArr.map((item) =>
-  nodes.find(({servicesCard:{heading}}) => heading === item)
+    nodes.find(({ servicesCard: { heading } }) => heading === item)
   )
+  
   return (
     <section
       className={ourServicesSectionClasses}

@@ -16,7 +16,7 @@ export const GenericTwoColumn = ({
     title,
     heading,
     _rawSubText,
-    text,
+    commingSoonLabel,
     reversed,
     mobileReversed,
     isDecorator,
@@ -54,15 +54,29 @@ export const GenericTwoColumn = ({
           </div>
         )}
         <div className="w-full lg:w-2/4 flex flex-col ">
+          {commingSoonLabel && (
+            <p class="px-3 py-2 rounded-full border-[1px] border-gray-500 font-medium text-xs w-fit mb-4">
+              Coming Soon
+            </p>
+          )}
           {heading && (
             <Heading
               type="h2"
-              otherClasses={clsx(isWhite ?'text-white' : 'text-gray-900' ,"  mb-6 after:mt-6 after:w-full after:h-[1px] after:bg-addition_button_color after:block")}
+              otherClasses={clsx(
+                isWhite ? 'text-white' : 'text-gray-900',
+                '  mb-6 after:mt-6 after:w-full after:h-[1px] after:bg-addition_button_color after:block'
+              )}
             >
               {heading}
             </Heading>
           )}
-          <div className={clsx(isWhite ? "generic_rich_text_white mb-6": "generic_rich_text mb-6")}>
+          <div
+            className={clsx(
+              isWhite
+                ? 'generic_rich_text_white mb-6'
+                : 'generic_rich_text mb-6'
+            )}
+          >
             <RichText richText={_rawSubText} />
           </div>
           {button && (
@@ -111,6 +125,7 @@ export const query = graphql`
       text
       reversed
       mobileReversed
+      commingSoonLabel
       mobileImage {
         ...CustomImage
       }
