@@ -16,6 +16,7 @@ export const MissionSection = ({
   mainHeading,
   _rawSubText,
   genericSections,
+  ...props
 }) => {
   const missionSectionClasses = clsx(
     otherClasses,
@@ -47,10 +48,8 @@ export const MissionSection = ({
             </div>
           </div>
         </div>
-        <GenericTwoColumn
-          {...props} genericSections={genericSections} isWhite ={true}
-          otherClasses="mission_two_column_section"
-        />
+        
+        <GenericTwoColumn {...props} genericSections={genericSections} isWhite ={true}  otherClasses="mission_two_column_section" />
       </div>
     </section>
   )
