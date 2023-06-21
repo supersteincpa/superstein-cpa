@@ -31,8 +31,8 @@ export const MeetTheTeamSection = ({ otherClasses }) => {
     'Drew Superstein, CPA, CFE, MAcc',
     'Esther Superstein, CPA, CGMA, MST',
     'Rick Superstein, CPA, CGMA',
-    'Matthew Milner',
-    'Tinus Van Wyk, CPA',
+    'Matt Milner, CPA, EA',
+    'Tinus Van Wyk, CPA, MAcc',
   ]
 
   let orderedNames = orderNames.map((item) =>
