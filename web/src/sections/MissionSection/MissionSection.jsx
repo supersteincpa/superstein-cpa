@@ -48,8 +48,8 @@ export const MissionSection = ({
           </div>
         </div>
         <GenericTwoColumn
-          genericSections={genericSections}
-          otherClasses="mission_two_column_section text-white"
+          {...props} genericSections={genericSections} isWhite ={true}
+          otherClasses="mission_two_column_section"
         />
       </div>
     </section>
