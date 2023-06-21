@@ -129,16 +129,13 @@ export const ContactForm = ({
 
         {toggleState === 'book-meeting' && (
           <div className="mt-8">
-            <Heading
-              type="h4"
-              otherClasses="font-raleway font-bold text-gray-900 mb-4"
-            >
-              Let's Start a Conversation
-            </Heading>
-            <p className="font-crimson_pro font-normal text-base text-gray-600 ">
-              Take this brief questionaire to find out how Superstein CPA
-              can help you.
-            </p>
+            <iframe
+                title="Book a Meeting"
+                src="https://Calendly.com/DrewCPA"
+                width="100%"
+                className="h-[70vh]"
+                height="100%"
+              ></iframe>
           </div>
         )}
 

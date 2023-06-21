@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import './footer.scss'
 import logo from '../../images/footer-logo.svg'
 import aicpaPeerReview from '../../images/aicpa-peer-review-program.png'
+import ficpa from '../../images/ficpa-logo__large.png'
 import Icon from '../../components/Icon/Icon'
 
 export const Footer = ({ otherClasses, services, industries, locations }) => {
@@ -43,6 +44,11 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             <img
               src={aicpaPeerReview}
               alt="aicpa-peer-review-program"
+              className="h-[48px] w-[113px] hidden lg:block"
+            />
+            <img
+              src={ficpa}
+              alt="ficpa-peer-review-program"
               className="h-[48px] w-[113px] hidden lg:block"
             />
           </div>
@@ -136,6 +142,13 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               <img
                 src={aicpaPeerReview}
                 alt="aicpa-peer-review-program"
+                className="h-[48px] w-[113px] block lg:hidden"
+              />
+            </div>
+            <div>
+              <img
+                src={ficpa}
+                alt="ficpa-peer-review-program"
                 className="h-[48px] w-[113px] block lg:hidden"
               />
             </div>
