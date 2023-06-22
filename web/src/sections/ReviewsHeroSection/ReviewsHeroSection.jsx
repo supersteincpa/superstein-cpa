@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { graphql } from 'gatsby'
-import './Reviewsherosection.scss'
+import './reviewsherosection.scss'
 import { Image } from '../../components/Image'
 import { Heading } from '../../components/Heading'
 import { RichText } from '../../components/RichText'
