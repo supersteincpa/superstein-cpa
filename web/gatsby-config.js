@@ -43,6 +43,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-advanced-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -55,6 +56,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-M8TSN67",
+        includeInDevelopment: false,
+      },
+    },
+    {
       resolve: 'gatsby-source-sanity',
       options: {
         ...clientConfig.sanity,
@@ -64,4 +72,5 @@ module.exports = {
       },
     },
   ],
+  
 }
