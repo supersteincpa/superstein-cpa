@@ -142,6 +142,16 @@ export default {
           to: [{type: 'miniHeroSection'}],
         },
         {
+          title: 'Reviews Hero Section',
+          name: 'reviewsHeroSection',
+          type: 'reference',
+          validation: (Rule) => Rule.required(),
+          options: {
+            disableNew: true,
+          },
+          to: [{type: 'reviewsHeroSection'}],
+        },
+        {
           title: 'Blogs Reference',
           name: 'blogsReference',
           type: 'reference',
