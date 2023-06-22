@@ -23,6 +23,7 @@ import ourHistory from './documents/ourHistory'
 import pages from './documents/pages'
 import positions from './documents/positions'
 import profileSection from './documents/profileSection'
+import reviewsHeroSection from './documents/reviewsHeroSection'
 import reviewsReference from './documents/reviewsReference'
 import reviewsSection from './documents/reviewsSection'
 import servicesPages from './documents/servicesPages'
@@ -68,6 +69,7 @@ export const schemaTypes = [
   miniHeroSection,
   blogsReference,
   locationTwoColumnSection,
+  reviewsHeroSection,
   reviewsReference,
   ourBodySection,
   industryServicesSection,

@@ -11,6 +11,7 @@ export const Button = ({
   variant = 'primary',
   otherClasses,
   form,
+  external,
   slug,
   onClick,
 }) => {
@@ -31,7 +32,10 @@ export const Button = ({
   if (slug && !form) {
     const { current } = slug
     return (
-      <Link to={`/${current}`} className={buttonClasses}>
+      <Link className={buttonClasses}
+      to={external ? `${current}` : `/${current}`}
+      target={external ? '_blank' : '_self'}
+      rel={external ? 'noopener noreferrer' : ''}>
         {label}
         {withIcon && (
           <Icon icon="button-right-arrow" iconWidth={24} iconHeight={24} />
