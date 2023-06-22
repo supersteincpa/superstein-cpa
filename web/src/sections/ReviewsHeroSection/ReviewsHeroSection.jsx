@@ -131,30 +131,26 @@ export const ReviewsHeroSection = ({
             Pick a platform to leave your review!
           </Heading>
           <div className="flex flex-col gap-6 items-center">
+          <a href="https://www.facebook.com/profile.php?id=100067590180053&sk=reviews" target="_blank">
             <button className="w-[288px] h-[56px] rounded-full border-[1px] border-gray-200 flex justify-center items-center">
-            <a href="https://www.facebook.com/PengilleyMyersAPC" target="_blank">
+            
               <img
                 src={facebookLogo}
                 alt="facebook-logo"
                 className="max-w-[115px] max-h-[28px]"
-              /></a>
+              />
             </button>
+            </a>
+            <a href="https://g.co/kgs/EjpXvC" target="_blank">
             <button className="w-[288px] h-[56px] rounded-full border-[1px] border-gray-200 flex justify-center items-center">
-              <a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0LM7INsgxz043YLRSNaiwMEixNDVOTTU1STNLM7cwtTKoSDI3NDC1MDMzNktLTjEyNvQSLkjNS8_MyUmtVMitTC0qVkgsSAYAIAcWUw&q=pengilley+myers+apc&oq=pengilley+myers+&aqs=chrome.1.69i59j46i175i199i512j69i57j69i60l3.7276j0j7&sourceid=chrome&ie=UTF-8#lrd=0x80d953ee54f6f785:0xb710586636fcd231,1" target="_blank">
+              
               <img
                 src={googleLogo}
                 alt="google-logo"
                 className="max-w-[115px] max-h-[28px]"
-              /></a>
+              />
             </button>
-            <button className="w-[288px] h-[56px] rounded-full border-[1px] border-gray-200 flex justify-center items-center">
-            <a href="https://www.yelp.com/biz/pengilley-myers-apc-san-diego" target="_blank">
-              <img
-                src={yelpLogo}
-                alt="yelp-logo"
-                className="max-w-[115px] max-h-[28px]"
-              /></a>
-            </button>
+            </a>
           </div>
         </div>
       </ModalComponent>
