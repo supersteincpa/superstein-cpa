@@ -79,7 +79,7 @@ export const BlogPostSection = ({
   const shareButtons = siteMetadata && (
     <>
       <a
-        href="https://www.linkedin.com/company/audit-club?original_referer=https%3A%2F%2Fwww.google.com%2F"
+        href="https://www.linkedin.com/company/superstein-superstein-pa/"
         target="_blank"
         rel="noopener noreferrer"
       >
