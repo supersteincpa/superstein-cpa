@@ -154,7 +154,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             </div>
           </ul>
         </div>
-        <div className="flex flex-col mt-6 gap-[26px] lg:gap-0 lg:flex-row items-start lg:justify-between">
+        <div className="flex flex-col mt-6 lg:-mt-8 gap-[26px] lg:gap-0 lg:flex-row items-start lg:justify-between">
           <ul className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row items-start lg:items-center justify-start lg:space-x-4">
             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               &copy;{Year} Superstein PA
