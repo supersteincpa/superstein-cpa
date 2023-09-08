@@ -10,7 +10,7 @@ import Icon from '../../components/Icon/Icon'
 export const Footer = ({ otherClasses, services, industries, locations }) => {
   const footerClasses = clsx(
     otherClasses,
-    'w-full h-full lg:max-h-[709px] lg:h-[559px] bg-black relative bg_clip_path pt-20 pb-10 lg:pt-[190px]'
+    'w-full h-full lg:max-h-[730px] lg:h-[730px] bg-black relative bg_clip_path pt-20 pb-10 lg:pt-[190px]'
   )
 
   const Year = new Date().getFullYear()
