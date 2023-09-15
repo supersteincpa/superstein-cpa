@@ -122,7 +122,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             </li>
             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               355 South Main Street <br /> 1st & 2nd Floors <br /> Greenville, SC 29601 <br/>
-{/*               (123) 456-7890 */}
+              (864) 999-2003 
             </li>
             <br /> 
             <li className="text-white font-semibold text-base leading-6 mb-2">
