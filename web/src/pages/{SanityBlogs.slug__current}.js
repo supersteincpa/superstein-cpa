@@ -79,7 +79,7 @@ export const query = graphql`
       slug {
         current
       }
-      publishedAt
+      publishedAt(formatString: "MMMM d, yyyy")
       seoTitle
       metaDescription
       desktopImage {
@@ -117,7 +117,7 @@ export const query = graphql`
         blogCategory {
           category
         }
-        publishedAt
+        publishedAt(formatString: "MMMM d, yyyy")
       }
     }
   }

@@ -17,7 +17,7 @@ export const BlogPage = ({ otherClasses }) => {
       allSanityBlogs(sort: {_updatedAt: DESC}) {
         nodes {
           title
-          publishedAt
+          publishedAt(formatString: "MMMM d, yyyy")
           slug {
             current
           }

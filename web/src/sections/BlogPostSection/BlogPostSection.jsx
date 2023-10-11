@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import clsx from 'clsx'
-import { differenceInDays, formatDistance, format } from 'date-fns'
 
 import Heading from '../../components/Heading'
 import Image from '../../components/Image'
@@ -120,9 +119,7 @@ export const BlogPostSection = ({
                 {authors?.name}
               </p>
               <p className="text-[14px] leading-5 mt-1 font-normal text-gray_800 font-Public_Sans">
-                {differenceInDays(new Date(publishedAt), new Date()) > 3
-                  ? formatDistance(new Date(publishedAt), new Date())
-                  : format(new Date(publishedAt), 'MMMM d, yyyy')}
+                {publishedAt && publishedAt}
               </p>
             </div>
           </div>

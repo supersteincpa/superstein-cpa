@@ -30,7 +30,7 @@ export const FeaturedBlogSection = ({ otherClasses, heading, title }) => {
           blogCategory {
             category
           }
-          publishedAt
+          publishedAt(formatString: "MMMM d, yyyy")
         }
       }
     }
