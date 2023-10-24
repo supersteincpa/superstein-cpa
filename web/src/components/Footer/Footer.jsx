@@ -125,19 +125,19 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               (864) 999-2003 
             </li>
             <br /> 
-            <li className="text-white font-semibold text-base leading-6 mb-2">
+{/*             <li className="text-white font-semibold text-base leading-6 mb-2">
               Miami Office
-            </li>
-            <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
+            </li> */}
+{/*             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               (305) 861-9600
-            </li>
-            <br />
+            </li> */}
+{/*             <br />
             <li className="text-white font-semibold text-base leading-6 mb-2">
               Palm Beach Office
-            </li>
-            <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
+            </li> */}
+{/*             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               (561) 279-7997
-            </li>
+            </li> */}
             <br />
             <div>
               <img
