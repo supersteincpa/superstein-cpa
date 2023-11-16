@@ -111,34 +111,42 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
           </ul>
           <ul className="flex flex-col">
             <li className="text-white font-semibold text-base leading-6 mb-2">
-              Broward Office...
+              Broward Office
             </li>
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              3830 Hollywood Blvd. <br /> Suite 101 <br /> Hollywood FL 33021{' '}
-              <br /> (954) 602-9100
+              3830 Hollywood Blvd., Suite 101 <br />
+              Hollywood FL 33021<br />
+              <a href="tel:1-954-602-9100">(954) 602-9100</a>
             </li>
+             
+            <li className="text-white font-semibold text-base leading-6 mb-2">
+              Miami Office
+            </li> 
+            <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
+              333 SE 2nd Ave, Suite 2000<br>
+              Miami, FL 33131<br>
+              <a href="tel:1-305-861-9600">(305) 861-9600</a>
+            </li>
+            
+            <li className="text-white font-semibold text-base leading-6 mb-2">
+              Palm Beach Office
+            </li> 
+            <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
+              2054 Vista Parkway, Suite 400<br>
+              West Palm Beach, FL 33411<br>
+              <a href="tel:1-561-279-7997">(561) 279-7997</a>
+            </li>
+
             <li className="text-white font-semibold text-base leading-6 mb-2">
               Greenville Office
             </li>
-            <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              355 South Main Street <br /> 1st & 2nd Floors <br /> Greenville, SC 29601 <br/>
-              (864) 999-2003 
+            <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
+              200-A South Main Street<br>
+              2nd Floor - Suite C<br>
+              Greenville, SC 29601<br>
+              <a href="tel:8649992003">(864) 999-2003</a>
             </li>
-            <br /> 
-{/*             <li className="text-white font-semibold text-base leading-6 mb-2">
-              Miami Office
-            </li> */}
-{/*             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              (305) 861-9600
-            </li> */}
-{/*             <br />
-            <li className="text-white font-semibold text-base leading-6 mb-2">
-              Palm Beach Office
-            </li> */}
-{/*             <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              (561) 279-7997
-            </li> */}
-            <br />
+            
             <div>
               <img
                 src={aicpaPeerReview}
