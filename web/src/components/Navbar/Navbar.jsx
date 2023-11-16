@@ -34,7 +34,7 @@ export const Navbar = ({
   services.find(({title}) => title === item)
   )
 
-  
+  /*
   let orderLocations = [
     'Greenville',
     'Broward County',
@@ -46,7 +46,7 @@ export const Navbar = ({
   let orderedNodesLocations = orderLocations.map((item) =>
   locations.find(({title}) => title === item)
   )
-
+  */
 
 
 
@@ -200,7 +200,7 @@ export const Navbar = ({
                     Locations
                   </Link>
                   <ul className="grid lg:grid-cols-1 gap-y-5 gap-x-12 w-fit mt-5">
-                    {orderedNodesLocations.map(({ title, slug: { current } },index) => {
+                    {locations.map(({ title, slug: { current } },index) => {
                       return (
                         <Link
                         key ={index}
