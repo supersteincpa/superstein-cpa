@@ -36,10 +36,11 @@ export const Navbar = ({
 
   
   let orderLocations = [
+    'Greenville',
     'Broward County',
     'West Palm Beach',
     'Miami',
-    'Greenville',
+  
   ]
   
   let orderedNodesLocations = orderLocations.map((item) =>
