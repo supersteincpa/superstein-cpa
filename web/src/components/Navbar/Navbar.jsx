@@ -34,6 +34,25 @@ export const Navbar = ({
   services.find(({title}) => title === item)
   )
 
+  
+  let orderLocations = [
+    'Broward County',
+    'West Palm Beach',
+    'Miami',
+    'Greenville',
+  ]
+  
+  let orderedNodesLocations = orderLocations.map((item) =>
+  locations.find(({title}) => title === item)
+  )
+
+
+
+
+
+
+
+  
   const [toggleNav, setToggleNav] = useState(false)
   const toggleNavbar = (elm) => {
     setToggleNav(!elm)
@@ -180,7 +199,7 @@ export const Navbar = ({
                     Locations
                   </Link>
                   <ul className="grid lg:grid-cols-1 gap-y-5 gap-x-12 w-fit mt-5">
-                    {locations.map(({ title, slug: { current } },index) => {
+                    {orderedNodesLocations.map(({ title, slug: { current } },index) => {
                       return (
                         <Link
                         key ={index}
