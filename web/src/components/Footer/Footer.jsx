@@ -123,8 +123,8 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               Miami Office
             </li> 
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              333 SE 2nd Ave, Suite 2000<br>
-              Miami, FL 33131<br>
+              333 SE 2nd Ave, Suite 2000<br />
+              Miami, FL 33131<br />
               (305) 861-9600
             </li>
             
@@ -132,8 +132,8 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               Palm Beach Office
             </li> 
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              2054 Vista Parkway, Suite 400<br>
-              West Palm Beach, FL 33411<br>
+              2054 Vista Parkway, Suite 400<br />
+              West Palm Beach, FL 33411<br />
               (561) 279-7997
             </li>
 
@@ -141,9 +141,9 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               Greenville Office
             </li>
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
-              200-A South Main Street<br>
-              2nd Floor - Suite C<br>
-              Greenville, SC 29601<br>
+              200-A South Main Street<br />
+              2nd Floor - Suite C<br />
+              Greenville, SC 29601<br />
               (864) 999-2003
             </li>
             
