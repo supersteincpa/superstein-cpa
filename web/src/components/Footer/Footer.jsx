@@ -111,7 +111,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
           </ul>
           <ul className="flex flex-col">
             <li className="text-white font-semibold text-base leading-6 mb-2">
-              Broward Office
+              Broward Office...
             </li>
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               3830 Hollywood Blvd. <br /> Suite 101 <br /> Hollywood FL 33021{' '}
