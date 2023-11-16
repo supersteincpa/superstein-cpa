@@ -144,7 +144,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               200-A South Main Street<br />
               2nd Floor - Suite C<br />
               Greenville, SC 29601<br />
-              (864) 999-2003
+              (864) 999-2003 
             </li>
             
             <div>
