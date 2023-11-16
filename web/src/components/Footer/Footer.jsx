@@ -116,7 +116,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               3830 Hollywood Blvd., Suite 101 <br />
               Hollywood FL 33021<br />
-              <a href="tel:1-954-602-9100">(954) 602-9100</a>
+              (954) 602-9100
             </li>
              
             <li className="text-white font-semibold text-base leading-6 mb-2">
@@ -125,7 +125,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               333 SE 2nd Ave, Suite 2000<br>
               Miami, FL 33131<br>
-              <a href="tel:1-305-861-9600">(305) 861-9600</a>
+              (305) 861-9600
             </li>
             
             <li className="text-white font-semibold text-base leading-6 mb-2">
@@ -134,7 +134,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               2054 Vista Parkway, Suite 400<br>
               West Palm Beach, FL 33411<br>
-              <a href="tel:1-561-279-7997">(561) 279-7997</a>
+              (561) 279-7997
             </li>
 
             <li className="text-white font-semibold text-base leading-6 mb-2">
@@ -144,7 +144,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               200-A South Main Street<br>
               2nd Floor - Suite C<br>
               Greenville, SC 29601<br>
-              <a href="tel:8649992003">(864) 999-2003</a>
+              (864) 999-2003
             </li>
             
             <div>
