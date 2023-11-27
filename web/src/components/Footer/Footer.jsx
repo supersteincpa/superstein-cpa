@@ -99,6 +99,12 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             >
               Testimonials
             </Link>
+            <Link
+              to="/locations"
+              className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70"
+            >
+              Locations
+            </Link>
             {/* <li className=" font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               Case Studies
             </li> */}
