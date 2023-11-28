@@ -12,7 +12,7 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
     otherClasses,
     'w-full h-full lg:max-h-[800px] lg:h-[800px] bg-black relative bg_clip_path pt-20 pb-10 lg:pt-[190px]'
   )
-
+ 
   const Year = new Date().getFullYear()
 
   let orderArr = [
@@ -130,8 +130,13 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
               (954) 602-9100
             </li>
              
-            <li className="text-white font-semibold text-base leading-6 mb-2">
-              Miami Office
+            <li className="text-white font-semibold text-base leading-6 mb-2">       
+              <Link
+                to="/locations/miami"
+                className="text-white font-semibold text-base leading-6 mb-2"
+              >
+                Miami Office
+              </Link>
             </li> 
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               333 SE 2nd Ave, Suite 2000<br />
@@ -140,7 +145,12 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             </li>
             
             <li className="text-white font-semibold text-base leading-6 mb-2">
-              Palm Beach Office
+              <Link
+                to="/locations/west-palm-beach"
+                className="text-white font-semibold text-base leading-6 mb-2"
+              >
+                Palm Beach Office
+              </Link>
             </li> 
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               2054 Vista Parkway, Suite 400<br />
@@ -149,7 +159,13 @@ export const Footer = ({ otherClasses, services, industries, locations }) => {
             </li>
 
             <li className="text-white font-semibold text-base leading-6 mb-2">
-              Greenville Office
+              <Link
+                to="/locations/greenville"
+                className="text-white font-semibold text-base leading-6 mb-2"
+              >
+                Greenville Office
+              </Link>
+              
             </li>
             <li className="mb-6 font-Public_Sans font-normal text-sm leading-[20px] tracking-[0.03em] text-white opacity-70">
               200-A South Main Street<br />
