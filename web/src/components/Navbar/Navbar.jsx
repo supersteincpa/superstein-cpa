@@ -68,7 +68,7 @@ export const Navbar = ({
     <nav className={navbarClasses} id="navbar" data-testid="navbar">
       <div className="max-w-[1512px] mx-auto px-6 xl:px-10 flex items-center justify-between relative">
         <div className="border-r-[1px] border-r-gray-800 pr-[22px] lg:hidden h-[62px] flex items-center ">
-          <div className="navbar_phone_button p-2 active:p-[5px] rounded-full ">
+          <div className="navbar_phone_button p-2 active:p-[5px] rounded-full "  onClick={() => toggleFunc('Contact Us') }>
             <Icon
               icon="white-phone-outline-icon"
               iconHeight={18}
